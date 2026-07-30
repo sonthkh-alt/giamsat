@@ -1,0 +1,9 @@
+# Chuẩn hóa xuống dòng: trong kho luôn là LF, khỏi lệch giữa Windows và Linux.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.pdf binary
+*.ico binary
+*.woff binary
+*.woff2 binary

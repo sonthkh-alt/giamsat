@@ -1,0 +1,23 @@
+[
+  {
+    "id": "BT-001",
+    "tieuDe": "Bắt đầu thí điểm kiểm tra ngẫu nhiên nghị quyết cấp xã",
+    "noiDung": "Từ tuần này, hệ thống rút thăm 5 nghị quyết mỗi tuần vào 8h00 sáng thứ Hai. Các đơn vị chuẩn bị hồ sơ để gửi khi được yêu cầu.",
+    "ngayDang": "2026-07-20",
+    "mucDo": "quan_trong"
+  },
+  {
+    "id": "BT-002",
+    "tieuDe": "Lưu ý về mốc 28/02/2027",
+    "noiDung": "Đề nghị các đơn vị rà soát những nội dung đang áp dụng theo văn bản của cấp huyện cũ và chủ động xây dựng nghị quyết thay thế.",
+    "ngayDang": "2026-07-06",
+    "mucDo": "quan_trong"
+  },
+  {
+    "id": "BT-003",
+    "tieuDe": "Cập nhật thư viện văn bản mẫu",
+    "noiDung": "Đã bổ sung mẫu báo cáo thẩm tra theo năm nhóm tiêu chí chấm điểm.",
+    "ngayDang": "2026-04-05",
+    "mucDo": "thuong"
+  }
+]

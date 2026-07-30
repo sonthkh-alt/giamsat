@@ -1,0 +1,23 @@
+[
+  {
+    "id": "VBM-001",
+    "ten": "Mẫu nghị quyết quy phạm pháp luật của Hội đồng nhân dân cấp xã",
+    "moTa": "Bố cục và thể thức theo Nghị định 30/2020/NĐ-CP, kèm chú thích từng phần.",
+    "duongDan": "data/mau/vanban/mau-nghi-quyet-quy-pham.md",
+    "ngayCapNhat": "2026-03-10"
+  },
+  {
+    "id": "VBM-002",
+    "ten": "Mẫu tờ trình dự thảo nghị quyết",
+    "moTa": "Dùng khi Ủy ban nhân dân trình dự thảo nghị quyết ra kỳ họp.",
+    "duongDan": "data/mau/vanban/mau-to-trinh.md",
+    "ngayCapNhat": "2026-03-10"
+  },
+  {
+    "id": "VBM-003",
+    "ten": "Mẫu báo cáo thẩm tra của Ban của Hội đồng nhân dân",
+    "moTa": "Khung nội dung báo cáo thẩm tra theo năm nhóm tiêu chí chấm điểm.",
+    "duongDan": "data/mau/vanban/mau-bao-cao-tham-tra.md",
+    "ngayCapNhat": "2026-04-05"
+  }
+]

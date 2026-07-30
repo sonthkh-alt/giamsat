@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-nen font-giaodien text-base text-muc antialiased;
+  }
+
+  /* Viền focus phải luôn thấy rõ khi thao tác bằng bàn phím. */
+  :focus-visible {
+    outline: 3px solid #16264f;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-semibold text-muc;
+    text-wrap: balance;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+}
+
+@layer components {
+  .khung {
+    @apply border border-vien bg-giay;
+  }
+
+  .nut {
+    @apply inline-flex items-center justify-center gap-2 border px-4 py-2 font-medium
+      transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .nut-chinh {
+    @apply nut border-muc bg-muc text-giay hover:bg-[#0f1c3c];
+  }
+
+  .nut-phu {
+    @apply nut border-vien bg-giay text-muc hover:bg-nen;
+  }
+
+  .nut-canhbao {
+    @apply nut border-canhbao bg-canhbao text-giay hover:bg-[#a50d26];
+  }
+
+  .o-nhap {
+    @apply w-full border border-vien bg-giay px-3 py-2 text-base text-muc
+      placeholder:text-[#7A8194] focus:border-muc;
+  }
+
+  .nhan-truong {
+    @apply mb-1 block text-[0.9375rem] font-medium text-muc;
+  }
+
+  .bang {
+    @apply w-full border-collapse text-left text-base;
+  }
+
+  .bang th {
+    @apply border-b border-vien bg-nen px-3 py-2 text-[0.9375rem] font-semibold text-muc;
+  }
+
+  .bang td {
+    @apply border-b border-vien px-3 py-2 align-top;
+  }
+
+  .bang tbody tr:nth-child(even) {
+    @apply bg-[#FAFBFD];
+  }
+
+  .so {
+    @apply font-so tabular-nums;
+  }
+
+  .trichdan {
+    @apply font-vanban text-[1.0625rem] leading-relaxed;
+  }
+}
+
+/* Tôn trọng lựa chọn giảm chuyển động của người dùng. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .khong-in {
+    display: none !important;
+  }
+}

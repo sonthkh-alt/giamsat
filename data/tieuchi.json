@@ -1,0 +1,65 @@
+[
+  {
+    "ma": "thamQuyenHinhThuc",
+    "ten": "Thẩm quyền và hình thức văn bản",
+    "diemToiDa": 20,
+    "tieuChi": [
+      {
+        "ma": "TQ-01",
+        "noiDung": "Ban hành đúng thẩm quyền về nội dung của Hội đồng nhân dân cấp xã",
+        "diemToiDa": 8
+      },
+      {
+        "ma": "TQ-02",
+        "noiDung": "Đúng thẩm quyền về hình thức: dùng nghị quyết cho đúng loại việc",
+        "diemToiDa": 6
+      },
+      {
+        "ma": "TQ-03",
+        "noiDung": "Xác định đúng nghị quyết là quy phạm pháp luật hay cá biệt",
+        "diemToiDa": 6
+      }
+    ]
+  },
+  {
+    "ma": "trinhTuThuTuc",
+    "ten": "Trình tự, thủ tục ban hành",
+    "diemToiDa": 20,
+    "tieuChi": [
+      { "ma": "TT-01", "noiDung": "Có đề nghị, tờ trình và hồ sơ dự thảo đầy đủ", "diemToiDa": 5 },
+      { "ma": "TT-02", "noiDung": "Lấy ý kiến đối tượng chịu tác động theo quy định", "diemToiDa": 5 },
+      { "ma": "TT-03", "noiDung": "Có báo cáo thẩm tra của Ban của Hội đồng nhân dân", "diemToiDa": 5 },
+      { "ma": "TT-04", "noiDung": "Thông qua tại kỳ họp đúng thủ tục, có biên bản", "diemToiDa": 5 }
+    ]
+  },
+  {
+    "ma": "noiDungHopPhap",
+    "ten": "Nội dung hợp hiến, hợp pháp, thống nhất",
+    "diemToiDa": 30,
+    "tieuChi": [
+      { "ma": "ND-01", "noiDung": "Không trái Hiến pháp, luật và văn bản của cơ quan cấp trên", "diemToiDa": 12 },
+      { "ma": "ND-02", "noiDung": "Thống nhất với hệ thống văn bản hiện hành, không chồng chéo", "diemToiDa": 8 },
+      { "ma": "ND-03", "noiDung": "Căn cứ pháp lý viện dẫn đúng, còn hiệu lực", "diemToiDa": 5 },
+      { "ma": "ND-04", "noiDung": "Xác định rõ hiệu lực, đối tượng và phạm vi điều chỉnh", "diemToiDa": 5 }
+    ]
+  },
+  {
+    "ma": "theThucTrinhBay",
+    "ten": "Thể thức và kỹ thuật trình bày",
+    "diemToiDa": 10,
+    "tieuChi": [
+      { "ma": "TH-01", "noiDung": "Thể thức theo Nghị định 30/2020/NĐ-CP", "diemToiDa": 5 },
+      { "ma": "TH-02", "noiDung": "Bố cục, đánh số điều khoản, chính tả chuẩn xác", "diemToiDa": 5 }
+    ]
+  },
+  {
+    "ma": "khaThiThucTien",
+    "ten": "Tính khả thi, phù hợp thực tiễn",
+    "diemToiDa": 20,
+    "tieuChi": [
+      { "ma": "KT-01", "noiDung": "Phù hợp điều kiện kinh tế - xã hội của địa phương", "diemToiDa": 7 },
+      { "ma": "KT-02", "noiDung": "Cân đối được nguồn lực bảo đảm thực hiện", "diemToiDa": 7 },
+      { "ma": "KT-03", "noiDung": "Phân công tổ chức thực hiện và kiểm tra rõ ràng", "diemToiDa": 6 }
+    ]
+  }
+]

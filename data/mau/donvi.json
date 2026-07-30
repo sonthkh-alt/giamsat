@@ -1,0 +1,1164 @@
+[
+  {
+    "ma": "TH-001",
+    "ten": "Phường Mẫu 01",
+    "loai": "phuong",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-002",
+    "ten": "Phường Mẫu 02",
+    "loai": "phuong",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-003",
+    "ten": "Phường Mẫu 03",
+    "loai": "phuong",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-004",
+    "ten": "Phường Mẫu 04",
+    "loai": "phuong",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-005",
+    "ten": "Phường Mẫu 05",
+    "loai": "phuong",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-01-09"
+  },
+  {
+    "ma": "TH-006",
+    "ten": "Phường Mẫu 06",
+    "loai": "phuong",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-12-23"
+  },
+  {
+    "ma": "TH-007",
+    "ten": "Phường Mẫu 07",
+    "loai": "phuong",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-12-12"
+  },
+  {
+    "ma": "TH-008",
+    "ten": "Phường Mẫu 08",
+    "loai": "phuong",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-01-30"
+  },
+  {
+    "ma": "TH-009",
+    "ten": "Phường Mẫu 09",
+    "loai": "phuong",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-02-25"
+  },
+  {
+    "ma": "TH-010",
+    "ten": "Phường Mẫu 10",
+    "loai": "phuong",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-09-04"
+  },
+  {
+    "ma": "TH-011",
+    "ten": "Phường Mẫu 11",
+    "loai": "phuong",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-02-02"
+  },
+  {
+    "ma": "TH-012",
+    "ten": "Phường Mẫu 12",
+    "loai": "phuong",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-013",
+    "ten": "Phường Mẫu 13",
+    "loai": "phuong",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-05-04"
+  },
+  {
+    "ma": "TH-014",
+    "ten": "Phường Mẫu 14",
+    "loai": "phuong",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-08-23"
+  },
+  {
+    "ma": "TH-015",
+    "ten": "Phường Mẫu 15",
+    "loai": "phuong",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-09-20"
+  },
+  {
+    "ma": "TH-016",
+    "ten": "Phường Mẫu 16",
+    "loai": "phuong",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-10-29"
+  },
+  {
+    "ma": "TH-017",
+    "ten": "Phường Mẫu 17",
+    "loai": "phuong",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-07-08"
+  },
+  {
+    "ma": "TH-018",
+    "ten": "Phường Mẫu 18",
+    "loai": "phuong",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-01-30"
+  },
+  {
+    "ma": "TH-019",
+    "ten": "Phường Mẫu 19",
+    "loai": "phuong",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-12-21"
+  },
+  {
+    "ma": "TH-020",
+    "ten": "Xã Mẫu 001",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-05-29"
+  },
+  {
+    "ma": "TH-021",
+    "ten": "Xã Mẫu 002",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-022",
+    "ten": "Xã Mẫu 003",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-10-18"
+  },
+  {
+    "ma": "TH-023",
+    "ten": "Xã Mẫu 004",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-08-19"
+  },
+  {
+    "ma": "TH-024",
+    "ten": "Xã Mẫu 005",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-05-23"
+  },
+  {
+    "ma": "TH-025",
+    "ten": "Xã Mẫu 006",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-04-04"
+  },
+  {
+    "ma": "TH-026",
+    "ten": "Xã Mẫu 007",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-10-23"
+  },
+  {
+    "ma": "TH-027",
+    "ten": "Xã Mẫu 008",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-08-12"
+  },
+  {
+    "ma": "TH-028",
+    "ten": "Xã Mẫu 009",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-10-13"
+  },
+  {
+    "ma": "TH-029",
+    "ten": "Xã Mẫu 010",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-10-14"
+  },
+  {
+    "ma": "TH-030",
+    "ten": "Xã Mẫu 011",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-12-11"
+  },
+  {
+    "ma": "TH-031",
+    "ten": "Xã Mẫu 012",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-06-08"
+  },
+  {
+    "ma": "TH-032",
+    "ten": "Xã Mẫu 013",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-033",
+    "ten": "Xã Mẫu 014",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-02-19"
+  },
+  {
+    "ma": "TH-034",
+    "ten": "Xã Mẫu 015",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-11-28"
+  },
+  {
+    "ma": "TH-035",
+    "ten": "Xã Mẫu 016",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-06-05"
+  },
+  {
+    "ma": "TH-036",
+    "ten": "Xã Mẫu 017",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-037",
+    "ten": "Xã Mẫu 018",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-038",
+    "ten": "Xã Mẫu 019",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-09-10"
+  },
+  {
+    "ma": "TH-039",
+    "ten": "Xã Mẫu 020",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-08-03"
+  },
+  {
+    "ma": "TH-040",
+    "ten": "Xã Mẫu 021",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-04-24"
+  },
+  {
+    "ma": "TH-041",
+    "ten": "Xã Mẫu 022",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-11-08"
+  },
+  {
+    "ma": "TH-042",
+    "ten": "Xã Mẫu 023",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-02-05"
+  },
+  {
+    "ma": "TH-043",
+    "ten": "Xã Mẫu 024",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-044",
+    "ten": "Xã Mẫu 025",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-10-06"
+  },
+  {
+    "ma": "TH-045",
+    "ten": "Xã Mẫu 026",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-02-09"
+  },
+  {
+    "ma": "TH-046",
+    "ten": "Xã Mẫu 027",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-047",
+    "ten": "Xã Mẫu 028",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-048",
+    "ten": "Xã Mẫu 029",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-01-31"
+  },
+  {
+    "ma": "TH-049",
+    "ten": "Xã Mẫu 030",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-050",
+    "ten": "Xã Mẫu 031",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-12-29"
+  },
+  {
+    "ma": "TH-051",
+    "ten": "Xã Mẫu 032",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-02-08"
+  },
+  {
+    "ma": "TH-052",
+    "ten": "Xã Mẫu 033",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-10-14"
+  },
+  {
+    "ma": "TH-053",
+    "ten": "Xã Mẫu 034",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-02-27"
+  },
+  {
+    "ma": "TH-054",
+    "ten": "Xã Mẫu 035",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-055",
+    "ten": "Xã Mẫu 036",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-12-16"
+  },
+  {
+    "ma": "TH-056",
+    "ten": "Xã Mẫu 037",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-03-10"
+  },
+  {
+    "ma": "TH-057",
+    "ten": "Xã Mẫu 038",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-08-24"
+  },
+  {
+    "ma": "TH-058",
+    "ten": "Xã Mẫu 039",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-08-07"
+  },
+  {
+    "ma": "TH-059",
+    "ten": "Xã Mẫu 040",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-02-19"
+  },
+  {
+    "ma": "TH-060",
+    "ten": "Xã Mẫu 041",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-061",
+    "ten": "Xã Mẫu 042",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-04-16"
+  },
+  {
+    "ma": "TH-062",
+    "ten": "Xã Mẫu 043",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-12-31"
+  },
+  {
+    "ma": "TH-063",
+    "ten": "Xã Mẫu 044",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-02-16"
+  },
+  {
+    "ma": "TH-064",
+    "ten": "Xã Mẫu 045",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-12-03"
+  },
+  {
+    "ma": "TH-065",
+    "ten": "Xã Mẫu 046",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-066",
+    "ten": "Xã Mẫu 047",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-06-25"
+  },
+  {
+    "ma": "TH-067",
+    "ten": "Xã Mẫu 048",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-09-30"
+  },
+  {
+    "ma": "TH-068",
+    "ten": "Xã Mẫu 049",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-069",
+    "ten": "Xã Mẫu 050",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-070",
+    "ten": "Xã Mẫu 051",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-10-31"
+  },
+  {
+    "ma": "TH-071",
+    "ten": "Xã Mẫu 052",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-12-06"
+  },
+  {
+    "ma": "TH-072",
+    "ten": "Xã Mẫu 053",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-073",
+    "ten": "Xã Mẫu 054",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-074",
+    "ten": "Xã Mẫu 055",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-09-11"
+  },
+  {
+    "ma": "TH-075",
+    "ten": "Xã Mẫu 056",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-03-21"
+  },
+  {
+    "ma": "TH-076",
+    "ten": "Xã Mẫu 057",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-077",
+    "ten": "Xã Mẫu 058",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-06-20"
+  },
+  {
+    "ma": "TH-078",
+    "ten": "Xã Mẫu 059",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-079",
+    "ten": "Xã Mẫu 060",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-08-20"
+  },
+  {
+    "ma": "TH-080",
+    "ten": "Xã Mẫu 061",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-04-14"
+  },
+  {
+    "ma": "TH-081",
+    "ten": "Xã Mẫu 062",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-07-05"
+  },
+  {
+    "ma": "TH-082",
+    "ten": "Xã Mẫu 063",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-083",
+    "ten": "Xã Mẫu 064",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-10-10"
+  },
+  {
+    "ma": "TH-084",
+    "ten": "Xã Mẫu 065",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-085",
+    "ten": "Xã Mẫu 066",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-01-22"
+  },
+  {
+    "ma": "TH-086",
+    "ten": "Xã Mẫu 067",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-087",
+    "ten": "Xã Mẫu 068",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-088",
+    "ten": "Xã Mẫu 069",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-089",
+    "ten": "Xã Mẫu 070",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-090",
+    "ten": "Xã Mẫu 071",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-04-07"
+  },
+  {
+    "ma": "TH-091",
+    "ten": "Xã Mẫu 072",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-11-30"
+  },
+  {
+    "ma": "TH-092",
+    "ten": "Xã Mẫu 073",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-093",
+    "ten": "Xã Mẫu 074",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-05-30"
+  },
+  {
+    "ma": "TH-094",
+    "ten": "Xã Mẫu 075",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-05-23"
+  },
+  {
+    "ma": "TH-095",
+    "ten": "Xã Mẫu 076",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-096",
+    "ten": "Xã Mẫu 077",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-097",
+    "ten": "Xã Mẫu 078",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-098",
+    "ten": "Xã Mẫu 079",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-06-04"
+  },
+  {
+    "ma": "TH-099",
+    "ten": "Xã Mẫu 080",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-10-18"
+  },
+  {
+    "ma": "TH-100",
+    "ten": "Xã Mẫu 081",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-04-11"
+  },
+  {
+    "ma": "TH-101",
+    "ten": "Xã Mẫu 082",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-03-30"
+  },
+  {
+    "ma": "TH-102",
+    "ten": "Xã Mẫu 083",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-06-24"
+  },
+  {
+    "ma": "TH-103",
+    "ten": "Xã Mẫu 084",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-01-22"
+  },
+  {
+    "ma": "TH-104",
+    "ten": "Xã Mẫu 085",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-04-13"
+  },
+  {
+    "ma": "TH-105",
+    "ten": "Xã Mẫu 086",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-01-09"
+  },
+  {
+    "ma": "TH-106",
+    "ten": "Xã Mẫu 087",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-107",
+    "ten": "Xã Mẫu 088",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-01-20"
+  },
+  {
+    "ma": "TH-108",
+    "ten": "Xã Mẫu 089",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-12-15"
+  },
+  {
+    "ma": "TH-109",
+    "ten": "Xã Mẫu 090",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-07-20"
+  },
+  {
+    "ma": "TH-110",
+    "ten": "Xã Mẫu 091",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-111",
+    "ten": "Xã Mẫu 092",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-112",
+    "ten": "Xã Mẫu 093",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-113",
+    "ten": "Xã Mẫu 094",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-114",
+    "ten": "Xã Mẫu 095",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-07-20"
+  },
+  {
+    "ma": "TH-115",
+    "ten": "Xã Mẫu 096",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-04-23"
+  },
+  {
+    "ma": "TH-116",
+    "ten": "Xã Mẫu 097",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-12-21"
+  },
+  {
+    "ma": "TH-117",
+    "ten": "Xã Mẫu 098",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-118",
+    "ten": "Xã Mẫu 099",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-04-17"
+  },
+  {
+    "ma": "TH-119",
+    "ten": "Xã Mẫu 100",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-03-20"
+  },
+  {
+    "ma": "TH-120",
+    "ten": "Xã Mẫu 101",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-06-18"
+  },
+  {
+    "ma": "TH-121",
+    "ten": "Xã Mẫu 102",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-122",
+    "ten": "Xã Mẫu 103",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-05-23"
+  },
+  {
+    "ma": "TH-123",
+    "ten": "Xã Mẫu 104",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-124",
+    "ten": "Xã Mẫu 105",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-06-07"
+  },
+  {
+    "ma": "TH-125",
+    "ten": "Xã Mẫu 106",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-126",
+    "ten": "Xã Mẫu 107",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-10-11"
+  },
+  {
+    "ma": "TH-127",
+    "ten": "Xã Mẫu 108",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-128",
+    "ten": "Xã Mẫu 109",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-10-20"
+  },
+  {
+    "ma": "TH-129",
+    "ten": "Xã Mẫu 110",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-09-29"
+  },
+  {
+    "ma": "TH-130",
+    "ten": "Xã Mẫu 111",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-05-11"
+  },
+  {
+    "ma": "TH-131",
+    "ten": "Xã Mẫu 112",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-11-17"
+  },
+  {
+    "ma": "TH-132",
+    "ten": "Xã Mẫu 113",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-05-12"
+  },
+  {
+    "ma": "TH-133",
+    "ten": "Xã Mẫu 114",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-11-09"
+  },
+  {
+    "ma": "TH-134",
+    "ten": "Xã Mẫu 115",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-04-22"
+  },
+  {
+    "ma": "TH-135",
+    "ten": "Xã Mẫu 116",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-136",
+    "ten": "Xã Mẫu 117",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-02-05"
+  },
+  {
+    "ma": "TH-137",
+    "ten": "Xã Mẫu 118",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-01-08"
+  },
+  {
+    "ma": "TH-138",
+    "ten": "Xã Mẫu 119",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-08-18"
+  },
+  {
+    "ma": "TH-139",
+    "ten": "Xã Mẫu 120",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-140",
+    "ten": "Xã Mẫu 121",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-12-25"
+  },
+  {
+    "ma": "TH-141",
+    "ten": "Xã Mẫu 122",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-142",
+    "ten": "Xã Mẫu 123",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-02-06"
+  },
+  {
+    "ma": "TH-143",
+    "ten": "Xã Mẫu 124",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-11-11"
+  },
+  {
+    "ma": "TH-144",
+    "ten": "Xã Mẫu 125",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-06-17"
+  },
+  {
+    "ma": "TH-145",
+    "ten": "Xã Mẫu 126",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-02-26"
+  },
+  {
+    "ma": "TH-146",
+    "ten": "Xã Mẫu 127",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-147",
+    "ten": "Xã Mẫu 128",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-09-11"
+  },
+  {
+    "ma": "TH-148",
+    "ten": "Xã Mẫu 129",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-03-13"
+  },
+  {
+    "ma": "TH-149",
+    "ten": "Xã Mẫu 130",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-06-16"
+  },
+  {
+    "ma": "TH-150",
+    "ten": "Xã Mẫu 131",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": null
+  },
+  {
+    "ma": "TH-151",
+    "ten": "Xã Mẫu 132",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-07-20"
+  },
+  {
+    "ma": "TH-152",
+    "ten": "Xã Mẫu 133",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-03-31"
+  },
+  {
+    "ma": "TH-153",
+    "ten": "Xã Mẫu 134",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-01-29"
+  },
+  {
+    "ma": "TH-154",
+    "ten": "Xã Mẫu 135",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-09-29"
+  },
+  {
+    "ma": "TH-155",
+    "ten": "Xã Mẫu 136",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-02-13"
+  },
+  {
+    "ma": "TH-156",
+    "ten": "Xã Mẫu 137",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-12-27"
+  },
+  {
+    "ma": "TH-157",
+    "ten": "Xã Mẫu 138",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-02-04"
+  },
+  {
+    "ma": "TH-158",
+    "ten": "Xã Mẫu 139",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-04-12"
+  },
+  {
+    "ma": "TH-159",
+    "ten": "Xã Mẫu 140",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2025-11-03"
+  },
+  {
+    "ma": "TH-160",
+    "ten": "Xã Mẫu 141",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2026-05-22"
+  },
+  {
+    "ma": "TH-161",
+    "ten": "Xã Mẫu 142",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2026-02-05"
+  },
+  {
+    "ma": "TH-162",
+    "ten": "Xã Mẫu 143",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-06-24"
+  },
+  {
+    "ma": "TH-163",
+    "ten": "Xã Mẫu 144",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": "2025-10-04"
+  },
+  {
+    "ma": "TH-164",
+    "ten": "Xã Mẫu 145",
+    "loai": "xa",
+    "vung": "mien_nui",
+    "lanKiemTraGanNhat": "2025-12-15"
+  },
+  {
+    "ma": "TH-165",
+    "ten": "Xã Mẫu 146",
+    "loai": "xa",
+    "vung": "dong_bang",
+    "lanKiemTraGanNhat": "2026-01-02"
+  },
+  {
+    "ma": "TH-166",
+    "ten": "Xã Mẫu 147",
+    "loai": "xa",
+    "vung": "ven_bien",
+    "lanKiemTraGanNhat": null
+  }
+]

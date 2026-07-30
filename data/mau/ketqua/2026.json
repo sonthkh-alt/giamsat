@@ -1,0 +1,97 @@
+[
+  {
+    "idNghiQuyet": "TH-151-1-2026",
+    "ky": "2026-W30",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 20,
+      "trinhTuThuTuc": 18,
+      "noiDungHopPhap": 28,
+      "theThucTrinhBay": 9,
+      "khaThiThucTien": 18
+    },
+    "tongDiem": 93,
+    "xepLoai": "tot",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Hồ sơ đầy đủ, trình tự đúng quy định. Còn một số lỗi nhỏ về kỹ thuật trình bày ở phần căn cứ ban hành.",
+    "nguoiThamDinh": "Lê Thị B",
+    "hanGiaiTrinh": "2026-07-29",
+    "giaiTrinh": null,
+    "trangThai": "da_chot"
+  },
+  {
+    "idNghiQuyet": "TH-109-1-2026",
+    "ky": "2026-W30",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 18,
+      "trinhTuThuTuc": 14,
+      "noiDungHopPhap": 24,
+      "theThucTrinhBay": 8,
+      "khaThiThucTien": 15
+    },
+    "tongDiem": 79,
+    "xepLoai": "kha",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Thiếu văn bản lấy ý kiến đối tượng chịu tác động. Đề nghị bổ sung vào hồ sơ lưu và rút kinh nghiệm cho các nghị quyết sau.",
+    "nguoiThamDinh": "Trần Văn C",
+    "hanGiaiTrinh": "2026-07-29",
+    "giaiTrinh": null,
+    "trangThai": "da_chot"
+  },
+  {
+    "idNghiQuyet": "TH-114-2-2026",
+    "ky": "2026-W30",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 14,
+      "trinhTuThuTuc": 12,
+      "noiDungHopPhap": 18,
+      "theThucTrinhBay": 7,
+      "khaThiThucTien": 12
+    },
+    "tongDiem": 63,
+    "xepLoai": "chua_dat",
+    "coNoiDungTraiPhapLuat": true,
+    "nhanXet": "Nghị quyết quy định mức thu vượt khung do văn bản cấp trên ấn định. Nội dung này trái quy định hiện hành, đề nghị đơn vị sửa đổi và báo cáo kết quả.",
+    "nguoiThamDinh": "Phạm Thị D",
+    "hanGiaiTrinh": "2026-07-29",
+    "giaiTrinh": null,
+    "trangThai": "da_chot"
+  },
+  {
+    "idNghiQuyet": "TH-072-2-2026",
+    "ky": "2026-W30",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 19,
+      "trinhTuThuTuc": 17,
+      "noiDungHopPhap": 26,
+      "theThucTrinhBay": 9,
+      "khaThiThucTien": 16
+    },
+    "tongDiem": 87,
+    "xepLoai": "kha",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Nội dung phù hợp thẩm quyền. Cần làm rõ nguồn kinh phí bảo đảm thực hiện trong năm ngân sách.",
+    "nguoiThamDinh": "Lê Thị B",
+    "hanGiaiTrinh": "2026-07-29",
+    "giaiTrinh": "Đơn vị đã bố trí nguồn từ nguồn tăng thu năm 2025 chuyển sang, có biểu chi tiết kèm theo.",
+    "trangThai": "chua_chot"
+  },
+  {
+    "idNghiQuyet": "TH-151-4-2026",
+    "ky": "2026-W30",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 20,
+      "trinhTuThuTuc": 19,
+      "noiDungHopPhap": 29,
+      "theThucTrinhBay": 10,
+      "khaThiThucTien": 19
+    },
+    "tongDiem": 97,
+    "xepLoai": "tot",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Hồ sơ và nội dung đạt yêu cầu, không có kiến nghị sửa đổi.",
+    "nguoiThamDinh": "Trần Văn C",
+    "hanGiaiTrinh": "2026-07-29",
+    "giaiTrinh": null,
+    "trangThai": "chua_chot"
+  }
+]

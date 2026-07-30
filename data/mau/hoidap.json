@@ -1,0 +1,52 @@
+[
+  {
+    "id": "HD-001",
+    "cauHoi": "Nghị quyết của Hội đồng nhân dân cấp xã khi nào là văn bản quy phạm pháp luật?",
+    "traLoi": "Khi nghị quyết chứa quy tắc xử sự chung, có hiệu lực bắt buộc chung, được áp dụng lặp đi lặp lại đối với cơ quan, tổ chức, cá nhân trên địa bàn. Nghị quyết chỉ giải quyết một vụ việc cụ thể, áp dụng một lần cho đối tượng xác định là nghị quyết cá biệt và không phải làm theo trình tự ban hành văn bản quy phạm pháp luật.",
+    "chuDe": "Phân loại văn bản",
+    "canCuPhapLy": [
+      "Luật Ban hành văn bản quy phạm pháp luật"
+    ],
+    "ngayCapNhat": "2026-03-10"
+  },
+  {
+    "id": "HD-002",
+    "cauHoi": "Hồ sơ trình nghị quyết quy phạm pháp luật gồm những gì?",
+    "traLoi": "Tối thiểu gồm: tờ trình, dự thảo nghị quyết, bản tổng hợp và tiếp thu ý kiến của đối tượng chịu tác động, báo cáo thẩm tra của Ban của Hội đồng nhân dân, và các tài liệu liên quan khác. Thiếu bản tổng hợp ý kiến là lỗi bị trừ điểm nhiều nhất ở nhóm trình tự, thủ tục.",
+    "chuDe": "Trình tự, thủ tục",
+    "canCuPhapLy": [
+      "Luật Ban hành văn bản quy phạm pháp luật"
+    ],
+    "ngayCapNhat": "2026-03-10"
+  },
+  {
+    "id": "HD-003",
+    "cauHoi": "Văn bản quy phạm pháp luật của Hội đồng nhân dân, Ủy ban nhân dân cấp huyện cũ còn hiệu lực đến bao giờ?",
+    "traLoi": "Đến hết ngày 28/02/2027. Trong thời gian này, Hội đồng nhân dân cấp xã cần rà soát và ban hành nghị quyết thay thế đối với những nội dung còn cần thiết, tránh khoảng trống pháp lý sau mốc trên.",
+    "chuDe": "Chuyển tiếp chính quyền hai cấp",
+    "canCuPhapLy": [
+      "Quy định chuyển tiếp về hiệu lực văn bản khi tổ chức chính quyền địa phương hai cấp"
+    ],
+    "ngayCapNhat": "2026-04-02"
+  },
+  {
+    "id": "HD-004",
+    "cauHoi": "Đơn vị không đồng ý với kết quả chấm điểm thì làm thế nào?",
+    "traLoi": "Đơn vị có 5 ngày làm việc kể từ ngày nhận kết quả để gửi giải trình. Giải trình được ghi vào phiếu thẩm định và xem xét trước khi chốt kết quả. Sau khi chốt, kết quả mới được công bố công khai.",
+    "chuDe": "Thẩm định và giải trình",
+    "canCuPhapLy": [
+      "Quy chế kiểm tra ngẫu nhiên nghị quyết Hội đồng nhân dân cấp xã"
+    ],
+    "ngayCapNhat": "2026-05-18"
+  },
+  {
+    "id": "HD-005",
+    "cauHoi": "Vì sao tin được rằng việc rút thăm là khách quan?",
+    "traLoi": "Vì rút thăm không dùng số ngẫu nhiên của máy mà dùng bộ sinh số có seed cố định, công thức seed là \"<năm>-W<tuần ISO>-<mã muối>\" với mã muối công bố trước. Toàn bộ danh sách ứng viên đầu vào, trọng số và kết quả được lưu vào kho công khai. Bất kỳ ai bấm nút \"Chạy lại để kiểm chứng\" cũng tính ra đúng kết quả cũ; nếu ai đó sửa danh sách trúng thì việc tính lại sẽ báo không khớp.",
+    "chuDe": "Rút thăm",
+    "canCuPhapLy": [
+      "Quy chế kiểm tra ngẫu nhiên nghị quyết Hội đồng nhân dân cấp xã"
+    ],
+    "ngayCapNhat": "2026-06-01"
+  }
+]
