@@ -1,1164 +1,1330 @@
 [
   {
     "ma": "TH-001",
-    "ten": "Phường Mẫu 01",
+    "maDvhc": "14812",
+    "ten": "Phường Bỉm Sơn",
     "loai": "phuong",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-002",
-    "ten": "Phường Mẫu 02",
+    "maDvhc": "14758",
+    "ten": "Phường Hàm Rồng",
     "loai": "phuong",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-003",
-    "ten": "Phường Mẫu 03",
+    "maDvhc": "14797",
+    "ten": "Phường Hạc Thành",
     "loai": "phuong",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-004",
-    "ten": "Phường Mẫu 04",
+    "maDvhc": "16645",
+    "ten": "Phường Hải Bình",
     "loai": "phuong",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-005",
-    "ten": "Phường Mẫu 05",
+    "maDvhc": "16597",
+    "ten": "Phường Hải Lĩnh",
     "loai": "phuong",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-09"
   },
   {
     "ma": "TH-006",
-    "ten": "Phường Mẫu 06",
+    "maDvhc": "16516",
+    "ten": "Phường Nam Sầm Sơn",
     "loai": "phuong",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-23"
   },
   {
     "ma": "TH-007",
-    "ten": "Phường Mẫu 07",
+    "maDvhc": "16654",
+    "ten": "Phường Nghi Sơn",
     "loai": "phuong",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-12"
   },
   {
     "ma": "TH-008",
-    "ten": "Phường Mẫu 08",
+    "maDvhc": "15925",
+    "ten": "Phường Nguyệt Viên",
     "loai": "phuong",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-30"
   },
   {
     "ma": "TH-009",
-    "ten": "Phường Mẫu 09",
+    "maDvhc": "16576",
+    "ten": "Phường Ngọc Sơn",
     "loai": "phuong",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-25"
   },
   {
     "ma": "TH-010",
-    "ten": "Phường Mẫu 10",
+    "maDvhc": "14818",
+    "ten": "Phường Quang Trung",
     "loai": "phuong",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-09-04"
   },
   {
     "ma": "TH-011",
-    "ten": "Phường Mẫu 11",
+    "maDvhc": "16522",
+    "ten": "Phường Quảng Phú",
     "loai": "phuong",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-02"
   },
   {
     "ma": "TH-012",
-    "ten": "Phường Mẫu 12",
+    "maDvhc": "16531",
+    "ten": "Phường Sầm Sơn",
     "loai": "phuong",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-013",
-    "ten": "Phường Mẫu 13",
+    "maDvhc": "16624",
+    "ten": "Phường Trúc Lâm",
     "loai": "phuong",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-04"
   },
   {
     "ma": "TH-014",
-    "ten": "Phường Mẫu 14",
+    "maDvhc": "16594",
+    "ten": "Phường Tân Dân",
     "loai": "phuong",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-08-23"
   },
   {
     "ma": "TH-015",
-    "ten": "Phường Mẫu 15",
+    "maDvhc": "16561",
+    "ten": "Phường Tĩnh Gia",
     "loai": "phuong",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-09-20"
   },
   {
     "ma": "TH-016",
-    "ten": "Phường Mẫu 16",
+    "maDvhc": "16609",
+    "ten": "Phường Đào Duy Từ",
     "loai": "phuong",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-29"
   },
   {
     "ma": "TH-017",
-    "ten": "Phường Mẫu 17",
+    "maDvhc": "16417",
+    "ten": "Phường Đông Quang",
     "loai": "phuong",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-07-08"
   },
   {
     "ma": "TH-018",
-    "ten": "Phường Mẫu 18",
+    "maDvhc": "16378",
+    "ten": "Phường Đông Sơn",
     "loai": "phuong",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-30"
   },
   {
     "ma": "TH-019",
-    "ten": "Phường Mẫu 19",
+    "maDvhc": "15853",
+    "ten": "Phường Đông Tiến",
     "loai": "phuong",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-21"
   },
   {
     "ma": "TH-020",
-    "ten": "Xã Mẫu 001",
+    "maDvhc": "15766",
+    "ten": "Xã An Nông",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-29"
   },
   {
     "ma": "TH-021",
-    "ten": "Xã Mẫu 002",
+    "maDvhc": "16171",
+    "ten": "Xã Ba Đình",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-022",
-    "ten": "Xã Mẫu 003",
+    "maDvhc": "15382",
+    "ten": "Xã Biện Thượng",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-18"
   },
   {
     "ma": "TH-023",
-    "ten": "Xã Mẫu 004",
+    "maDvhc": "14923",
+    "ten": "Xã Bá Thước",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-08-19"
   },
   {
     "ma": "TH-024",
-    "ten": "Xã Mẫu 005",
+    "maDvhc": "15607",
+    "ten": "Xã Bát Mọt",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-23"
   },
   {
     "ma": "TH-025",
-    "ten": "Xã Mẫu 006",
+    "maDvhc": "16591",
+    "ten": "Xã Các Sơn",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-04"
   },
   {
     "ma": "TH-026",
-    "ten": "Xã Mẫu 007",
+    "maDvhc": "16369",
+    "ten": "Xã Công Chính",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-23"
   },
   {
     "ma": "TH-027",
-    "ten": "Xã Mẫu 008",
+    "maDvhc": "15127",
+    "ten": "Xã Cẩm Thuỷ",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-08-12"
   },
   {
     "ma": "TH-028",
-    "ten": "Xã Mẫu 009",
+    "maDvhc": "15142",
+    "ten": "Xã Cẩm Thạch",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-13"
   },
   {
     "ma": "TH-029",
-    "ten": "Xã Mẫu 010",
+    "maDvhc": "15178",
+    "ten": "Xã Cẩm Tân",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-14"
   },
   {
     "ma": "TH-030",
-    "ten": "Xã Mẫu 011",
+    "maDvhc": "15148",
+    "ten": "Xã Cẩm Tú",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-11"
   },
   {
     "ma": "TH-031",
-    "ten": "Xã Mẫu 012",
+    "maDvhc": "15163",
+    "ten": "Xã Cẩm Vân",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-08"
   },
   {
     "ma": "TH-032",
-    "ten": "Xã Mẫu 013",
+    "maDvhc": "14959",
+    "ten": "Xã Cổ Lũng",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-033",
-    "ten": "Xã Mẫu 014",
+    "maDvhc": "15043",
+    "ten": "Xã Giao An",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-19"
   },
   {
     "ma": "TH-034",
-    "ten": "Xã Mẫu 015",
+    "maDvhc": "14896",
+    "ten": "Xã Hiền Kiệt",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-11-28"
   },
   {
     "ma": "TH-035",
-    "ten": "Xã Mẫu 016",
+    "maDvhc": "16072",
+    "ten": "Xã Hoa Lộc",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-05"
   },
   {
     "ma": "TH-036",
-    "ten": "Xã Mẫu 017",
+    "maDvhc": "16186",
+    "ten": "Xã Hoá Quỳ",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-037",
-    "ten": "Xã Mẫu 018",
+    "maDvhc": "15286",
+    "ten": "Xã Hoạt Giang",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-038",
-    "ten": "Xã Mẫu 019",
+    "maDvhc": "15976",
+    "ten": "Xã Hoằng Châu",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-09-10"
   },
   {
     "ma": "TH-039",
-    "ten": "Xã Mẫu 020",
+    "maDvhc": "15880",
+    "ten": "Xã Hoằng Giang",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-08-03"
   },
   {
     "ma": "TH-040",
-    "ten": "Xã Mẫu 021",
+    "maDvhc": "15865",
+    "ten": "Xã Hoằng Hoá",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-24"
   },
   {
     "ma": "TH-041",
-    "ten": "Xã Mẫu 022",
+    "maDvhc": "15961",
+    "ten": "Xã Hoằng Lộc",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-11-08"
   },
   {
     "ma": "TH-042",
-    "ten": "Xã Mẫu 023",
+    "maDvhc": "15889",
+    "ten": "Xã Hoằng Phú",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-05"
   },
   {
     "ma": "TH-043",
-    "ten": "Xã Mẫu 024",
+    "maDvhc": "15910",
+    "ten": "Xã Hoằng Sơn",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-044",
-    "ten": "Xã Mẫu 025",
+    "maDvhc": "16000",
+    "ten": "Xã Hoằng Thanh",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-06"
   },
   {
     "ma": "TH-045",
-    "ten": "Xã Mẫu 026",
+    "maDvhc": "15991",
+    "ten": "Xã Hoằng Tiến",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-09"
   },
   {
     "ma": "TH-046",
-    "ten": "Xã Mẫu 027",
+    "maDvhc": "15274",
+    "ten": "Xã Hà Long",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-047",
-    "ten": "Xã Mẫu 028",
+    "maDvhc": "15271",
+    "ten": "Xã Hà Trung",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-048",
-    "ten": "Xã Mẫu 029",
+    "maDvhc": "16012",
+    "ten": "Xã Hậu Lộc",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-31"
   },
   {
     "ma": "TH-049",
-    "ten": "Xã Mẫu 030",
+    "maDvhc": "16138",
+    "ten": "Xã Hồ Vương",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-050",
-    "ten": "Xã Mẫu 031",
+    "maDvhc": "14869",
+    "ten": "Xã Hồi Xuân",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-29"
   },
   {
     "ma": "TH-051",
-    "ten": "Xã Mẫu 032",
+    "maDvhc": "15682",
+    "ten": "Xã Hợp Tiến",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-08"
   },
   {
     "ma": "TH-052",
-    "ten": "Xã Mẫu 033",
+    "maDvhc": "15187",
+    "ten": "Xã Kim Tân",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-14"
   },
   {
     "ma": "TH-053",
-    "ten": "Xã Mẫu 034",
+    "maDvhc": "15112",
+    "ten": "Xã Kiên Thọ",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-27"
   },
   {
     "ma": "TH-054",
-    "ten": "Xã Mẫu 035",
+    "maDvhc": "15544",
+    "ten": "Xã Lam Sơn",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-055",
-    "ten": "Xã Mẫu 036",
+    "maDvhc": "15055",
+    "ten": "Xã Linh Sơn",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-16"
   },
   {
     "ma": "TH-056",
-    "ten": "Xã Mẫu 037",
+    "maDvhc": "15634",
+    "ten": "Xã Luận Thành",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-03-10"
   },
   {
     "ma": "TH-057",
-    "ten": "Xã Mẫu 038",
+    "maDvhc": "15298",
+    "ten": "Xã Lĩnh Toại",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-08-24"
   },
   {
     "ma": "TH-058",
-    "ten": "Xã Mẫu 039",
+    "maDvhc": "16438",
+    "ten": "Xã Lưu Vệ",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-08-07"
   },
   {
     "ma": "TH-059",
-    "ten": "Xã Mẫu 040",
+    "maDvhc": "15628",
+    "ten": "Xã Lương Sơn",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-19"
   },
   {
     "ma": "TH-060",
-    "ten": "Xã Mẫu 041",
+    "maDvhc": "15124",
+    "ten": "Xã Minh Sơn",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-061",
-    "ten": "Xã Mẫu 042",
+    "maDvhc": "14866",
+    "ten": "Xã Mường Chanh",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-16"
   },
   {
     "ma": "TH-062",
-    "ten": "Xã Mẫu 043",
+    "maDvhc": "14845",
+    "ten": "Xã Mường Lát",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-31"
   },
   {
     "ma": "TH-063",
-    "ten": "Xã Mẫu 044",
+    "maDvhc": "14854",
+    "ten": "Xã Mường Lý",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-16"
   },
   {
     "ma": "TH-064",
-    "ten": "Xã Mẫu 045",
+    "maDvhc": "15025",
+    "ten": "Xã Mường Mìn",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-03"
   },
   {
     "ma": "TH-065",
-    "ten": "Xã Mẫu 046",
+    "maDvhc": "16249",
+    "ten": "Xã Mậu Lâm",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-066",
-    "ten": "Xã Mẫu 047",
+    "maDvhc": "15013",
+    "ten": "Xã Na Mèo",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-25"
   },
   {
     "ma": "TH-067",
-    "ten": "Xã Mẫu 048",
+    "maDvhc": "14902",
+    "ten": "Xã Nam Xuân",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-09-30"
   },
   {
     "ma": "TH-068",
-    "ten": "Xã Mẫu 049",
+    "maDvhc": "16144",
+    "ten": "Xã Nga An",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-069",
-    "ten": "Xã Mẫu 050",
+    "maDvhc": "16093",
+    "ten": "Xã Nga Sơn",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-070",
-    "ten": "Xã Mẫu 051",
+    "maDvhc": "16114",
+    "ten": "Xã Nga Thắng",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-31"
   },
   {
     "ma": "TH-071",
-    "ten": "Xã Mẫu 052",
+    "maDvhc": "15106",
+    "ten": "Xã Nguyệt Ấn",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-06"
   },
   {
     "ma": "TH-072",
-    "ten": "Xã Mẫu 053",
+    "maDvhc": "15091",
+    "ten": "Xã Ngọc Liên",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-073",
-    "ten": "Xã Mẫu 054",
+    "maDvhc": "15061",
+    "ten": "Xã Ngọc Lặc",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-074",
-    "ten": "Xã Mẫu 055",
+    "maDvhc": "15250",
+    "ten": "Xã Ngọc Trạo",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-09-11"
   },
   {
     "ma": "TH-075",
-    "ten": "Xã Mẫu 056",
+    "maDvhc": "14864",
+    "ten": "Xã Nhi Sơn",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-03-21"
   },
   {
     "ma": "TH-076",
-    "ten": "Xã Mẫu 057",
+    "maDvhc": "16228",
+    "ten": "Xã Như Thanh",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-077",
-    "ten": "Xã Mẫu 058",
+    "maDvhc": "16174",
+    "ten": "Xã Như Xuân",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-20"
   },
   {
     "ma": "TH-078",
-    "ten": "Xã Mẫu 059",
+    "maDvhc": "16279",
+    "ten": "Xã Nông Cống",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-079",
-    "ten": "Xã Mẫu 060",
+    "maDvhc": "14878",
+    "ten": "Xã Phú Lệ",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-08-20"
   },
   {
     "ma": "TH-080",
-    "ten": "Xã Mẫu 061",
+    "maDvhc": "14890",
+    "ten": "Xã Phú Xuân",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-14"
   },
   {
     "ma": "TH-081",
-    "ten": "Xã Mẫu 062",
+    "maDvhc": "14956",
+    "ten": "Xã Pù Luông",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-07-05"
   },
   {
     "ma": "TH-082",
-    "ten": "Xã Mẫu 063",
+    "maDvhc": "14863",
+    "ten": "Xã Pù Nhi",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-083",
-    "ten": "Xã Mẫu 064",
+    "maDvhc": "15016",
+    "ten": "Xã Quan Sơn",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-10"
   },
   {
     "ma": "TH-084",
-    "ten": "Xã Mẫu 065",
+    "maDvhc": "14860",
+    "ten": "Xã Quang Chiểu",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-085",
-    "ten": "Xã Mẫu 066",
+    "maDvhc": "14953",
+    "ten": "Xã Quý Lương",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-22"
   },
   {
     "ma": "TH-086",
-    "ten": "Xã Mẫu 067",
+    "maDvhc": "15412",
+    "ten": "Xã Quý Lộc",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-087",
-    "ten": "Xã Mẫu 068",
+    "maDvhc": "16543",
+    "ten": "Xã Quảng Bình",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-088",
-    "ten": "Xã Mẫu 069",
+    "maDvhc": "16489",
+    "ten": "Xã Quảng Chính",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-089",
-    "ten": "Xã Mẫu 070",
+    "maDvhc": "16498",
+    "ten": "Xã Quảng Ngọc",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-090",
-    "ten": "Xã Mẫu 071",
+    "maDvhc": "16540",
+    "ten": "Xã Quảng Ninh",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-07"
   },
   {
     "ma": "TH-091",
-    "ten": "Xã Mẫu 072",
+    "maDvhc": "16480",
+    "ten": "Xã Quảng Yên",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-11-30"
   },
   {
     "ma": "TH-092",
-    "ten": "Xã Mẫu 073",
+    "maDvhc": "15553",
+    "ten": "Xã Sao Vàng",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-093",
-    "ten": "Xã Mẫu 074",
+    "maDvhc": "15010",
+    "ten": "Xã Sơn Thuỷ",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-30"
   },
   {
     "ma": "TH-094",
-    "ten": "Xã Mẫu 075",
+    "maDvhc": "15022",
+    "ten": "Xã Sơn Điện",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-23"
   },
   {
     "ma": "TH-095",
-    "ten": "Xã Mẫu 076",
+    "maDvhc": "14848",
+    "ten": "Xã Tam Chung",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-096",
-    "ten": "Xã Mẫu 077",
+    "maDvhc": "15019",
+    "ten": "Xã Tam Lư",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-097",
-    "ten": "Xã Mẫu 078",
+    "maDvhc": "15007",
+    "ten": "Xã Tam Thanh",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-098",
-    "ten": "Xã Mẫu 079",
+    "maDvhc": "16273",
+    "ten": "Xã Thanh Kỳ",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-04"
   },
   {
     "ma": "TH-099",
-    "ten": "Xã Mẫu 080",
+    "maDvhc": "16213",
+    "ten": "Xã Thanh Phong",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-18"
   },
   {
     "ma": "TH-100",
-    "ten": "Xã Mẫu 081",
+    "maDvhc": "16222",
+    "ten": "Xã Thanh Quân",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-11"
   },
   {
     "ma": "TH-101",
-    "ten": "Xã Mẫu 082",
+    "maDvhc": "14908",
+    "ten": "Xã Thiên Phủ",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-03-30"
   },
   {
     "ma": "TH-102",
-    "ten": "Xã Mẫu 083",
+    "maDvhc": "14980",
+    "ten": "Xã Thiết Ống",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-24"
   },
   {
     "ma": "TH-103",
-    "ten": "Xã Mẫu 084",
+    "maDvhc": "15772",
+    "ten": "Xã Thiệu Hoá",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-22"
   },
   {
     "ma": "TH-104",
-    "ten": "Xã Mẫu 085",
+    "maDvhc": "15796",
+    "ten": "Xã Thiệu Quang",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-13"
   },
   {
     "ma": "TH-105",
-    "ten": "Xã Mẫu 086",
+    "maDvhc": "15778",
+    "ten": "Xã Thiệu Tiến",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-09"
   },
   {
     "ma": "TH-106",
-    "ten": "Xã Mẫu 087",
+    "maDvhc": "15820",
+    "ten": "Xã Thiệu Toán",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-107",
-    "ten": "Xã Mẫu 088",
+    "maDvhc": "15835",
+    "ten": "Xã Thiệu Trung",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-20"
   },
   {
     "ma": "TH-108",
-    "ten": "Xã Mẫu 089",
+    "maDvhc": "15229",
+    "ten": "Xã Thành Vinh",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-15"
   },
   {
     "ma": "TH-109",
-    "ten": "Xã Mẫu 090",
+    "maDvhc": "16342",
+    "ten": "Xã Thăng Bình",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-07-20"
   },
   {
     "ma": "TH-110",
-    "ten": "Xã Mẫu 091",
+    "maDvhc": "15646",
+    "ten": "Xã Thường Xuân",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-111",
-    "ten": "Xã Mẫu 092",
+    "maDvhc": "16225",
+    "ten": "Xã Thượng Ninh",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-112",
-    "ten": "Xã Mẫu 093",
+    "maDvhc": "15211",
+    "ten": "Xã Thạch Bình",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-113",
-    "ten": "Xã Mẫu 094",
+    "maDvhc": "15085",
+    "ten": "Xã Thạch Lập",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-114",
-    "ten": "Xã Mẫu 095",
+    "maDvhc": "15199",
+    "ten": "Xã Thạch Quảng",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-07-20"
   },
   {
     "ma": "TH-115",
-    "ten": "Xã Mẫu 096",
+    "maDvhc": "15643",
+    "ten": "Xã Thắng Lộc",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-23"
   },
   {
     "ma": "TH-116",
-    "ten": "Xã Mẫu 097",
+    "maDvhc": "16309",
+    "ten": "Xã Thắng Lợi",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-21"
   },
   {
     "ma": "TH-117",
-    "ten": "Xã Mẫu 098",
+    "maDvhc": "15667",
+    "ten": "Xã Thọ Bình",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-118",
-    "ten": "Xã Mẫu 099",
+    "maDvhc": "15505",
+    "ten": "Xã Thọ Long",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-17"
   },
   {
     "ma": "TH-119",
-    "ten": "Xã Mẫu 100",
+    "maDvhc": "15568",
+    "ten": "Xã Thọ Lập",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-03-20"
   },
   {
     "ma": "TH-120",
-    "ten": "Xã Mẫu 101",
+    "maDvhc": "15754",
+    "ten": "Xã Thọ Ngọc",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-18"
   },
   {
     "ma": "TH-121",
-    "ten": "Xã Mẫu 102",
+    "maDvhc": "15763",
+    "ten": "Xã Thọ Phú",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-122",
-    "ten": "Xã Mẫu 103",
+    "maDvhc": "15499",
+    "ten": "Xã Thọ Xuân",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-23"
   },
   {
     "ma": "TH-123",
-    "ten": "Xã Mẫu 104",
+    "maDvhc": "16549",
+    "ten": "Xã Tiên Trang",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-124",
-    "ten": "Xã Mẫu 105",
+    "maDvhc": "16021",
+    "ten": "Xã Triệu Lộc",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-07"
   },
   {
     "ma": "TH-125",
-    "ten": "Xã Mẫu 106",
+    "maDvhc": "15664",
+    "ten": "Xã Triệu Sơn",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-126",
-    "ten": "Xã Mẫu 107",
+    "maDvhc": "16297",
+    "ten": "Xã Trung Chính",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-11"
   },
   {
     "ma": "TH-127",
-    "ten": "Xã Mẫu 108",
+    "maDvhc": "15001",
+    "ten": "Xã Trung Hạ",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-128",
-    "ten": "Xã Mẫu 109",
+    "maDvhc": "14857",
+    "ten": "Xã Trung Lý",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-20"
   },
   {
     "ma": "TH-129",
-    "ten": "Xã Mẫu 110",
+    "maDvhc": "14875",
+    "ten": "Xã Trung Sơn",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-09-29"
   },
   {
     "ma": "TH-130",
-    "ten": "Xã Mẫu 111",
+    "maDvhc": "14872",
+    "ten": "Xã Trung Thành",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-11"
   },
   {
     "ma": "TH-131",
-    "ten": "Xã Mẫu 112",
+    "maDvhc": "16636",
+    "ten": "Xã Trường Lâm",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-11-17"
   },
   {
     "ma": "TH-132",
-    "ten": "Xã Mẫu 113",
+    "maDvhc": "16348",
+    "ten": "Xã Trường Văn",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-12"
   },
   {
     "ma": "TH-133",
-    "ten": "Xã Mẫu 114",
+    "maDvhc": "15715",
+    "ten": "Xã Tân Ninh",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-11-09"
   },
   {
     "ma": "TH-134",
-    "ten": "Xã Mẫu 115",
+    "maDvhc": "15661",
+    "ten": "Xã Tân Thành",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-22"
   },
   {
     "ma": "TH-135",
-    "ten": "Xã Mẫu 116",
+    "maDvhc": "16108",
+    "ten": "Xã Tân Tiến",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-136",
-    "ten": "Xã Mẫu 117",
+    "maDvhc": "15361",
+    "ten": "Xã Tây Đô",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-05"
   },
   {
     "ma": "TH-137",
-    "ten": "Xã Mẫu 118",
+    "maDvhc": "16363",
+    "ten": "Xã Tượng Lĩnh",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-08"
   },
   {
     "ma": "TH-138",
-    "ten": "Xã Mẫu 119",
+    "maDvhc": "15316",
+    "ten": "Xã Tống Sơn",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-08-18"
   },
   {
     "ma": "TH-139",
-    "ten": "Xã Mẫu 120",
+    "maDvhc": "15190",
+    "ten": "Xã Vân Du",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-140",
-    "ten": "Xã Mẫu 121",
+    "maDvhc": "14974",
+    "ten": "Xã Văn Nho",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-25"
   },
   {
     "ma": "TH-141",
-    "ten": "Xã Mẫu 122",
+    "maDvhc": "15049",
+    "ten": "Xã Văn Phú",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-142",
-    "ten": "Xã Mẫu 123",
+    "maDvhc": "15349",
+    "ten": "Xã Vĩnh Lộc",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-06"
   },
   {
     "ma": "TH-143",
-    "ten": "Xã Mẫu 124",
+    "maDvhc": "16078",
+    "ten": "Xã Vạn Lộc",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-11-11"
   },
   {
     "ma": "TH-144",
-    "ten": "Xã Mẫu 125",
+    "maDvhc": "15622",
+    "ten": "Xã Vạn Xuân",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-17"
   },
   {
     "ma": "TH-145",
-    "ten": "Xã Mẫu 126",
+    "maDvhc": "16177",
+    "ten": "Xã Xuân Bình",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-26"
   },
   {
     "ma": "TH-146",
-    "ten": "Xã Mẫu 127",
+    "maDvhc": "15658",
+    "ten": "Xã Xuân Chinh",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-147",
-    "ten": "Xã Mẫu 128",
+    "maDvhc": "16234",
+    "ten": "Xã Xuân Du",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-09-11"
   },
   {
     "ma": "TH-148",
-    "ten": "Xã Mẫu 129",
+    "maDvhc": "15520",
+    "ten": "Xã Xuân Hoà",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-03-13"
   },
   {
     "ma": "TH-149",
-    "ten": "Xã Mẫu 130",
+    "maDvhc": "15592",
+    "ten": "Xã Xuân Lập",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-16"
   },
   {
     "ma": "TH-150",
-    "ten": "Xã Mẫu 131",
+    "maDvhc": "16258",
+    "ten": "Xã Xuân Thái",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   },
   {
     "ma": "TH-151",
-    "ten": "Xã Mẫu 132",
+    "maDvhc": "15574",
+    "ten": "Xã Xuân Tín",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-07-20"
   },
   {
     "ma": "TH-152",
-    "ten": "Xã Mẫu 133",
+    "maDvhc": "15031",
+    "ten": "Xã Yên Khương",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-03-31"
   },
   {
     "ma": "TH-153",
-    "ten": "Xã Mẫu 134",
+    "maDvhc": "15610",
+    "ten": "Xã Yên Nhân",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-29"
   },
   {
     "ma": "TH-154",
-    "ten": "Xã Mẫu 135",
+    "maDvhc": "15442",
+    "ten": "Xã Yên Ninh",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-09-29"
   },
   {
     "ma": "TH-155",
-    "ten": "Xã Mẫu 136",
+    "maDvhc": "15409",
+    "ten": "Xã Yên Phú",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-13"
   },
   {
     "ma": "TH-156",
-    "ten": "Xã Mẫu 137",
+    "maDvhc": "15034",
+    "ten": "Xã Yên Thắng",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-27"
   },
   {
     "ma": "TH-157",
-    "ten": "Xã Mẫu 138",
+    "maDvhc": "16264",
+    "ten": "Xã Yên Thọ",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-04"
   },
   {
     "ma": "TH-158",
-    "ten": "Xã Mẫu 139",
+    "maDvhc": "15421",
+    "ten": "Xã Yên Trường",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-04-12"
   },
   {
     "ma": "TH-159",
-    "ten": "Xã Mẫu 140",
+    "maDvhc": "15469",
+    "ten": "Xã Yên Định",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-11-03"
   },
   {
     "ma": "TH-160",
-    "ten": "Xã Mẫu 141",
+    "maDvhc": "14950",
+    "ten": "Xã Điền Lư",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-05-22"
   },
   {
     "ma": "TH-161",
-    "ten": "Xã Mẫu 142",
+    "maDvhc": "14932",
+    "ten": "Xã Điền Quang",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-02-05"
   },
   {
     "ma": "TH-162",
-    "ten": "Xã Mẫu 143",
+    "maDvhc": "16033",
+    "ten": "Xã Đông Thành",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-06-24"
   },
   {
     "ma": "TH-163",
-    "ten": "Xã Mẫu 144",
+    "maDvhc": "15448",
+    "ten": "Xã Định Hoà",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-10-04"
   },
   {
     "ma": "TH-164",
-    "ten": "Xã Mẫu 145",
+    "maDvhc": "15457",
+    "ten": "Xã Định Tân",
     "loai": "xa",
-    "vung": "mien_nui",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2025-12-15"
   },
   {
     "ma": "TH-165",
-    "ten": "Xã Mẫu 146",
+    "maDvhc": "15058",
+    "ten": "Xã Đồng Lương",
     "loai": "xa",
-    "vung": "dong_bang",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": "2026-01-02"
   },
   {
     "ma": "TH-166",
-    "ten": "Xã Mẫu 147",
+    "maDvhc": "15724",
+    "ten": "Xã Đồng Tiến",
     "loai": "xa",
-    "vung": "ven_bien",
+    "vung": "chua_phan_loai",
     "lanKiemTraGanNhat": null
   }
 ]

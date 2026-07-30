@@ -15,7 +15,13 @@ const GOC = resolve(__dirname, '../..');
 const doc = <T,>(duongDan: string): T =>
   JSON.parse(readFileSync(resolve(GOC, duongDan), 'utf8')) as T;
 
+type DanhMucDvhc = {
+  tong_so: number;
+  don_vi: { ma_dvhc: string; ten_day_du: string; loai: string }[];
+};
+
 const cauHinh = doc<CauHinh>('data/cauhinh.json');
+const danhMuc = doc<DanhMucDvhc>('data/donvi_hanhchinh_thanhhoa_166.json');
 const ngayLe = doc<NgayLe[]>('data/ngayle.json');
 const donVi = doc<DonVi[]>('data/mau/donvi.json');
 const nghiQuyet = doc<NghiQuyet[]>('data/mau/nghiquyet/2026.json');
@@ -36,6 +42,20 @@ describe('cấu hình', () => {
   });
 });
 
+describe('danh mục đơn vị hành chính', () => {
+  it('tệp nguồn có đủ 166 đơn vị, 19 phường và 147 xã', () => {
+    expect(danhMuc.tong_so).toBe(166);
+    expect(danhMuc.don_vi).toHaveLength(166);
+    expect(danhMuc.don_vi.filter((d) => d.loai === 'Phường')).toHaveLength(19);
+    expect(danhMuc.don_vi.filter((d) => d.loai === 'Xã')).toHaveLength(147);
+  });
+
+  it('mã đơn vị hành chính là 5 chữ số và không trùng nhau', () => {
+    for (const d of danhMuc.don_vi) expect(d.ma_dvhc).toMatch(/^\d{5}$/);
+    expect(new Set(danhMuc.don_vi.map((d) => d.ma_dvhc)).size).toBe(166);
+  });
+});
+
 describe('dữ liệu giả lập', () => {
   it('có đủ 166 xã, phường', () => {
     expect(donVi).toHaveLength(166);
@@ -45,10 +65,21 @@ describe('dữ liệu giả lập', () => {
 
   it('mã đơn vị không trùng nhau', () => {
     expect(new Set(donVi.map((d) => d.ma)).size).toBe(donVi.length);
+    expect(new Set(donVi.map((d) => d.maDvhc)).size).toBe(donVi.length);
   });
 
-  it('không có tên đơn vị nào mạo nhận là xã, phường có thật', () => {
-    for (const d of donVi) expect(d.ten).toMatch(/Mẫu/);
+  it('tên và mã đơn vị lấy đúng từ danh mục chính thức, không tự chế', () => {
+    expect(donVi).toHaveLength(danhMuc.don_vi.length);
+    donVi.forEach((d, i) => {
+      const goc = danhMuc.don_vi[i]!;
+      expect(d.ten).toBe(goc.ten_day_du);
+      expect(d.maDvhc).toBe(goc.ma_dvhc);
+      expect(d.loai).toBe(goc.loai === 'Phường' ? 'phuong' : 'xa');
+    });
+  });
+
+  it('không tự gán vùng cho xã, phường có thật khi danh mục nguồn bỏ trống', () => {
+    for (const d of donVi) expect(d.vung).toBe('chua_phan_loai');
   });
 
   it('id nghị quyết không trùng và trỏ tới đơn vị có thật', () => {

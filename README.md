@@ -117,8 +117,19 @@ npm run lint
 lập** để chạy thử, và giao diện hiện dải cảnh báo. Chi tiết trong
 [`data/README.md`](data/README.md).
 
-Bộ dữ liệu giả lập gồm 166 đơn vị hư cấu mang tên “Xã Mẫu 001”, “Phường Mẫu 01”… **Không có
-số liệu thật của bất kỳ xã, phường cụ thể nào.**
+Tên và mã 166 xã, phường lấy từ danh mục chính thức
+[`data/donvi_hanhchinh_thanhhoa_166.json`](data/donvi_hanhchinh_thanhhoa_166.json)
+(Nghị quyết 1686/NQ-UBTVQH15 ngày 16/6/2025, kèm mã đơn vị hành chính 5 chữ số của Tổng cục
+Thống kê). **Tên đơn vị là thật; mọi số liệu còn lại — nghị quyết, điểm số, xếp loại, kiến
+nghị — đều hư cấu.** Trong đó có một trường hợp bị xếp “chưa đạt · có nội dung trái pháp
+luật”, gắn với tên một xã có thật: cân nhắc khi trình chiếu hoặc chia sẻ ảnh màn hình tách
+khỏi dải cảnh báo.
+
+Sinh lại toàn bộ bộ dữ liệu giả lập:
+
+```bash
+npm run sinh-du-lieu-mau
+```
 
 > **`data/ngayle.json` cần bổ sung.** Hiện chỉ có bốn ngày nghỉ lễ theo dương lịch. Các ngày
 > nghỉ theo âm lịch và ngày nghỉ bù phải cập nhật theo thông báo hằng năm. Thiếu ngày lễ thì

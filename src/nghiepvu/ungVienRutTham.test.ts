@@ -4,8 +4,22 @@ import { DIEM_NHOM_RONG } from './chamDiem';
 import type { DonVi, DotKiemTra, KetQuaThamDinh, NghiQuyet } from '../kieu';
 
 const donVi: DonVi[] = [
-  { ma: 'TH-001', ten: 'Đơn vị 1', loai: 'xa', vung: 'dong_bang', lanKiemTraGanNhat: '2026-06-01' },
-  { ma: 'TH-002', ten: 'Đơn vị 2', loai: 'phuong', vung: 'ven_bien', lanKiemTraGanNhat: null },
+  {
+    ma: 'TH-001',
+    maDvhc: '99001',
+    ten: 'Đơn vị thử 1',
+    loai: 'xa',
+    vung: 'chua_phan_loai',
+    lanKiemTraGanNhat: '2026-06-01',
+  },
+  {
+    ma: 'TH-002',
+    maDvhc: '99002',
+    ten: 'Đơn vị thử 2',
+    loai: 'phuong',
+    vung: 'chua_phan_loai',
+    lanKiemTraGanNhat: null,
+  },
 ];
 
 function nq(id: string, maDonVi: string, phan: Partial<NghiQuyet> = {}): NghiQuyet {

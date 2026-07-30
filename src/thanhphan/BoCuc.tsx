@@ -74,8 +74,9 @@ export default function BoCuc() {
           role="status"
           className="border-b border-[#E5CFA0] bg-[#FDF6E7] px-4 py-2 text-center text-[0.9375rem] text-[#6B4602] sm:px-6"
         >
-          Hệ thống đang chạy trên <strong>dữ liệu giả lập</strong> trong <code>data/mau/</code>.
-          Số liệu dưới đây không phải số liệu thật của các xã, phường.
+          Tên xã, phường là tên thật theo danh mục đơn vị hành chính. Còn lại — nghị quyết, kết
+          quả chấm điểm, xếp loại, kiến nghị — đều là <strong>số liệu giả lập</strong> trong{' '}
+          <code>data/mau/</code> để chạy thử, <strong>không phản ánh thực tế của bất kỳ đơn vị nào</strong>.
         </p>
       )}
 

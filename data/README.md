@@ -19,6 +19,7 @@ Tệp thật luôn được ưu tiên.
 | `cauhinh.json` | Mã muối rút thăm, tên kho, năm làm việc | `data/` — thật |
 | `tieuchi.json` | Năm nhóm tiêu chí chấm điểm và chi tiết từng tiêu chí | `data/` — thật |
 | `ngayle.json` | Ngày nghỉ lễ, dùng để tính ngày làm việc | `data/` — thật, **cần bổ sung** |
+| `donvi_hanhchinh_thanhhoa_166.json` | Danh mục 166 xã, phường — nguồn gốc của tên đơn vị | `data/` — thật |
 | `donvi.json` | Danh sách xã, phường | `data/mau/` — giả lập |
 | `nghiquyet/<năm>.json` | Nghị quyết đã ban hành | `data/mau/` — giả lập |
 | `dotkiemtra/muc-luc.json` | Danh sách mã kỳ đã rút thăm | `data/mau/` — giả lập |
@@ -30,14 +31,45 @@ Tệp thật luôn được ưu tiên.
 | `bangtin.json` | Bảng tin điều hành | `data/mau/` — giả lập |
 | `files/<năm>/…` | Bản PDF nghị quyết, tối đa 10 MB mỗi tệp | chưa có |
 
+## Danh mục đơn vị hành chính
+
+`donvi_hanhchinh_thanhhoa_166.json` là danh mục chính thức 166 xã, phường (19 phường,
+147 xã) theo Nghị quyết 1686/NQ-UBTVQH15 ngày 16/6/2025, kèm mã đơn vị hành chính 5 chữ số
+theo danh mục của Tổng cục Thống kê. Đây là **nguồn duy nhất** của tên và mã đơn vị; không
+gõ tay tên xã, phường ở chỗ khác.
+
+Trường `vung` trong danh mục nguồn để trống. Hệ thống để nguyên là `chua_phan_loai` thay vì
+tự gán đồng bằng / ven biển / miền núi — không bịa đặc điểm cho đơn vị có thật. Khi có văn
+bản phân vùng chính thức thì cập nhật lại.
+
 ## Dữ liệu giả lập trong `mau/`
 
-`data/mau/` chứa **166 đơn vị hư cấu** mang tên "Xã Mẫu 001", "Phường Mẫu 01"… cùng nghị
-quyết, kết quả chấm điểm và kiến nghị hư cấu. Không có số liệu thật của bất kỳ xã, phường
-cụ thể nào ở đây, và cũng không được đưa số liệu thật vào thư mục này.
+`data/mau/` dùng **tên xã, phường thật** lấy từ danh mục trên, nhưng **mọi số liệu đều hư
+cấu**: nghị quyết, điểm số, xếp loại, kiến nghị. Giao diện hiện dải cảnh báo nói rõ điều này.
 
-Đợt rút thăm mẫu `dotkiemtra/2026-W30.json` được sinh bằng đúng thuật toán trong
-`src/nghiepvu/rutTham.ts`, nên nút **"Chạy lại để kiểm chứng"** trên trang Rút thăm sẽ báo khớp.
+> Kết quả chấm điểm giả lập có gắn với tên đơn vị có thật, trong đó có một trường hợp bị xếp
+> "chưa đạt" vì "có nội dung trái pháp luật". **Ảnh chụp màn hình tách khỏi dải cảnh báo sẽ
+> thành lời cáo buộc sai về một xã có thật.** Cân nhắc kỹ khi trình chiếu hoặc chia sẻ.
+
+Không được đưa số liệu thật vào thư mục `mau/`.
+
+Toàn bộ bộ dữ liệu này sinh lại được:
+
+```bash
+npm run sinh-du-lieu-mau
+```
+
+Script `scripts/sinh-du-lieu-mau.mjs` dùng bộ sinh số có seed cố định nên chạy bao nhiêu lần
+cũng ra đúng kết quả cũ. Đợt rút thăm mẫu `dotkiemtra/2026-W30.json` được sinh bằng đúng
+thuật toán trong `src/nghiepvu/rutTham.ts`, nên nút **"Chạy lại để kiểm chứng"** trên trang
+Rút thăm báo khớp.
+
+## Chuyển sang chạy thật
+
+Tạo `data/donvi.json` từ danh mục chính thức — giữ nguyên `ma`, `maDvhc`, `ten`, `loai`, đặt
+`lanKiemTraGanNhat` là `null` cho mọi đơn vị vì chưa đơn vị nào được kiểm tra. Tệp này ưu tiên
+hơn `data/mau/donvi.json`. Sau đó nhập nghị quyết thật qua trang Nghị quyết; khi đủ các tệp
+thật thì dải cảnh báo tự tắt.
 
 ## `ngayle.json` cần bổ sung hằng năm
 

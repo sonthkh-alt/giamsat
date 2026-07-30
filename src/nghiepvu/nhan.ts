@@ -33,6 +33,7 @@ export const NHAN_VUNG: Readonly<Record<Vung, string>> = {
   dong_bang: 'Đồng bằng',
   ven_bien: 'Ven biển',
   mien_nui: 'Miền núi',
+  chua_phan_loai: 'Chưa phân loại',
 };
 
 /** Dấu thanh và dấu phụ tổ hợp trong bảng Unicode. */

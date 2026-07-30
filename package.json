@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit && tsc -p tsconfig.node.json",
     "lint": "eslint .",
+    "sinh-du-lieu-mau": "node scripts/sinh-du-lieu-mau.mjs",
     "test": "vitest run"
   },
   "dependencies": {

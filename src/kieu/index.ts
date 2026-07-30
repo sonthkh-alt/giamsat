@@ -2,10 +2,17 @@
 // Định danh nghiệp vụ dùng tiếng Việt không dấu để đối chiếu với Quy chế.
 
 export type LoaiDonVi = 'xa' | 'phuong';
-export type Vung = 'dong_bang' | 'ven_bien' | 'mien_nui';
+
+/**
+ * Phân vùng địa lý. `chua_phan_loai` dùng khi chưa có căn cứ chính thức —
+ * thà để trống còn hơn gán bừa một vùng cho xã, phường có thật.
+ */
+export type Vung = 'dong_bang' | 'ven_bien' | 'mien_nui' | 'chua_phan_loai';
 
 export type DonVi = {
-  ma: string; // "TH-001"
+  ma: string; // "TH-001" — mã nội bộ, ổn định, dùng dựng id nghị quyết
+  /** Mã đơn vị hành chính 5 chữ số theo danh mục của Tổng cục Thống kê. */
+  maDvhc: string; // "14812"
   ten: string; // "Phường Hạc Thành"
   loai: LoaiDonVi;
   vung: Vung;
