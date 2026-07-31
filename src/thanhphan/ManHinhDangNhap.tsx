@@ -52,11 +52,7 @@ export default function ManHinhDangNhap({ khoTaiKhoan }: { khoTaiKhoan: KhoTaiKh
                 <code>data/nguoidung.json</code>.
               </p>
             </div>
-          ) : (
-            <p className="text-[0.9375rem] text-[#4A536B]">
-              Dùng tài khoản do quản trị hệ thống cấp.
-            </p>
-          )}
+          ) : null}
 
           {loi && (
             <div role="alert" className="border border-canhbao bg-[#FDF0F2] px-3 py-2">
@@ -103,10 +99,6 @@ export default function ManHinhDangNhap({ khoTaiKhoan }: { khoTaiKhoan: KhoTaiKh
             {dangGui ? 'Đang kiểm tra…' : 'Đăng nhập'}
           </button>
 
-          <p className="text-[0.875rem] text-[#4A536B]">
-            Quên mật khẩu thì liên hệ quản trị hệ thống để đặt lại. Phiên đăng nhập kết thúc khi
-            bạn đóng tab.
-          </p>
         </form>
       </main>
     </div>

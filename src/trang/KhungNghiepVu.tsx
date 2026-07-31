@@ -69,19 +69,7 @@ export default function KhungNghiepVu() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl">Khung nghiệp vụ giám sát</h2>
-        <p className="max-w-[85ch] text-[0.9375rem] text-[#4A536B]">
-          Mười hai nhóm nghiệp vụ là xương sống dữ liệu của hệ thống. Mọi hồ sơ đều thuộc đúng một
-          nhóm và được gắn đồng thời ba thuộc tính: nhóm nghiệp vụ, chủ thể giám sát, cấp hành
-          chính. Nhờ đó cùng một kho dữ liệu kết xuất được báo cáo theo bất kỳ chiều nào mà không
-          phải nhập lại.
-        </p>
       </div>
-
-      <ThongBao loai="luu_y" tieuDe="Đây là cấu hình, không phải mã nguồn">
-        Toàn bộ khung dưới đây đọc từ <code>data/khung-nghiep-vu.json</code> (phiên bản{' '}
-        <span className="so">{du.khung.phienBan}</span>). Khi quy định pháp luật thay đổi, người
-        quản trị sửa tệp cấu hình — không sửa mã nguồn.
-      </ThongBao>
 
       <div className="khung flex flex-wrap items-end gap-4 p-4">
         <div>

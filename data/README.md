@@ -6,8 +6,7 @@ JSON ở đây, tải bằng `fetch()` khi mở trang và ghi lại bằng GitHu
 ## Cách tra dữ liệu
 
 Với mỗi tệp, ứng dụng đọc `data/<tên tệp>` trước. Nếu tệp đó chưa có (mã 404) thì lùi về
-`data/mau/<tên tệp>` — bộ **dữ liệu giả lập** phục vụ chạy thử. Khi đang chạy trên dữ liệu
-giả lập, giao diện hiện một dải cảnh báo ở đầu trang.
+`data/mau/<tên tệp>` — bộ **dữ liệu giả lập** phục vụ chạy thử.
 
 Muốn chuyển sang dữ liệu thật: tạo tệp tương ứng trong `data/` (không nằm trong `mau/`).
 Tệp thật luôn được ưu tiên.
@@ -56,9 +55,13 @@ muối và chuỗi băm PBKDF2-SHA256 210.000 vòng. **Không lưu mật khẩu 
 
 Cấp và quản lý bằng `npm run tai-khoan`, rồi commit lại tệp này.
 
+**Sáu tài khoản có sẵn đang dùng chung mật khẩu `123456`:** `quantri`, `thuongtruc`,
+`vanphong`, `banphapche`, `daibieu`, `xamau`.
+
 > Tệp nằm trong kho public nên ai cũng tải về được. Băm PBKDF2 chỉ làm việc dò mật khẩu tốn
-> kém, không làm nó bất khả thi. Đặt mật khẩu dài, không dùng lại mật khẩu của hệ thống khác,
-> và coi đăng nhập là phân việc trong ứng dụng chứ không phải kiểm soát truy cập thật.
+> kém, không làm nó bất khả thi — và `123456` thì dò ra tức thì. Mật khẩu này chỉ dùng để chạy
+> thử. **Trước khi vận hành thật phải đặt lại mật khẩu dài cho từng tài khoản**, hoặc chuyển kho
+> sang private. Coi đăng nhập là phân việc trong ứng dụng, không phải kiểm soát truy cập thật.
 
 ## Danh mục đơn vị hành chính
 
@@ -74,12 +77,12 @@ bản phân vùng chính thức thì cập nhật lại.
 ## Dữ liệu giả lập trong `mau/`
 
 `data/mau/` dùng **tên xã, phường thật** lấy từ danh mục trên, nhưng **mọi số liệu đều hư
-cấu**: nghị quyết, điểm số, xếp loại, nhiệm vụ sau giám sát. Giao diện hiện dải cảnh báo nói
-rõ điều này.
+cấu**: nghị quyết, điểm số, xếp loại, nhiệm vụ sau giám sát.
 
 > Kết quả chấm điểm giả lập có gắn với tên đơn vị có thật, trong đó có trường hợp bị xếp
-> "chưa đạt" vì "có nội dung trái pháp luật". **Ảnh chụp màn hình tách khỏi dải cảnh báo sẽ
-> thành lời cáo buộc sai về một xã có thật.** Cân nhắc kỹ khi trình chiếu hoặc chia sẻ.
+> "chưa đạt" vì "có nội dung trái pháp luật". **Giao diện không còn dải cảnh báo nào nhắc rằng
+> đây là số liệu giả lập**, nên ảnh chụp màn hình sẽ đọc như kết luận thật về một xã có thật.
+> Cân nhắc kỹ khi trình chiếu hoặc chia sẻ.
 
 Bộ dữ liệu gồm hai kỳ rà soát để chạy thử đủ vòng đời: kỳ `2026-06` đã chốt kết quả, kỳ
 `2026-07` đang thẩm định. Một số nghị quyết được cố tình gieo dấu hiệu (căn cứ đã hết hiệu
@@ -112,7 +115,7 @@ phụ thuộc tệp này.
 Tạo `data/donvi.json` từ danh mục chính thức — giữ nguyên `ma`, `maDvhc`, `ten`, `loai`, đặt
 `lanRaSoatGanNhat` là `null` cho mọi đơn vị vì chưa đơn vị nào được rà soát. Tệp này ưu tiên
 hơn `data/mau/donvi.json`. Sau đó nhập nghị quyết thật qua trang Nghị quyết; khi đủ các tệp
-thật thì dải cảnh báo tự tắt.
+thật thì hệ thống tự dùng dữ liệu thật.
 
 ## Quy tắc bắt buộc
 

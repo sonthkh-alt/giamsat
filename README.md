@@ -129,6 +129,7 @@ vòng, mỗi tài khoản một muối riêng; không lưu mật khẩu gốc.
 ```bash
 npm run tai-khoan cap <tên đăng nhập> <mật khẩu> <vai trò> "<họ tên>" [mã đơn vị]
 npm run tai-khoan doi-mat-khau <tên đăng nhập> <mật khẩu mới>
+npm run tai-khoan dat-lai-tat-ca <mật khẩu mới>
 npm run tai-khoan khoa <tên đăng nhập>
 npm run tai-khoan danh-sach
 ```
@@ -144,6 +145,10 @@ npm run tai-khoan danh-sach
 
 Tách bạch thẩm quyền được khóa bằng kiểm thử: Văn phòng lập danh mục nhưng không quyết định;
 Ban chấm điểm nhưng không chốt kết quả.
+
+Sáu tài khoản có sẵn để chạy thử — `quantri`, `thuongtruc`, `vanphong`, `banphapche`,
+`daibieu`, `xamau` — dùng chung mật khẩu `123456`. **Đặt lại trước khi vận hành thật:**
+`npm run tai-khoan dat-lai-tat-ca "<mật khẩu mới>"`.
 
 ### Vì sao vẫn còn mã kết nối kho
 
@@ -221,7 +226,7 @@ soát gần nhất — phục vụ cách thức `luan_phien`.
 ## Dữ liệu
 
 Ứng dụng đọc `data/<tệp>` trước; nếu chưa có thì lùi về `data/mau/<tệp>` — bộ **dữ liệu giả
-lập** để chạy thử, và giao diện hiện dải cảnh báo. Chi tiết trong
+lập** để chạy thử. Chi tiết trong
 [`data/README.md`](data/README.md).
 
 Tên và mã 166 xã, phường lấy từ danh mục chính thức
@@ -229,7 +234,7 @@ Tên và mã 166 xã, phường lấy từ danh mục chính thức
 (Nghị quyết 1686/NQ-UBTVQH15 ngày 16/6/2025). **Tên đơn vị là thật; mọi số liệu còn lại —
 nghị quyết, điểm số, xếp loại, nhiệm vụ sau giám sát — đều hư cấu.** Trong đó có trường hợp bị
 xếp "chưa đạt · có nội dung trái pháp luật" gắn với tên một xã có thật: cân nhắc khi trình
-chiếu hoặc chia sẻ ảnh màn hình tách khỏi dải cảnh báo.
+chiếu hoặc chia sẻ ảnh màn hình.
 
 > **`data/ngayle.json` cần bổ sung.** Hiện chỉ có bốn ngày nghỉ lễ theo dương lịch. Các ngày
 > nghỉ theo âm lịch và ngày nghỉ bù phải cập nhật theo thông báo hằng năm. Thiếu ngày lễ thì

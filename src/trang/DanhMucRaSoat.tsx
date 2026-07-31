@@ -186,11 +186,6 @@ export default function DanhMucRaSoat() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl">Danh mục rà soát văn bản quy phạm pháp luật</h2>
-        <p className="max-w-[85ch] text-[0.9375rem] text-[#4A536B]">
-          Nhóm nghiệp vụ <span className="so">GS-02</span>. Hệ thống tập hợp, phân tích và{' '}
-          <strong>trình danh mục đề xuất</strong>; thẩm quyền quyết định danh mục chính thức thuộc
-          Thường trực Hội đồng nhân dân tỉnh. Máy đề xuất, người quyết định.
-        </p>
       </div>
 
       <div className="khung flex flex-wrap items-end gap-4 p-4">
@@ -249,12 +244,6 @@ export default function DanhMucRaSoat() {
 
       {!dot ? (
         <section className="space-y-4">
-          <ThongBao loai="luu_y" tieuDe={`Kỳ ${hienThiKyThang(kyDangXem)} chưa có danh mục`}>
-            Ngày {du.cauHinh.ngayTongHop} hằng tháng hệ thống tổng hợp nghị quyết cập nhật trong
-            kỳ và chạy phân tích; ngày {du.cauHinh.ngayTrinhDanhMuc} Văn phòng trình danh mục đề
-            xuất kèm lý do từng văn bản.
-          </ThongBao>
-
           <div className="khung flex flex-wrap items-end gap-4 p-4">
             <div>
               <label className="nhan-truong" htmlFor="linh-vuc-trong-tam">
@@ -461,13 +450,6 @@ export default function DanhMucRaSoat() {
             </p>
           )}
 
-          {dot.seedNgauNhien && (
-            <p className="text-[0.9375rem] text-[#4A536B]">
-              Phần bổ sung ngẫu nhiên dùng seed công khai{' '}
-              <span className="so">{dot.seedNgauNhien}</span> — tính lại được từ dữ liệu trong kho.
-            </p>
-          )}
-
           {dot.nhatKyThayDoi.length > 0 && (
             <details className="khung px-4 py-3">
               <summary className="cursor-pointer font-medium">
@@ -520,10 +502,6 @@ function BieuMauQuyetDinh({
       }}
     >
       <h4 className="font-semibold">Ghi nhận quyết định của Thường trực</h4>
-      <p className="text-[0.9375rem] text-[#4A536B]">
-        Danh mục chính thức được quyết định tại phiên họp Thường trực và ghi vào thông báo kết
-        luận. Nhập số thông báo để khóa danh mục lại.
-      </p>
       <div className="grid gap-3 sm:grid-cols-[2fr_auto]">
         <div>
           <label className="nhan-truong" htmlFor="so-thong-bao">

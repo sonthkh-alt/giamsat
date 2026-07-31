@@ -189,11 +189,9 @@ export default function HoSoGiamSat() {
           )}
           {NHOM_CO_MAN_HINH_RIENG[nhomDangChon.ma] && (
             <p className="mt-3 text-[0.9375rem]">
-              Nhóm này có màn hình nghiệp vụ riêng:{' '}
               <a href={`#${NHOM_CO_MAN_HINH_RIENG[nhomDangChon.ma]!.den}`} className="underline">
-                {NHOM_CO_MAN_HINH_RIENG[nhomDangChon.ma]!.ten}
+                Sang màn hình {NHOM_CO_MAN_HINH_RIENG[nhomDangChon.ma]!.ten}
               </a>
-              . Màn hình này chỉ dùng để lưu hồ sơ bổ sung.
             </p>
           )}
         </div>

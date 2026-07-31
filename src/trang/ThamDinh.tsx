@@ -21,7 +21,6 @@ import {
   mucCanhBao,
   soNgayLamViecConLai,
   HAN_GIAI_TRINH,
-  HAN_THAM_DINH,
 } from '../nghiepvu/hanXuLy';
 import { thieuQuyen } from '../nghiepvu/phanQuyen';
 import ManHinhTrong from '../thanhphan/ManHinhTrong';
@@ -135,11 +134,8 @@ export default function ThamDinh() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="text-xl">Thẩm định văn bản</h2>
-          <p className="max-w-[85ch] text-[0.9375rem] text-[#4A536B]">
-            Thang 100 điểm, năm nhóm tiêu chí. Hoàn thành thẩm định trong {HAN_THAM_DINH} ngày làm
-            việc kể từ ngày mở đợt — hạn kỳ này là{' '}
-            <span className="so">{hienThiNgay(dot.hanThamDinh)}</span>. Đơn vị có{' '}
-            {HAN_GIAI_TRINH} ngày làm việc để giải trình.
+          <p className="text-[0.9375rem] text-[#4A536B]">
+            Hạn thẩm định <span className="so">{hienThiNgay(dot.hanThamDinh)}</span>
           </p>
         </div>
         <div>
@@ -167,8 +163,7 @@ export default function ThamDinh() {
 
       {du.homNay > dot.hanThamDinh && (
         <ThongBao loai="luu_y" tieuDe="Đã qua hạn hoàn thành thẩm định">
-          Hạn thẩm định của kỳ này là {hienThiNgay(dot.hanThamDinh)}. Các phiếu chưa lập cần hoàn
-          thành sớm để kịp công bố tại phiên họp tháng sau.
+          Hạn là {hienThiNgay(dot.hanThamDinh)}.
         </ThongBao>
       )}
 
@@ -311,8 +306,8 @@ export default function ThamDinh() {
           </tbody>
         </table>
         <p className="mt-3 text-[0.9375rem] text-[#4A536B]">
-          Xếp loại: Tốt từ 90 điểm · Khá 75–89 · Đạt 60–74 · Chưa đạt dưới 60. Nếu văn bản có nội
-          dung trái pháp luật thì xếp loại Chưa đạt, bất kể tổng điểm.
+          Tốt ≥ 90 · Khá 75–89 · Đạt 60–74 · Chưa đạt &lt; 60. Có nội dung trái pháp luật thì luôn
+          Chưa đạt.
         </p>
         {du.tieuChi.length > 0 && (
           <ul className="mt-3 space-y-2">
@@ -443,10 +438,7 @@ function PhieuChamDiem({
           onChange={(e) => datTraiPhapLuat(e.target.checked)}
         />
         <span>
-          Văn bản có nội dung trái pháp luật.
-          <span className="block text-[0.9375rem] text-[#4A536B]">
-            Đánh dấu ô này thì xếp loại là Chưa đạt, bất kể tổng điểm.
-          </span>
+          Văn bản có nội dung trái pháp luật
         </span>
       </label>
 
@@ -558,9 +550,7 @@ function ChiTietKetQua({
       </div>
 
       {ketQua.coNoiDungTraiPhapLuat && (
-        <ThongBao loai="loi" tieuDe="Có nội dung trái pháp luật">
-          Văn bản bị xếp loại Chưa đạt theo quy định, không phụ thuộc tổng điểm.
-        </ThongBao>
+        <ThongBao loai="loi" tieuDe="Có nội dung trái pháp luật" />
       )}
 
       <div>

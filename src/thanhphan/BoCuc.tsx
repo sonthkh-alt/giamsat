@@ -88,16 +88,6 @@ export default function BoCuc() {
         </nav>
       </header>
 
-      {du.dangDungDuLieuMau && (
-        <p
-          role="status"
-          className="border-b border-[#E5CFA0] bg-[#FDF6E7] px-4 py-2 text-center text-[0.9375rem] text-[#6B4602] sm:px-6"
-        >
-          Tên xã, phường là thật; nghị quyết, điểm số và nhiệm vụ đều là{' '}
-          <strong>số liệu giả lập</strong>, không phản ánh thực tế của bất kỳ đơn vị nào.
-        </p>
-      )}
-
       <main id="noi-dung" className="mx-auto w-full max-w-[1200px] flex-1 px-4 py-6 sm:px-6">
         <Outlet />
       </main>

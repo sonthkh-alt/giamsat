@@ -57,10 +57,7 @@ export default function QuanTri() {
           </ul>
         )}
         {!coKetNoi && phien && quyenCuaVaiTro(phien.vaiTro).length > 0 && (
-          <p className="mt-3 text-[0.9375rem] text-[#4A536B]">
-            Máy trạm này chưa cấu hình kết nối kho nên các thao tác ghi đang bị khóa. Quản trị hệ
-            thống cấu hình một lần cho mỗi máy.
-          </p>
+          <p className="mt-3 text-[0.9375rem] text-canhbao">Máy trạm chưa kết nối kho.</p>
         )}
       </section>
 
@@ -193,9 +190,6 @@ function DoiMatKhau() {
       <button type="submit" className="nut-chinh" disabled={ghi.dangGhi || !cu || !moi}>
         {ghi.dangGhi ? 'Đang lưu…' : 'Đổi mật khẩu'}
       </button>
-      <p className="text-[0.875rem] text-[#4A536B]">
-        Đổi mật khẩu ghi thẳng lên kho nên máy trạm phải đã cấu hình kết nối kho.
-      </p>
     </form>
   );
 }
@@ -237,21 +231,12 @@ function KetNoiKho() {
       <h3 id="qt-ket-noi" className="text-lg">
         Kết nối kho dữ liệu
       </h3>
-      <p className="max-w-[80ch] text-[0.9375rem] text-[#4A536B]">
-        Trang chạy trên GitHub Pages, không có máy chủ riêng, nên mọi thao tác ghi đều do trình
-        duyệt gửi thẳng lên kho. Quản trị cấu hình mã kết nối một lần cho mỗi máy trạm dùng
-        chung; người dùng thường không thấy mục này.
-      </p>
-
       {coKetNoi ? (
         <ThongBao loai="thanh_cong" tieuDe="Máy trạm này đã kết nối kho">
-          Mã đang dùng: <span className="so">{cheMa(layMaKetNoi() ?? '')}</span>. Mã chỉ nằm trong
-          bộ nhớ tạm của tab này và mất khi đóng tab.
+          <span className="so">{cheMa(layMaKetNoi() ?? '')}</span>
         </ThongBao>
       ) : (
-        <ThongBao loai="luu_y" tieuDe="Máy trạm này chưa kết nối kho">
-          Mọi thao tác ghi dữ liệu đang bị khóa. Dán mã kết nối để mở.
-        </ThongBao>
+        <ThongBao loai="luu_y" tieuDe="Máy trạm này chưa kết nối kho" />
       )}
 
       <div className="grid gap-3 sm:grid-cols-[2fr_auto]">
@@ -389,11 +374,6 @@ function DanhSachTaiKhoan() {
       <h3 id="qt-tai-khoan" className="mb-3 text-lg">
         Tài khoản ({du.khoTaiKhoan.taiKhoan.length})
       </h3>
-      <p className="mb-3 text-[0.9375rem] text-[#4A536B]">
-        Cấp tài khoản mới và đặt lại mật khẩu bằng lệnh{' '}
-        <code>node scripts/tai-khoan.mjs</code>, rồi commit tệp <code>data/nguoidung.json</code>.
-        Tại đây chỉ khóa hoặc mở khóa được tài khoản.
-      </p>
       <div className="overflow-x-auto">
         <table className="bang">
           <thead>
@@ -450,10 +430,6 @@ function CauHinhHeThong() {
       <h3 id="qt-cau-hinh" className="mb-3 text-lg">
         Cấu hình hệ thống
       </h3>
-      <p className="mb-3 text-[0.9375rem] text-[#4A536B]">
-        Sửa trong <code>data/cauhinh.json</code>, <code>data/khung-nghiep-vu.json</code> và{' '}
-        <code>data/dauhieu-canhbao.json</code>.
-      </p>
       <table className="bang">
         <tbody>
           <tr>

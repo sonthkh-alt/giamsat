@@ -4,7 +4,7 @@ import { useDuLieu } from '../dulieu/khoDuLieu';
 import { useGhi } from '../dulieu/useGhi';
 import { usePhien } from '../dulieu/usePhien';
 import { ghiJson, type ThongTinKho } from '../dulieu/ghiGitHub';
-import { hienThiNgay, HAN_GIAI_TRINH_DIEU_40 } from '../nghiepvu/hanXuLy';
+import { hienThiNgay } from '../nghiepvu/hanXuLy';
 import {
   buocTiepTheo,
   conPhaiTheoDoi,
@@ -100,12 +100,6 @@ export default function TheoDoiSauGiamSat() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl">Theo dõi thực hiện sau giám sát</h2>
-        <p className="max-w-[85ch] text-[0.9375rem] text-[#4A536B]">
-          Nhóm nghiệp vụ <span className="so">GS-11</span> và <span className="so">GS-12</span>.
-          Hồ sơ không kết thúc khi ban hành kết luận, mà kết thúc khi kiến nghị được thực hiện
-          xong. Nhắc trước hạn 15, 7 và 3 ngày làm việc; quá hạn chuyển cảnh báo đỏ và khởi tạo
-          quy trình yêu cầu giải trình theo Điều 40 Luật 121/2025/QH15.
-        </p>
       </div>
 
       {ghi.loi && (
@@ -224,9 +218,7 @@ export default function TheoDoiSauGiamSat() {
                   {nv.hanGiaiTrinhDieu40 && (
                     <div className="mt-3">
                       <ThongBao loai="loi" tieuDe="Đã yêu cầu giải trình theo Điều 40">
-                        Hạn giải trình <span className="so">{hienThiNgay(nv.hanGiaiTrinhDieu40)}</span>.
-                        Điều 40 Luật 121/2025/QH15 ghi rõ {HAN_GIAI_TRINH_DIEU_40} ngày, trường hợp
-                        phức tạp không quá 30 ngày — đây là ngày dương lịch, không phải ngày làm việc.
+                        Hạn <span className="so">{hienThiNgay(nv.hanGiaiTrinhDieu40)}</span>
                       </ThongBao>
                     </div>
                   )}
@@ -349,10 +341,6 @@ function BieuMauBuoc({
       {quaHan && !coHanGiaiTrinh && (
         <div className="space-y-2 border border-canhbao bg-[#FDF0F2] p-3">
           <p className="font-medium text-canhbao">Nhiệm vụ đã quá hạn</p>
-          <p className="text-[0.9375rem]">
-            Khởi tạo quy trình yêu cầu giải trình theo Điều 40 Luật 121/2025/QH15. Thời hạn là 15
-            ngày dương lịch; trường hợp phức tạp không quá 30 ngày.
-          </p>
           <label className="flex items-center gap-2 text-[0.9375rem]">
             <input
               type="checkbox"
@@ -374,9 +362,7 @@ function BieuMauBuoc({
       )}
 
       {nhanBuoc === null ? (
-        <p className="text-[0.9375rem] text-[#4A536B]">
-          Đã đi hết bảy bước xử lý. Nhiệm vụ này cần báo cáo Hội đồng nhân dân xem xét trách nhiệm.
-        </p>
+        <p className="text-[0.9375rem] text-[#4A536B]">Đã đi hết bảy bước xử lý.</p>
       ) : (
         <form
           className="space-y-3"

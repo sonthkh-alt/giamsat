@@ -18,6 +18,14 @@ function bam(matKhau, muoiHex) {
   ).toString('hex');
 }
 
+function canhBaoMatKhauYeu(matKhau) {
+  if (matKhau.length < 10) {
+    console.warn(
+      'CẢNH BÁO: mật khẩu ngắn hơn 10 ký tự. Kho đang public nên chuỗi băm ai cũng tải được; mật khẩu yếu dò ra rất nhanh.',
+    );
+  }
+}
+
 function doc() {
   if (!existsSync(TEP)) {
     return {
@@ -38,6 +46,7 @@ function huongDan() {
 
   node scripts/tai-khoan.mjs cap <tên đăng nhập> <mật khẩu> <vai trò> "<họ tên>" [mã đơn vị]
   node scripts/tai-khoan.mjs doi-mat-khau <tên đăng nhập> <mật khẩu mới>
+  node scripts/tai-khoan.mjs dat-lai-tat-ca <mật khẩu mới>
   node scripts/tai-khoan.mjs khoa <tên đăng nhập>
   node scripts/tai-khoan.mjs mo-khoa <tên đăng nhập>
   node scripts/tai-khoan.mjs danh-sach
@@ -64,10 +73,7 @@ switch (lenh) {
       console.error(`Vai trò "${vaiTro}" không hợp lệ. Chọn một trong: ${VAI_TRO.join(', ')}`);
       process.exit(1);
     }
-    if (matKhau.length < 10) {
-      console.error('Mật khẩu phải dài ít nhất 10 ký tự.');
-      process.exit(1);
-    }
+    canhBaoMatKhauYeu(matKhau);
     if (tim(ten)) {
       console.error(`Tài khoản "${ten}" đã tồn tại. Dùng lệnh doi-mat-khau nếu muốn đặt lại.`);
       process.exit(1);
@@ -94,14 +100,34 @@ switch (lenh) {
       console.error(`Không tìm thấy tài khoản "${ten}".`);
       process.exit(1);
     }
-    if (!matKhau || matKhau.length < 10) {
-      console.error('Mật khẩu phải dài ít nhất 10 ký tự.');
+    if (!matKhau) {
+      console.error('Thiếu mật khẩu mới.');
       process.exit(1);
     }
+    canhBaoMatKhauYeu(matKhau);
     tk.muoi = randomBytes(16).toString('hex');
     tk.bam = bam(matKhau, tk.muoi);
     ghi(kho);
     console.log(`Đã đổi mật khẩu tài khoản "${ten}".`);
+    break;
+  }
+  case 'dat-lai-tat-ca': {
+    const [matKhau] = doiSo;
+    if (!matKhau) {
+      console.error('Thiếu mật khẩu mới.');
+      process.exit(1);
+    }
+    if (kho.taiKhoan.length === 0) {
+      console.error('Chưa có tài khoản nào để đặt lại.');
+      process.exit(1);
+    }
+    canhBaoMatKhauYeu(matKhau);
+    for (const tk of kho.taiKhoan) {
+      tk.muoi = randomBytes(16).toString('hex');
+      tk.bam = bam(matKhau, tk.muoi);
+    }
+    ghi(kho);
+    console.log(`Đã đặt lại mật khẩu cho ${kho.taiKhoan.length} tài khoản.`);
     break;
   }
   case 'khoa':

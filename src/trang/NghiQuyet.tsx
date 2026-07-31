@@ -569,10 +569,6 @@ function BieuMauNghiQuyet({
           onChange={(e) => datCanCuPhapLy(e.target.value)}
           placeholder={'Căn cứ Luật Tổ chức chính quyền địa phương;\nCăn cứ Nghị định số …;'}
         />
-        <p className="mt-1 text-[0.875rem] text-[#4A536B]">
-          Hệ thống đối chiếu các căn cứ này với danh mục văn bản đã hết hiệu lực và với tên cơ
-          quan không còn đúng sau sắp xếp 01/7/2025, để phát hiện dấu hiệu cần rà soát.
-        </p>
       </div>
 
       <fieldset>
@@ -594,18 +590,7 @@ function BieuMauNghiQuyet({
             </label>
           ))}
         </div>
-        <p className="mt-1 text-[0.875rem] text-[#4A536B]">
-          Thiếu thành phần bắt buộc sẽ sinh dấu hiệu cảnh báo cho văn bản quy phạm pháp luật.
-        </p>
       </fieldset>
-
-      <p className="text-[0.9375rem] text-[#4A536B]">
-        Nội dung nhập ở đây sẽ được commit công khai vào kho{' '}
-        <span className="so">
-          {kho.chuKho}/{kho.tenKho}
-        </span>
-        . Không nhập thông tin cá nhân của công dân hay nội dung thuộc phạm vi bí mật nhà nước.
-      </p>
 
       <div className="flex flex-wrap gap-2">
         <button type="submit" className="nut-chinh" disabled={ghi.dangGhi}>
