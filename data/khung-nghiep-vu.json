@@ -1,0 +1,234 @@
+{
+  "phienBan": "2026-07",
+  "ghiChu": "Khung 12 nhóm nghiệp vụ giám sát. Đây là CẤU HÌNH, không hard-code trong mã nguồn. Khi quy định pháp luật thay đổi thì sửa tệp này, không sửa mã.",
+  "chuThe": [
+    { "ma": "hdnd", "ten": "Hội đồng nhân dân" },
+    { "ma": "thuong_truc", "ten": "Thường trực Hội đồng nhân dân" },
+    { "ma": "ban", "ten": "Ban của Hội đồng nhân dân" },
+    { "ma": "to_dai_bieu", "ten": "Tổ đại biểu" },
+    { "ma": "dai_bieu", "ten": "Đại biểu Hội đồng nhân dân" }
+  ],
+  "cap": [
+    { "ma": "tinh", "ten": "Cấp tỉnh" },
+    { "ma": "xa", "ten": "Cấp xã" }
+  ],
+  "nhom": [
+    {
+      "ma": "GS-01",
+      "ten": "Xem xét, thẩm tra báo cáo",
+      "canCu": "Đ.28.1.a Luật 121/2025/QH15; Đ.15 Nghị quyết 114/2025/UBTVQH15",
+      "chuTheApDung": ["hdnd", "thuong_truc", "ban"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_2",
+      "dauMuc": [
+        { "ma": "loaiBaoCao", "ten": "Nhóm báo cáo theo Điều 15", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "coQuanBaoCao", "ten": "Cơ quan gửi báo cáo", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "kyBaoCao", "ten": "Kỳ báo cáo", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "ngayNhan", "ten": "Ngày nhận báo cáo", "kieu": "ngay", "batBuoc": true },
+        { "ma": "baoCaoThamTra", "ten": "Báo cáo thẩm tra", "kieu": "tep", "batBuoc": false }
+      ]
+    },
+    {
+      "ma": "GS-02",
+      "ten": "Giám sát văn bản quy phạm pháp luật",
+      "canCu": "Đ.28.1.b, Đ.31 Luật 121/2025/QH15; Nghị quyết 115/2025/UBTVQH15",
+      "chuTheApDung": ["thuong_truc", "ban"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_1",
+      "dauMuc": [
+        { "ma": "kyRaSoat", "ten": "Kỳ rà soát", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "linhVucTrongTam", "ten": "Lĩnh vực trọng tâm", "kieu": "chuoi", "batBuoc": false },
+        { "ma": "danhMucChinhThuc", "ten": "Danh mục văn bản rà soát", "kieu": "danh_sach", "batBuoc": true },
+        { "ma": "vanBanQuyetDinh", "ten": "Thông báo kết luận phiên họp", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "ketQuaThamDinh", "ten": "Kết quả thẩm định", "kieu": "danh_sach", "batBuoc": true }
+      ]
+    },
+    {
+      "ma": "GS-03",
+      "ten": "Chất vấn và xem xét trả lời chất vấn",
+      "canCu": "Đ.28.1.c Luật 121/2025/QH15; Đ.24 Nghị quyết 114/2025/UBTVQH15",
+      "chuTheApDung": ["hdnd", "thuong_truc", "dai_bieu"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_2",
+      "dauMuc": [
+        { "ma": "nguoiChatVan", "ten": "Đại biểu chất vấn", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "nguoiTraLoi", "ten": "Người bị chất vấn", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "noiDung", "ten": "Nội dung chất vấn", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "nghiQuyetSauChatVan", "ten": "Nghị quyết sau chất vấn", "kieu": "chuoi", "batBuoc": false }
+      ]
+    },
+    {
+      "ma": "GS-04",
+      "ten": "Hoạt động giải trình",
+      "canCu": "Đ.31.2 Luật 121/2025/QH15",
+      "chuTheApDung": ["thuong_truc"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "theo_quy_dinh",
+      "trienKhai": "giai_doan_2",
+      "dauMuc": [
+        { "ma": "vanDeGiaiTrinh", "ten": "Vấn đề yêu cầu giải trình", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "coQuanGiaiTrinh", "ten": "Cơ quan giải trình", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "ngayToChuc", "ten": "Ngày tổ chức phiên giải trình", "kieu": "ngay", "batBuoc": true },
+        { "ma": "ketLuan", "ten": "Kết luận phiên giải trình", "kieu": "tep", "batBuoc": true }
+      ]
+    },
+    {
+      "ma": "GS-05",
+      "ten": "Giám sát chuyên đề",
+      "canCu": "Đ.28.1.d, Đ.31, Đ.34 Luật 121/2025/QH15; Đ.40 Nghị quyết 114/2025/UBTVQH15",
+      "chuTheApDung": ["hdnd", "thuong_truc", "ban"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_3",
+      "dauMuc": [
+        { "ma": "chuyenDe", "ten": "Tên chuyên đề", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "nghiQuyetThanhLap", "ten": "Nghị quyết thành lập Đoàn giám sát", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "thanhPhanDoan", "ten": "Thành phần Đoàn giám sát", "kieu": "danh_sach", "batBuoc": true },
+        { "ma": "keHoach", "ten": "Kế hoạch giám sát", "kieu": "tep", "batBuoc": true },
+        { "ma": "baoCaoKetQua", "ten": "Báo cáo kết quả giám sát", "kieu": "tep", "batBuoc": false }
+      ]
+    },
+    {
+      "ma": "GS-06",
+      "ten": "Giám sát giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh",
+      "canCu": "Đ.31, Đ.34 Luật 121/2025/QH15",
+      "chuTheApDung": ["thuong_truc", "ban"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_3",
+      "canhBaoDuLieu": "Không đưa nội dung đơn thư và thông tin cá nhân của công dân lên kho public. Chỉ lưu số liệu tổng hợp.",
+      "dauMuc": [
+        { "ma": "soVuViec", "ten": "Số vụ việc theo dõi", "kieu": "so", "batBuoc": true },
+        { "ma": "coQuanGiaiQuyet", "ten": "Cơ quan giải quyết", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "tyLeGiaiQuyet", "ten": "Tỷ lệ giải quyết đúng hạn", "kieu": "so", "batBuoc": false }
+      ]
+    },
+    {
+      "ma": "GS-07",
+      "ten": "Giám sát giải quyết, trả lời kiến nghị cử tri",
+      "canCu": "Đ.31, Đ.34.1.c Luật 121/2025/QH15",
+      "chuTheApDung": ["thuong_truc", "ban"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_3",
+      "dauMuc": [
+        { "ma": "kyTiepXucCuTri", "ten": "Kỳ tiếp xúc cử tri", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "soKienNghi", "ten": "Số kiến nghị chuyển đến", "kieu": "so", "batBuoc": true },
+        { "ma": "soDaTraLoi", "ten": "Số kiến nghị đã trả lời", "kieu": "so", "batBuoc": true }
+      ]
+    },
+    {
+      "ma": "GS-08",
+      "ten": "Giám sát việc thi hành pháp luật ở địa phương",
+      "canCu": "Đ.36, Đ.37 Luật 121/2025/QH15; Đ.48 Nghị quyết 114/2025/UBTVQH15",
+      "chuTheApDung": ["to_dai_bieu", "dai_bieu"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "khi_duoc_giao",
+      "trienKhai": "giai_doan_3",
+      "dauMuc": [
+        { "ma": "toDaiBieu", "ten": "Tổ đại biểu thực hiện", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "linhVuc", "ten": "Lĩnh vực thi hành pháp luật", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "diaBan", "ten": "Địa bàn giám sát", "kieu": "chuoi", "batBuoc": true }
+      ]
+    },
+    {
+      "ma": "GS-09",
+      "ten": "Lấy phiếu tín nhiệm, bỏ phiếu tín nhiệm",
+      "canCu": "Đ.28.3 Luật 121/2025/QH15",
+      "chuTheApDung": ["hdnd"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "theo_quy_dinh",
+      "trienKhai": "khong_tren_kho_public",
+      "canhBaoDuLieu": "Nhóm này áp dụng chế độ bảo mật cao nhất, KHÔNG triển khai trên kho public. Để lại đến khi có hạ tầng riêng.",
+      "dauMuc": []
+    },
+    {
+      "ma": "GS-10",
+      "ten": "Giám sát việc thực hiện nghị quyết về giám sát",
+      "canCu": "Đ.28.1.e Luật 121/2025/QH15",
+      "chuTheApDung": ["hdnd", "thuong_truc"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_2",
+      "dauMuc": [
+        { "ma": "nghiQuyetGiamSat", "ten": "Nghị quyết về giám sát", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "noiDungTheoDoi", "ten": "Nội dung theo dõi", "kieu": "chuoi", "batBuoc": true }
+      ]
+    },
+    {
+      "ma": "GS-11",
+      "ten": "Theo dõi thực hiện kết luận, kiến nghị giám sát",
+      "canCu": "Đ.28.1.g, Đ.40 Luật 121/2025/QH15",
+      "chuTheApDung": ["thuong_truc", "ban"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_1",
+      "dauMuc": [
+        { "ma": "nguonGoc", "ten": "Văn bản kết luận, kiến nghị", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "noiDungYeuCau", "ten": "Nội dung yêu cầu", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "coQuanChuTri", "ten": "Cơ quan chủ trì", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "sanPhamPhaiHoanThanh", "ten": "Sản phẩm phải hoàn thành", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "hanHoanThanh", "ten": "Hạn hoàn thành", "kieu": "ngay", "batBuoc": true },
+        { "ma": "minhChung", "ten": "Minh chứng", "kieu": "tep", "batBuoc": false }
+      ]
+    },
+    {
+      "ma": "GS-12",
+      "ten": "Giám sát lại, xem xét trách nhiệm, xử lý sau giám sát",
+      "canCu": "Đ.40 Luật 121/2025/QH15",
+      "chuTheApDung": ["hdnd", "thuong_truc", "ban"],
+      "capApDung": ["tinh", "xa"],
+      "apDungCapXa": "day_du",
+      "trienKhai": "giai_doan_1",
+      "dauMuc": [
+        { "ma": "nhiemVuLienQuan", "ten": "Nhiệm vụ chưa hoàn thành", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "buocXuLy", "ten": "Bước xử lý đang áp dụng", "kieu": "chuoi", "batBuoc": true },
+        { "ma": "vanBanXuLy", "ten": "Văn bản của bước xử lý", "kieu": "chuoi", "batBuoc": true }
+      ]
+    }
+  ],
+  "buocXuLySauGiamSat": [
+    { "ma": "don_doc_1", "ten": "Đôn đốc lần 1", "thuTu": 1 },
+    { "ma": "don_doc_tiep", "ten": "Đôn đốc lần tiếp theo", "thuTu": 2 },
+    { "ma": "kien_nghi_xu_ly", "ten": "Kiến nghị cấp có thẩm quyền xử lý", "thuTu": 3 },
+    { "ma": "phien_giai_trinh", "ten": "Đưa vào phiên giải trình", "thuTu": 4 },
+    { "ma": "chat_van", "ten": "Đưa vào nội dung chất vấn", "thuTu": 5 },
+    { "ma": "giam_sat_lai", "ten": "Tổ chức giám sát lại", "thuTu": 6 },
+    { "ma": "bao_cao_hdnd", "ten": "Báo cáo Hội đồng nhân dân xem xét", "thuTu": 7 }
+  ],
+  "cachThucLapDanhMuc": [
+    {
+      "ma": "chuyen_de",
+      "ten": "Theo chuyên đề",
+      "moTa": "Theo lĩnh vực trọng tâm Thường trực ấn định cho tháng đó.",
+      "thuTuUuTien": 1
+    },
+    {
+      "ma": "canh_bao",
+      "ten": "Theo dấu hiệu cảnh báo",
+      "moTa": "Theo dấu hiệu hệ thống phát hiện, xếp hạng theo điểm rủi ro.",
+      "thuTuUuTien": 2
+    },
+    {
+      "ma": "de_nghi",
+      "ten": "Theo đề nghị",
+      "moTa": "Đề nghị của Ủy ban nhân dân tỉnh, Ban Thường trực Ủy ban Mặt trận Tổ quốc tỉnh, đại biểu Quốc hội, các Ban và đại biểu Hội đồng nhân dân tỉnh; phản ánh của cử tri, cơ quan báo chí.",
+      "thuTuUuTien": 3
+    },
+    {
+      "ma": "luan_phien",
+      "ten": "Luân phiên",
+      "moTa": "Ưu tiên đơn vị lâu chưa được rà soát, bảo đảm trong năm không đơn vị nào bị bỏ sót.",
+      "thuTuUuTien": 4
+    },
+    {
+      "ma": "ngau_nhien",
+      "ten": "Ngẫu nhiên bổ sung",
+      "moTa": "Chỉ bổ sung phần còn lại của danh mục. Vai trò bổ trợ, không thay thế bốn cách trên. Khi dùng vẫn ghi seed vào bản ghi để tra lại được.",
+      "thuTuUuTien": 5
+    }
+  ]
+}

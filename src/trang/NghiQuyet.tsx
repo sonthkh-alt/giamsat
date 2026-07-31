@@ -13,6 +13,7 @@ import {
   NHAN_LINH_VUC,
   NHAN_LOAI_NGHI_QUYET,
 } from '../nghiepvu/nhan';
+import { phatHienCanhBao, tinhDiemRuiRo } from '../nghiepvu/xepHangRuiRo';
 import { Nhan } from '../thanhphan/Nhan';
 import ManHinhTrong from '../thanhphan/ManHinhTrong';
 import ThongBao from '../thanhphan/ThongBao';
@@ -46,6 +47,12 @@ export default function NghiQuyet() {
     () => new Map(du.donVi.map((d) => [d.ma, d.ten])),
     [du.donVi],
   );
+
+  const canhBaoTheoId = useMemo(() => {
+    const bang = new Map<string, ReturnType<typeof phatHienCanhBao>>();
+    for (const nq of du.nghiQuyet) bang.set(nq.id, phatHienCanhBao(nq, du.cauHinhDauHieu));
+    return bang;
+  }, [du.nghiQuyet, du.cauHinhDauHieu]);
 
   const ketQua = useMemo(() => {
     const tuKhoa = boDau(boLoc.tuKhoa.trim());
@@ -225,6 +232,7 @@ export default function NghiQuyet() {
                 <th scope="col">Lĩnh vực</th>
                 <th scope="col">Trích yếu</th>
                 <th scope="col">Hiệu lực</th>
+                <th scope="col">Dấu hiệu</th>
                 <th scope="col">Tệp</th>
               </tr>
             </thead>
@@ -242,6 +250,9 @@ export default function NghiQuyet() {
                     <Nhan sac={nq.hieuLuc === 'con_hieu_luc' ? 'dat' : 'trung_tinh'}>
                       {NHAN_HIEU_LUC[nq.hieuLuc]}
                     </Nhan>
+                  </td>
+                  <td>
+                    <DauHieu canhBao={canhBaoTheoId.get(nq.id) ?? []} />
                   </td>
                   <td>
                     {nq.tepDinhKem.length === 0 ? (
@@ -275,6 +286,38 @@ export default function NghiQuyet() {
 
 // ---------------------------------------------------------------------------
 
+/**
+ * Dấu hiệu cảnh báo của một văn bản. Đây chỉ là dấu hiệu để người thẩm định xem
+ * trước, không phải kết luận. Mỗi dấu hiệu luôn kèm lý do và vị trí trong văn bản.
+ */
+function DauHieu({ canhBao }: { canhBao: ReturnType<typeof phatHienCanhBao> }) {
+  if (canhBao.length === 0) {
+    return <span className="text-[#4A536B]">Không có</span>;
+  }
+  const diem = tinhDiemRuiRo(canhBao);
+  return (
+    <details>
+      <summary className="cursor-pointer">
+        <Nhan sac={diem >= 40 ? 'canhbao' : 'luuy'}>
+          {canhBao.length} dấu hiệu · {diem} điểm
+        </Nhan>
+      </summary>
+      <ul className="mt-2 space-y-1 text-[0.875rem]">
+        {canhBao.map((cb, i) => (
+          <li key={`${cb.dauHieu}-${i}`}>
+            <span className="font-medium">{cb.lyDo}</span>
+            <span className="block text-[#4A536B]">
+              {cb.viTri.truong}: “{cb.viTri.trichDan}”
+            </span>
+          </li>
+        ))}
+      </ul>
+    </details>
+  );
+}
+
+// ---------------------------------------------------------------------------
+
 function BieuMauNghiQuyet({
   ghi,
   onXong,
@@ -292,8 +335,12 @@ function BieuMauNghiQuyet({
   const [linhVuc, datLinhVuc] = useState<LinhVuc>('ngan_sach');
   const [hieuLuc, datHieuLuc] = useState<HieuLuc>('con_hieu_luc');
   const [trichYeu, datTrichYeu] = useState('');
+  const [canCuPhapLy, datCanCuPhapLy] = useState('');
+  const [hoSoTrinh, datHoSoTrinh] = useState<string[]>([]);
   const [tep, datTep] = useState<File | null>(null);
   const [loiNhap, datLoiNhap] = useState<string[]>([]);
+
+  const thanhPhanHoSo = du.cauHinhDauHieu.thanhPhanHoSo.batBuoc;
 
   const kho: ThongTinKho = {
     chuKho: du.cauHinh.chuKho,
@@ -340,6 +387,11 @@ function BieuMauNghiQuyet({
         linhVuc,
         trichYeu: trichYeu.trim(),
         hieuLuc,
+        canCuPhapLy: canCuPhapLy
+          .split('\n')
+          .map((d) => d.trim())
+          .filter((d) => d.length > 0),
+        hoSoTrinh,
         tepDinhKem,
         ngayCapNhat: tinhHomNay(),
       };
@@ -514,6 +566,47 @@ function BieuMauNghiQuyet({
           placeholder="Về việc…"
         />
       </div>
+
+      <div>
+        <label className="nhan-truong" htmlFor="nq-can-cu">
+          Căn cứ pháp lý viện dẫn trong văn bản — mỗi căn cứ một dòng
+        </label>
+        <textarea
+          id="nq-can-cu"
+          className="o-nhap trichdan min-h-[5rem]"
+          value={canCuPhapLy}
+          onChange={(e) => datCanCuPhapLy(e.target.value)}
+          placeholder={'Căn cứ Luật Tổ chức chính quyền địa phương;\nCăn cứ Nghị định số …;'}
+        />
+        <p className="mt-1 text-[0.875rem] text-[#4A536B]">
+          Hệ thống đối chiếu các căn cứ này với danh mục văn bản đã hết hiệu lực và với tên cơ
+          quan không còn đúng sau sắp xếp 01/7/2025, để phát hiện dấu hiệu cần rà soát.
+        </p>
+      </div>
+
+      <fieldset>
+        <legend className="nhan-truong">Thành phần hồ sơ trình đã có</legend>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {thanhPhanHoSo.map((tp) => (
+            <label key={tp.ma} className="flex items-start gap-2 text-[0.9375rem]">
+              <input
+                type="checkbox"
+                className="mt-1 h-5 w-5"
+                checked={hoSoTrinh.includes(tp.ma)}
+                onChange={(e) =>
+                  datHoSoTrinh((cu) =>
+                    e.target.checked ? [...cu, tp.ma] : cu.filter((m) => m !== tp.ma),
+                  )
+                }
+              />
+              {tp.ten}
+            </label>
+          ))}
+        </div>
+        <p className="mt-1 text-[0.875rem] text-[#4A536B]">
+          Thiếu thành phần bắt buộc sẽ sinh dấu hiệu cảnh báo cho văn bản quy phạm pháp luật.
+        </p>
+      </fieldset>
 
       <p className="text-[0.9375rem] text-[#4A536B]">
         Nội dung nhập ở đây sẽ được commit công khai vào kho{' '}

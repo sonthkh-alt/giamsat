@@ -15,7 +15,7 @@ export const TEN_NHOM: Readonly<Record<keyof DiemNhom, string>> = {
   trinhTuThuTuc: 'Trình tự, thủ tục ban hành',
   noiDungHopPhap: 'Nội dung hợp hiến, hợp pháp, thống nhất',
   theThucTrinhBay: 'Thể thức và kỹ thuật trình bày',
-  khaThiThucTien: 'Tính khả thi, phù hợp thực tiễn',
+  khaThiThucTien: 'Tính khả thi, phù hợp thực tiễn và tổ chức thực hiện',
 };
 
 export const MA_NHOM = Object.keys(DIEM_TOI_DA) as (keyof DiemNhom)[];

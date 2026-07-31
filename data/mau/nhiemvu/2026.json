@@ -1,0 +1,159 @@
+[
+  {
+    "id": "NV-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-11",
+      "chuThe": "thuong_truc",
+      "cap": "tinh"
+    },
+    "nguonGoc": {
+      "nhomGS": "GS-02",
+      "soVanBan": "184/TB-HĐND",
+      "ngayBanHanh": "2026-06-26"
+    },
+    "noiDungYeuCau": "Sửa đổi nghị quyết có nội dung trái pháp luật về mức thu phí, báo cáo kết quả về Thường trực Hội đồng nhân dân tỉnh.",
+    "coQuanChuTri": "Ủy ban nhân dân Xã Hoằng Phú",
+    "coQuanPhoiHop": [
+      "Sở Tài chính"
+    ],
+    "nguoiChiuTrachNhiem": "Chủ tịch Ủy ban nhân dân xã",
+    "sanPhamPhaiHoanThanh": "Nghị quyết sửa đổi và báo cáo kết quả thực hiện",
+    "hanHoanThanh": "2026-07-24",
+    "trangThai": "qua_han",
+    "minhChung": [],
+    "buocXuLy": [
+      {
+        "ma": "don_doc_1",
+        "ngay": "2026-07-27",
+        "soVanBan": "245/HĐND-VP",
+        "ghiChu": "Đôn đốc bằng văn bản"
+      }
+    ],
+    "hanGiaiTrinhDieu40": "2026-08-14",
+    "ngayXacNhanHoanThanh": null
+  },
+  {
+    "id": "NV-2026-002",
+    "thuocTinh": {
+      "nhomGS": "GS-11",
+      "chuThe": "ban",
+      "cap": "tinh"
+    },
+    "nguonGoc": {
+      "nhomGS": "GS-02",
+      "soVanBan": "184/TB-HĐND",
+      "ngayBanHanh": "2026-06-26"
+    },
+    "noiDungYeuCau": "Bổ sung bản tổng hợp, tiếp thu ý kiến đối tượng chịu tác động vào hồ sơ lưu của các nghị quyết đã ban hành trong năm 2026.",
+    "coQuanChuTri": "Ủy ban nhân dân Xã Quảng Chính",
+    "coQuanPhoiHop": [],
+    "nguoiChiuTrachNhiem": "Công chức Tư pháp - Hộ tịch",
+    "sanPhamPhaiHoanThanh": "Hồ sơ lưu đã bổ sung đầy đủ, có biên bản kiểm tra",
+    "hanHoanThanh": "2026-08-14",
+    "trangThai": "chua_hoan_thanh",
+    "minhChung": [],
+    "buocXuLy": [],
+    "hanGiaiTrinhDieu40": null,
+    "ngayXacNhanHoanThanh": null
+  },
+  {
+    "id": "NV-2026-003",
+    "thuocTinh": {
+      "nhomGS": "GS-11",
+      "chuThe": "thuong_truc",
+      "cap": "tinh"
+    },
+    "nguonGoc": {
+      "nhomGS": "GS-02",
+      "soVanBan": "152/TB-HĐND",
+      "ngayBanHanh": "2026-05-28"
+    },
+    "noiDungYeuCau": "Đính chính tên cơ quan không còn đúng sau sắp xếp đơn vị hành chính trong các văn bản đã ban hành.",
+    "coQuanChuTri": "Ủy ban nhân dân Xã Triệu Lộc",
+    "coQuanPhoiHop": [],
+    "nguoiChiuTrachNhiem": "Chánh Văn phòng Ủy ban nhân dân xã",
+    "sanPhamPhaiHoanThanh": "Văn bản đính chính",
+    "hanHoanThanh": "2026-06-30",
+    "trangThai": "hoan_thanh",
+    "minhChung": [],
+    "buocXuLy": [
+      {
+        "ma": "don_doc_1",
+        "ngay": "2026-06-15",
+        "soVanBan": "198/HĐND-VP",
+        "ghiChu": "Đôn đốc lần 1"
+      }
+    ],
+    "hanGiaiTrinhDieu40": null,
+    "ngayXacNhanHoanThanh": "2026-06-25"
+  },
+  {
+    "id": "NV-2026-004",
+    "thuocTinh": {
+      "nhomGS": "GS-12",
+      "chuThe": "thuong_truc",
+      "cap": "tinh"
+    },
+    "nguonGoc": {
+      "nhomGS": "GS-02",
+      "soVanBan": "120/TB-HĐND",
+      "ngayBanHanh": "2026-04-24"
+    },
+    "noiDungYeuCau": "Bãi bỏ nội dung vượt thẩm quyền trong nghị quyết về quản lý đất công ích và báo cáo Hội đồng nhân dân tỉnh.",
+    "coQuanChuTri": "Ủy ban nhân dân Phường Quang Trung",
+    "coQuanPhoiHop": [
+      "Sở Nông nghiệp và Môi trường"
+    ],
+    "nguoiChiuTrachNhiem": "Chủ tịch Ủy ban nhân dân phường",
+    "sanPhamPhaiHoanThanh": "Nghị quyết bãi bỏ và báo cáo giải trình",
+    "hanHoanThanh": "2026-06-12",
+    "trangThai": "chua_dap_ung_yeu_cau",
+    "minhChung": [],
+    "buocXuLy": [
+      {
+        "ma": "don_doc_1",
+        "ngay": "2026-06-16",
+        "soVanBan": "201/HĐND-VP",
+        "ghiChu": "Đôn đốc lần 1"
+      },
+      {
+        "ma": "don_doc_tiep",
+        "ngay": "2026-07-01",
+        "soVanBan": "219/HĐND-VP",
+        "ghiChu": "Đôn đốc lần 2"
+      },
+      {
+        "ma": "kien_nghi_xu_ly",
+        "ngay": "2026-07-15",
+        "soVanBan": "233/HĐND-VP",
+        "ghiChu": "Kiến nghị Ủy ban nhân dân tỉnh xem xét trách nhiệm"
+      }
+    ],
+    "hanGiaiTrinhDieu40": "2026-07-27",
+    "ngayXacNhanHoanThanh": null
+  },
+  {
+    "id": "NV-2026-005",
+    "thuocTinh": {
+      "nhomGS": "GS-11",
+      "chuThe": "ban",
+      "cap": "tinh"
+    },
+    "nguonGoc": {
+      "nhomGS": "GS-02",
+      "soVanBan": "184/TB-HĐND",
+      "ngayBanHanh": "2026-06-26"
+    },
+    "noiDungYeuCau": "Rà soát toàn bộ văn bản còn viện dẫn Luật Ban hành văn bản quy phạm pháp luật số 80/2015/QH13, lập danh sách cần thay thế.",
+    "coQuanChuTri": "Ủy ban nhân dân Xã Xuân Tín",
+    "coQuanPhoiHop": [],
+    "nguoiChiuTrachNhiem": "Công chức Tư pháp - Hộ tịch",
+    "sanPhamPhaiHoanThanh": "Danh sách văn bản cần thay thế kèm lộ trình",
+    "hanHoanThanh": "2026-08-31",
+    "trangThai": "hoan_thanh_mot_phan",
+    "minhChung": [],
+    "buocXuLy": [],
+    "hanGiaiTrinhDieu40": null,
+    "ngayXacNhanHoanThanh": null
+  }
+]

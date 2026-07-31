@@ -8,9 +8,19 @@ import type { NgayLe } from '../kieu';
 
 export const MUI_GIO = 'Asia/Ho_Chi_Minh';
 
-/** Số ngày làm việc quy định cho một bước xử lý. */
-export const HAN_THAM_DINH = 5;
+/** Hoàn thành thẩm định: 10 ngày làm việc kể từ ngày mở đợt. */
+export const HAN_THAM_DINH = 10;
+
+/** Đơn vị giải trình kết quả thẩm định: 5 ngày làm việc. */
 export const HAN_GIAI_TRINH = 5;
+
+/**
+ * Giải trình theo Điều 40 Luật 121/2025/QH15 khi nhiệm vụ sau giám sát quá hạn.
+ * Luật ghi rõ là "15 ngày", "phức tạp không quá 30 ngày" — là NGÀY DƯƠNG LỊCH,
+ * không phải ngày làm việc. Đừng nhầm sang congNgayLamViec().
+ */
+export const HAN_GIAI_TRINH_DIEU_40 = 15;
+export const HAN_GIAI_TRINH_DIEU_40_PHUC_TAP = 30;
 
 /** Các mốc nhắc việc trước hạn, tính bằng ngày làm việc. */
 export const MOC_NHAC_VIEC = [15, 7, 3] as const;
@@ -163,4 +173,47 @@ export function soNgayLamViecConLai(
 /** Số ngày dương lịch giữa hai mốc; dùng cho lưới theo dõi đơn vị. */
 export function soNgayDuongLich(tuNgay: string, denNgay: string): number {
   return Math.round((taoNgay(denNgay).getTime() - taoNgay(tuNgay).getTime()) / MOT_NGAY);
+}
+
+/**
+ * Cộng thêm số NGÀY DƯƠNG LỊCH, kể cả cuối tuần và ngày lễ.
+ * Chỉ dùng cho thời hạn mà luật ghi rõ là "ngày", điển hình là Điều 40
+ * Luật 121/2025/QH15. Mọi thời hạn khác dùng congNgayLamViec().
+ */
+export function congNgayDuongLich(tuNgay: string, soNgay: number): string {
+  if (!Number.isInteger(soNgay) || soNgay < 0) {
+    throw new Error(`Số ngày phải là số nguyên không âm, nhận được ${soNgay}.`);
+  }
+  return sangISO(new Date(taoNgay(tuNgay).getTime() + soNgay * MOT_NGAY));
+}
+
+/** Mã kỳ theo tháng, dạng "2026-10". */
+export function kyThang(iso: string): string {
+  taoNgay(iso); // xác thực định dạng
+  return iso.slice(0, 7);
+}
+
+/** Hiển thị kỳ tháng theo "tháng M/yyyy". */
+export function hienThiKyThang(ky: string): string {
+  const khop = /^(\d{4})-(\d{2})$/.exec(ky);
+  if (!khop) return ky;
+  return `tháng ${Number(khop[2])}/${khop[1]}`;
+}
+
+/** Ngày thứ `ngayTrongThang` của kỳ, dạng ISO. */
+export function ngayTrongKy(ky: string, ngayTrongThang: number): string {
+  const khop = /^(\d{4})-(\d{2})$/.exec(ky);
+  if (!khop) throw new NgayKhongHopLe(ky);
+  return `${ky}-${String(ngayTrongThang).padStart(2, '0')}`;
+}
+
+/** Kỳ tháng liền trước, ví dụ "2026-01" → "2025-12". */
+export function kyThangTruoc(ky: string): string {
+  const khop = /^(\d{4})-(\d{2})$/.exec(ky);
+  if (!khop) throw new NgayKhongHopLe(ky);
+  const nam = Number(khop[1]);
+  const thang = Number(khop[2]);
+  return thang === 1
+    ? `${nam - 1}-12`
+    : `${nam}-${String(thang - 1).padStart(2, '0')}`;
 }

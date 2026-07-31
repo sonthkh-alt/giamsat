@@ -222,8 +222,10 @@ export default function QuanTri() {
           Cấu hình hiện tại
         </h3>
         <p className="mb-3 text-[0.9375rem] text-[#4A536B]">
-          Sửa trong <code>data/cauhinh.json</code>. Mã muối phải được công bố trước khi rút thăm và
-          không được đổi giữa chừng.
+          Sửa trong <code>data/cauhinh.json</code>. Khung 12 nhóm nghiệp vụ nằm trong{' '}
+          <code>data/khung-nghiep-vu.json</code>, bộ quy tắc cảnh báo nằm trong{' '}
+          <code>data/dauhieu-canhbao.json</code> — đều là cấu hình, sửa tệp chứ không sửa mã. Mã
+          muối phải công bố trước và không đổi giữa chừng.
         </p>
         <table className="bang">
           <tbody>
@@ -249,15 +251,42 @@ export default function QuanTri() {
             </tr>
             <tr>
               <th scope="row" className="text-left">
-                Mã muối rút thăm
+                Mã muối cho phần bổ sung ngẫu nhiên
               </th>
               <td className="so">{du.cauHinh.maMuoi}</td>
             </tr>
             <tr>
               <th scope="row" className="text-left">
-                Số nghị quyết rút mỗi tuần
+                Số văn bản rà soát mỗi tháng
               </th>
-              <td className="so">{du.cauHinh.soNghiQuyetRutMoiTuan}</td>
+              <td className="so">{du.cauHinh.soVanBanRaSoatMoiThang}</td>
+            </tr>
+            <tr>
+              <th scope="row" className="text-left">
+                Mốc tổng hợp, chạy phân tích
+              </th>
+              <td className="so">Ngày {du.cauHinh.ngayTongHop} hằng tháng</td>
+            </tr>
+            <tr>
+              <th scope="row" className="text-left">
+                Mốc trình danh mục đề xuất
+              </th>
+              <td className="so">Ngày {du.cauHinh.ngayTrinhDanhMuc} hằng tháng</td>
+            </tr>
+            <tr>
+              <th scope="row" className="text-left">
+                Khung nghiệp vụ
+              </th>
+              <td>
+                {du.khung.nhom.length} nhóm, phiên bản{' '}
+                <span className="so">{du.khung.phienBan || '—'}</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" className="text-left">
+                Bộ dấu hiệu cảnh báo
+              </th>
+              <td className="so">{du.cauHinhDauHieu.phienBan || '—'}</td>
             </tr>
             <tr>
               <th scope="row" className="text-left">

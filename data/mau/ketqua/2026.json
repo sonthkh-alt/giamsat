@@ -1,7 +1,7 @@
 [
   {
-    "idNghiQuyet": "TH-151-1-2026",
-    "ky": "2026-W30",
+    "idNghiQuyet": "TH-001-1-2026",
+    "ky": "2026-06",
     "diemNhom": {
       "thamQuyenHinhThuc": 20,
       "trinhTuThuTuc": 18,
@@ -14,13 +14,14 @@
     "coNoiDungTraiPhapLuat": false,
     "nhanXet": "Hồ sơ đầy đủ, trình tự đúng quy định. Còn một số lỗi nhỏ về kỹ thuật trình bày ở phần căn cứ ban hành.",
     "nguoiThamDinh": "Lê Thị B",
-    "hanGiaiTrinh": "2026-07-29",
-    "giaiTrinh": null,
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-07-07",
+    "giaiTrinh": "Đơn vị đã tiếp thu và có văn bản đính chính kèm theo.",
     "trangThai": "da_chot"
   },
   {
-    "idNghiQuyet": "TH-109-1-2026",
-    "ky": "2026-W30",
+    "idNghiQuyet": "TH-003-1-2026",
+    "ky": "2026-06",
     "diemNhom": {
       "thamQuyenHinhThuc": 18,
       "trinhTuThuTuc": 14,
@@ -31,15 +32,16 @@
     "tongDiem": 79,
     "xepLoai": "kha",
     "coNoiDungTraiPhapLuat": false,
-    "nhanXet": "Thiếu văn bản lấy ý kiến đối tượng chịu tác động. Đề nghị bổ sung vào hồ sơ lưu và rút kinh nghiệm cho các nghị quyết sau.",
+    "nhanXet": "Thiếu bản tổng hợp, tiếp thu ý kiến đối tượng chịu tác động. Đề nghị bổ sung vào hồ sơ lưu và rút kinh nghiệm cho các văn bản sau.",
     "nguoiThamDinh": "Trần Văn C",
-    "hanGiaiTrinh": "2026-07-29",
+    "banThamDinh": "Ban Pháp chế",
+    "hanGiaiTrinh": "2026-07-07",
     "giaiTrinh": null,
     "trangThai": "da_chot"
   },
   {
-    "idNghiQuyet": "TH-114-2-2026",
-    "ky": "2026-W30",
+    "idNghiQuyet": "TH-014-1-2026",
+    "ky": "2026-06",
     "diemNhom": {
       "thamQuyenHinhThuc": 14,
       "trinhTuThuTuc": 12,
@@ -50,15 +52,16 @@
     "tongDiem": 63,
     "xepLoai": "chua_dat",
     "coNoiDungTraiPhapLuat": true,
-    "nhanXet": "Nghị quyết quy định mức thu vượt khung do văn bản cấp trên ấn định. Nội dung này trái quy định hiện hành, đề nghị đơn vị sửa đổi và báo cáo kết quả.",
+    "nhanXet": "Văn bản viện dẫn căn cứ đã hết hiệu lực và quy định mức thu vượt khung do cơ quan có thẩm quyền ấn định. Đề nghị đơn vị sửa đổi và báo cáo kết quả.",
     "nguoiThamDinh": "Phạm Thị D",
-    "hanGiaiTrinh": "2026-07-29",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-07-07",
     "giaiTrinh": null,
     "trangThai": "da_chot"
   },
   {
-    "idNghiQuyet": "TH-072-2-2026",
-    "ky": "2026-W30",
+    "idNghiQuyet": "TH-016-2-2026",
+    "ky": "2026-06",
     "diemNhom": {
       "thamQuyenHinhThuc": 19,
       "trinhTuThuTuc": 17,
@@ -71,13 +74,14 @@
     "coNoiDungTraiPhapLuat": false,
     "nhanXet": "Nội dung phù hợp thẩm quyền. Cần làm rõ nguồn kinh phí bảo đảm thực hiện trong năm ngân sách.",
     "nguoiThamDinh": "Lê Thị B",
-    "hanGiaiTrinh": "2026-07-29",
-    "giaiTrinh": "Đơn vị đã bố trí nguồn từ nguồn tăng thu năm 2025 chuyển sang, có biểu chi tiết kèm theo.",
-    "trangThai": "chua_chot"
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-07-07",
+    "giaiTrinh": "Đơn vị đã tiếp thu và có văn bản đính chính kèm theo.",
+    "trangThai": "da_chot"
   },
   {
-    "idNghiQuyet": "TH-151-4-2026",
-    "ky": "2026-W30",
+    "idNghiQuyet": "TH-021-1-2026",
+    "ky": "2026-06",
     "diemNhom": {
       "thamQuyenHinhThuc": 20,
       "trinhTuThuTuc": 19,
@@ -90,7 +94,148 @@
     "coNoiDungTraiPhapLuat": false,
     "nhanXet": "Hồ sơ và nội dung đạt yêu cầu, không có kiến nghị sửa đổi.",
     "nguoiThamDinh": "Trần Văn C",
-    "hanGiaiTrinh": "2026-07-29",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-07-07",
+    "giaiTrinh": null,
+    "trangThai": "da_chot"
+  },
+  {
+    "idNghiQuyet": "TH-034-1-2026",
+    "ky": "2026-06",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 17,
+      "trinhTuThuTuc": 16,
+      "noiDungHopPhap": 25,
+      "theThucTrinhBay": 8,
+      "khaThiThucTien": 15
+    },
+    "tongDiem": 81,
+    "xepLoai": "kha",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Sử dụng tên cơ quan không còn đúng sau sắp xếp đơn vị hành chính. Đề nghị đính chính.",
+    "nguoiThamDinh": "Phạm Thị D",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-07-07",
+    "giaiTrinh": null,
+    "trangThai": "da_chot"
+  },
+  {
+    "idNghiQuyet": "TH-087-1-2026",
+    "ky": "2026-06",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 20,
+      "trinhTuThuTuc": 18,
+      "noiDungHopPhap": 28,
+      "theThucTrinhBay": 9,
+      "khaThiThucTien": 18
+    },
+    "tongDiem": 93,
+    "xepLoai": "tot",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Hồ sơ đầy đủ, trình tự đúng quy định. Còn một số lỗi nhỏ về kỹ thuật trình bày ở phần căn cứ ban hành.",
+    "nguoiThamDinh": "Lê Thị B",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-07-07",
+    "giaiTrinh": "Đơn vị đã tiếp thu và có văn bản đính chính kèm theo.",
+    "trangThai": "da_chot"
+  },
+  {
+    "idNghiQuyet": "TH-137-1-2026",
+    "ky": "2026-06",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 18,
+      "trinhTuThuTuc": 14,
+      "noiDungHopPhap": 24,
+      "theThucTrinhBay": 8,
+      "khaThiThucTien": 15
+    },
+    "tongDiem": 79,
+    "xepLoai": "kha",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Thiếu bản tổng hợp, tiếp thu ý kiến đối tượng chịu tác động. Đề nghị bổ sung vào hồ sơ lưu và rút kinh nghiệm cho các văn bản sau.",
+    "nguoiThamDinh": "Trần Văn C",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-07-07",
+    "giaiTrinh": null,
+    "trangThai": "da_chot"
+  },
+  {
+    "idNghiQuyet": "TH-163-1-2026",
+    "ky": "2026-06",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 14,
+      "trinhTuThuTuc": 12,
+      "noiDungHopPhap": 18,
+      "theThucTrinhBay": 7,
+      "khaThiThucTien": 12
+    },
+    "tongDiem": 63,
+    "xepLoai": "chua_dat",
+    "coNoiDungTraiPhapLuat": true,
+    "nhanXet": "Văn bản viện dẫn căn cứ đã hết hiệu lực và quy định mức thu vượt khung do cơ quan có thẩm quyền ấn định. Đề nghị đơn vị sửa đổi và báo cáo kết quả.",
+    "nguoiThamDinh": "Phạm Thị D",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-07-07",
+    "giaiTrinh": null,
+    "trangThai": "da_chot"
+  },
+  {
+    "idNghiQuyet": "TH-004-1-2026",
+    "ky": "2026-07",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 20,
+      "trinhTuThuTuc": 18,
+      "noiDungHopPhap": 28,
+      "theThucTrinhBay": 9,
+      "khaThiThucTien": 18
+    },
+    "tongDiem": 93,
+    "xepLoai": "tot",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Hồ sơ đầy đủ, trình tự đúng quy định. Còn một số lỗi nhỏ về kỹ thuật trình bày ở phần căn cứ ban hành.",
+    "nguoiThamDinh": "Lê Thị B",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-08-05",
+    "giaiTrinh": "Đơn vị đã tiếp thu và có văn bản đính chính kèm theo.",
+    "trangThai": "chua_chot"
+  },
+  {
+    "idNghiQuyet": "TH-025-2-2026",
+    "ky": "2026-07",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 18,
+      "trinhTuThuTuc": 14,
+      "noiDungHopPhap": 24,
+      "theThucTrinhBay": 8,
+      "khaThiThucTien": 15
+    },
+    "tongDiem": 79,
+    "xepLoai": "kha",
+    "coNoiDungTraiPhapLuat": false,
+    "nhanXet": "Thiếu bản tổng hợp, tiếp thu ý kiến đối tượng chịu tác động. Đề nghị bổ sung vào hồ sơ lưu và rút kinh nghiệm cho các văn bản sau.",
+    "nguoiThamDinh": "Trần Văn C",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-08-05",
+    "giaiTrinh": null,
+    "trangThai": "chua_chot"
+  },
+  {
+    "idNghiQuyet": "TH-046-1-2026",
+    "ky": "2026-07",
+    "diemNhom": {
+      "thamQuyenHinhThuc": 14,
+      "trinhTuThuTuc": 12,
+      "noiDungHopPhap": 18,
+      "theThucTrinhBay": 7,
+      "khaThiThucTien": 12
+    },
+    "tongDiem": 63,
+    "xepLoai": "chua_dat",
+    "coNoiDungTraiPhapLuat": true,
+    "nhanXet": "Văn bản viện dẫn căn cứ đã hết hiệu lực và quy định mức thu vượt khung do cơ quan có thẩm quyền ấn định. Đề nghị đơn vị sửa đổi và báo cáo kết quả.",
+    "nguoiThamDinh": "Phạm Thị D",
+    "banThamDinh": "Ban Kinh tế - Ngân sách",
+    "hanGiaiTrinh": "2026-08-05",
     "giaiTrinh": null,
     "trangThai": "chua_chot"
   }

@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { useDuLieu } from '../dulieu/khoDuLieu';
 import LuoiDonVi from '../thanhphan/LuoiDonVi';
 import { Nhan } from '../thanhphan/Nhan';
-import { hienThiNgay, mucCanhBao } from '../nghiepvu/hanXuLy';
-import { kyRutTham } from '../nghiepvu/rutTham';
+import { hienThiKyThang, hienThiNgay, kyThang } from '../nghiepvu/hanXuLy';
+import { mocChuKy, NHAN_TRANG_THAI_DOT } from '../nghiepvu/lapDanhMuc';
+import { thongKeNhiemVu } from '../nghiepvu/theoDoiNhiemVu';
 import { demTheoMuc } from '../nghiepvu/theoDoiDonVi';
 
 function O({
@@ -29,57 +30,75 @@ function O({
   );
 }
 
+type Viec = { noiDung: string; den: string; nhanNut: string; gap: boolean };
+
 export default function TongQuan() {
   const du = useDuLieu();
-  const kyHienTai = kyRutTham(du.homNay);
+  const kyHienTai = kyThang(du.homNay);
+  const moc = mocChuKy(kyHienTai, du.cauHinh);
 
   const tomTat = useMemo(() => {
     const dem = demTheoMuc(du.donVi, du.homNay);
-    const dot = du.dotKiemTra.find((d) => d.ky === kyHienTai) ?? null;
+    const dot = du.dotRaSoat.find((d) => d.ky === kyHienTai) ?? null;
     const daCoKetQua = new Set(
       du.ketQua.filter((k) => k.ky === kyHienTai).map((k) => k.idNghiQuyet),
     );
-    const chuaThamDinh = dot ? dot.danhSachTrung.filter((id) => !daCoKetQua.has(id)) : [];
+    const chuaThamDinh = dot
+      ? dot.danhMucChinhThuc.filter((id) => !daCoKetQua.has(id))
+      : [];
     const choChot = du.ketQua.filter((k) => k.trangThai === 'chua_chot');
-    const kienNghiDangMo = du.kienNghi.filter(
-      (k) => k.trangThai === 'chua_thuc_hien' || k.trangThai === 'dang_thuc_hien',
-    );
-    const kienNghiQuaHan = kienNghiDangMo.filter(
-      (k) => mucCanhBao(k.hanThucHien, du.homNay, du.ngayLe) === 'qua_han',
-    );
     const daChot = du.ketQua.filter((k) => k.trangThai === 'da_chot');
-    const chuaDat = daChot.filter((k) => k.xepLoai === 'chua_dat').length;
-
+    const nhiemVu = thongKeNhiemVu(du.nhiemVu, du.homNay, du.ngayLe);
     return {
       dem,
       dot,
       chuaThamDinh,
       choChot,
-      kienNghiDangMo,
-      kienNghiQuaHan,
       daChot,
-      chuaDat,
+      chuaDat: daChot.filter((k) => k.xepLoai === 'chua_dat').length,
+      nhiemVu,
       boQuen: dem.rat_lau + dem.chua_bao_gio,
     };
   }, [du, kyHienTai]);
 
-  const viecCanLam: { noiDung: string; den: string; nhanNut: string; gap: boolean }[] = [];
-  if (!tomTat.dot) {
+  const viecCanLam: Viec[] = [];
+  const { dot } = tomTat;
+
+  if (!dot) {
+    const quaNgayTongHop = du.homNay >= moc.ngayTongHop;
     viecCanLam.push({
-      noiDung: `Tuần ${kyHienTai} chưa rút thăm.`,
-      den: '/rut-tham',
-      nhanNut: 'Sang trang Rút thăm',
-      gap: true,
+      noiDung: quaNgayTongHop
+        ? `Đã qua ngày ${du.cauHinh.ngayTongHop} mà kỳ ${hienThiKyThang(kyHienTai)} chưa lập danh mục đề xuất.`
+        : `Kỳ ${hienThiKyThang(kyHienTai)} chưa lập danh mục. Mốc tổng hợp là ngày ${hienThiNgay(moc.ngayTongHop)}.`,
+      den: '/danh-muc-ra-soat',
+      nhanNut: 'Lập danh mục',
+      gap: quaNgayTongHop,
     });
-  }
-  if (tomTat.chuaThamDinh.length > 0) {
+  } else if (dot.trangThai === 'de_xuat') {
     viecCanLam.push({
-      noiDung: `Còn ${tomTat.chuaThamDinh.length} nghị quyết của kỳ ${kyHienTai} chưa có phiếu thẩm định.`,
-      den: '/tham-dinh',
-      nhanNut: 'Chấm điểm',
+      noiDung: `Danh mục kỳ ${hienThiKyThang(kyHienTai)} đang chờ Thường trực quyết định (${dot.danhMucDeXuat.length} văn bản đề xuất).`,
+      den: '/danh-muc-ra-soat',
+      nhanNut: 'Sang bàn quyết định',
+      gap: du.homNay >= moc.ngayTrinhDanhMuc,
+    });
+  } else if (dot.trangThai === 'da_quyet_dinh') {
+    viecCanLam.push({
+      noiDung: `Danh mục kỳ ${hienThiKyThang(kyHienTai)} đã quyết định, chưa mở đợt thẩm định.`,
+      den: '/danh-muc-ra-soat',
+      nhanNut: 'Mở đợt thẩm định',
       gap: false,
     });
   }
+
+  if (tomTat.chuaThamDinh.length > 0) {
+    viecCanLam.push({
+      noiDung: `Còn ${tomTat.chuaThamDinh.length} văn bản của kỳ ${hienThiKyThang(kyHienTai)} chưa có phiếu thẩm định. Hạn ${hienThiNgay(dot?.hanThamDinh ?? '')}.`,
+      den: '/tham-dinh',
+      nhanNut: 'Chấm điểm',
+      gap: dot !== null && du.homNay > dot.hanThamDinh,
+    });
+  }
+
   if (tomTat.choChot.length > 0) {
     viecCanLam.push({
       noiDung: `${tomTat.choChot.length} kết quả đang chờ giải trình hoặc chờ chốt.`,
@@ -88,30 +107,63 @@ export default function TongQuan() {
       gap: false,
     });
   }
-  if (tomTat.kienNghiQuaHan.length > 0) {
+
+  if (tomTat.nhiemVu.quaHan > 0) {
     viecCanLam.push({
-      noiDung: `${tomTat.kienNghiQuaHan.length} kiến nghị sau giám sát đã quá hạn thực hiện.`,
-      den: '/kien-nghi',
-      nhanNut: 'Xem kiến nghị',
+      noiDung: `${tomTat.nhiemVu.quaHan} nhiệm vụ sau giám sát đã quá hạn, cần khởi tạo yêu cầu giải trình theo Điều 40.`,
+      den: '/theo-doi-sau-giam-sat',
+      nhanNut: 'Xem nhiệm vụ',
       gap: true,
     });
   }
 
   return (
     <div className="space-y-8">
-      <section aria-labelledby="tieu-de-luoi">
-        <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-          <h2 id="tieu-de-luoi" className="text-xl">
-            Lưới theo dõi {du.donVi.length} xã, phường
-          </h2>
-          <p className="text-[0.9375rem] text-[#4A536B]">
-            Màu theo số ngày kể từ lần kiểm tra gần nhất, tính đến{' '}
-            <span className="so">{hienThiNgay(du.homNay)}</span>
+      <section aria-labelledby="tieu-de-chu-ky">
+        <h2 id="tieu-de-chu-ky" className="mb-3 text-xl">
+          Chu kỳ {hienThiKyThang(kyHienTai)}
+        </h2>
+        <ol className="khung grid gap-0 sm:grid-cols-4">
+          {[
+            {
+              nhan: `Ngày ${du.cauHinh.ngayTongHop} — tổng hợp, phân tích`,
+              xong: du.homNay >= moc.ngayTongHop,
+            },
+            {
+              nhan: `Ngày ${du.cauHinh.ngayTrinhDanhMuc} — trình danh mục`,
+              xong: dot !== null,
+            },
+            {
+              nhan: 'Phiên họp Thường trực — quyết định',
+              xong: dot !== null && dot.trangThai !== 'de_xuat',
+            },
+            {
+              nhan: 'Mở đợt, thẩm định 10 ngày làm việc',
+              xong: dot !== null && (dot.trangThai === 'dang_tham_dinh' || dot.trangThai === 'da_chot'),
+            },
+          ].map((b, i) => (
+            <li
+              key={b.nhan}
+              className={`border-vien px-4 py-3 ${i > 0 ? 'border-t sm:border-l sm:border-t-0' : ''}`}
+            >
+              <p className={`text-[0.9375rem] ${b.xong ? 'text-dat' : 'text-[#4A536B]'}`}>
+                {b.xong ? '✓ ' : ''}
+                {b.nhan}
+              </p>
+            </li>
+          ))}
+        </ol>
+        {dot && (
+          <p className="mt-2 text-[0.9375rem] text-[#4A536B]">
+            Trạng thái đợt: <strong>{NHAN_TRANG_THAI_DOT[dot.trangThai]}</strong>
+            {dot.vanBanQuyetDinh && (
+              <>
+                {' '}
+                · quyết định tại <span className="so">{dot.vanBanQuyetDinh}</span>
+              </>
+            )}
           </p>
-        </div>
-        <div className="khung p-4">
-          <LuoiDonVi danhSach={du.donVi} ngayThamChieu={du.homNay} />
-        </div>
+        )}
       </section>
 
       <section aria-labelledby="tieu-de-viec">
@@ -120,7 +172,8 @@ export default function TongQuan() {
         </h2>
         {viecCanLam.length === 0 ? (
           <p className="khung px-4 py-3 text-[#4A536B]">
-            Không có việc nào đến hạn. Kỳ {kyHienTai} đã rút thăm và các phiếu đều đã xử lý.
+            Không có việc nào đến hạn. Kỳ {hienThiKyThang(kyHienTai)} đã xử lý xong các bước hiện
+            tại.
           </p>
         ) : (
           <ul className="space-y-2">
@@ -153,7 +206,7 @@ export default function TongQuan() {
             phuChu={`Năm ${du.cauHinh.namLamViec}`}
           />
           <O
-            nhan="Đơn vị lâu chưa kiểm tra"
+            nhan="Đơn vị lâu chưa rà soát"
             giaTri={tomTat.boQuen}
             phuChu="Trên 180 ngày hoặc chưa từng"
             canhBao={tomTat.boQuen > 0}
@@ -161,14 +214,28 @@ export default function TongQuan() {
           <O
             nhan="Kết quả đã chốt"
             giaTri={tomTat.daChot.length}
-            phuChu={`${tomTat.chuaDat} đơn vị chưa đạt`}
+            phuChu={`${tomTat.chuaDat} văn bản chưa đạt`}
           />
           <O
-            nhan="Kiến nghị đang theo dõi"
-            giaTri={tomTat.kienNghiDangMo.length}
-            phuChu={`${tomTat.kienNghiQuaHan.length} quá hạn`}
-            canhBao={tomTat.kienNghiQuaHan.length > 0}
+            nhan="Nhiệm vụ sau giám sát"
+            giaTri={tomTat.nhiemVu.conTheoDoi}
+            phuChu={`${tomTat.nhiemVu.quaHan} quá hạn`}
+            canhBao={tomTat.nhiemVu.quaHan > 0}
           />
+        </div>
+      </section>
+
+      <section aria-labelledby="tieu-de-luoi">
+        <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 id="tieu-de-luoi" className="text-xl">
+            Lưới theo dõi {du.donVi.length} xã, phường
+          </h2>
+          <p className="text-[0.9375rem] text-[#4A536B]">
+            Màu theo số ngày kể từ lần rà soát gần nhất — cơ sở cho cách thức luân phiên
+          </p>
+        </div>
+        <div className="khung p-4">
+          <LuoiDonVi danhSach={du.donVi} ngayThamChieu={du.homNay} />
         </div>
       </section>
 

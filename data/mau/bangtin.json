@@ -1,9 +1,9 @@
 [
   {
     "id": "BT-001",
-    "tieuDe": "Bắt đầu thí điểm kiểm tra ngẫu nhiên nghị quyết cấp xã",
-    "noiDung": "Từ tuần này, hệ thống rút thăm 5 nghị quyết mỗi tuần vào 8h00 sáng thứ Hai. Các đơn vị chuẩn bị hồ sơ để gửi khi được yêu cầu.",
-    "ngayDang": "2026-07-20",
+    "tieuDe": "Danh mục rà soát tháng 7/2026 đã được quyết định",
+    "noiDung": "Thường trực Hội đồng nhân dân tỉnh đã quyết định danh mục 9 văn bản tại Thông báo 211/TB-HĐND. Lĩnh vực trọng tâm tháng này là đất đai. Hạn hoàn thành thẩm định 10/08/2026.",
+    "ngayDang": "2026-07-27",
     "mucDo": "quan_trong"
   },
   {
@@ -15,9 +15,9 @@
   },
   {
     "id": "BT-003",
-    "tieuDe": "Cập nhật thư viện văn bản mẫu",
-    "noiDung": "Đã bổ sung mẫu báo cáo thẩm tra theo năm nhóm tiêu chí chấm điểm.",
-    "ngayDang": "2026-04-05",
+    "tieuDe": "Hệ thống bổ sung cảnh báo căn cứ pháp lý hết hiệu lực",
+    "noiDung": "Từ kỳ tháng 6/2026, hệ thống tự đối chiếu căn cứ viện dẫn với danh mục văn bản đã hết hiệu lực và tên cơ quan không còn đúng sau sắp xếp 01/7/2025. Mỗi cảnh báo đều nêu rõ lý do và trích dẫn vị trí trong văn bản.",
+    "ngayDang": "2026-06-05",
     "mucDo": "thuong"
   }
 ]

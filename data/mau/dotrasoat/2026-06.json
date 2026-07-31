@@ -1,0 +1,190 @@
+{
+  "ky": "2026-06",
+  "thuocTinh": {
+    "nhomGS": "GS-02",
+    "chuThe": "thuong_truc",
+    "cap": "tinh"
+  },
+  "linhVucTrongTam": "Ngân sách",
+  "danhMucDeXuat": [
+    {
+      "idNghiQuyet": "TH-137-1-2026",
+      "cachThuc": "chuyen_de",
+      "lyDo": "Thuộc lĩnh vực trọng tâm \"Ngân sách\" Thường trực ấn định cho kỳ 2026-06.",
+      "diemRuiRo": 30,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-014-1-2026",
+      "cachThuc": "chuyen_de",
+      "lyDo": "Thuộc lĩnh vực trọng tâm \"Ngân sách\" Thường trực ấn định cho kỳ 2026-06.",
+      "diemRuiRo": 0,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-016-2-2026",
+      "cachThuc": "chuyen_de",
+      "lyDo": "Thuộc lĩnh vực trọng tâm \"Ngân sách\" Thường trực ấn định cho kỳ 2026-06.",
+      "diemRuiRo": 0,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-087-1-2026",
+      "cachThuc": "canh_bao",
+      "lyDo": "Điểm rủi ro 65. Hệ thống phát hiện 3 dấu hiệu cần rà soát.",
+      "diemRuiRo": 65,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-163-1-2026",
+      "cachThuc": "canh_bao",
+      "lyDo": "Điểm rủi ro 65. Hệ thống phát hiện 3 dấu hiệu cần rà soát.",
+      "diemRuiRo": 65,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-021-1-2026",
+      "cachThuc": "canh_bao",
+      "lyDo": "Điểm rủi ro 50. Hệ thống phát hiện 2 dấu hiệu cần rà soát.",
+      "diemRuiRo": 50,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-001-1-2026",
+      "cachThuc": "luan_phien",
+      "lyDo": "Phường Bỉm Sơn chưa từng được rà soát.",
+      "diemRuiRo": 20,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-003-1-2026",
+      "cachThuc": "luan_phien",
+      "lyDo": "Phường Hạc Thành chưa từng được rà soát.",
+      "diemRuiRo": 0,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-034-1-2026",
+      "cachThuc": "ngau_nhien",
+      "lyDo": "Bổ sung ngẫu nhiên cho đủ 10 văn bản của kỳ. Seed công khai \"2026-06-gsts-2026-thidiem\", tính lại được.",
+      "diemRuiRo": 50,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-019-2-2026",
+      "cachThuc": "ngau_nhien",
+      "lyDo": "Bổ sung ngẫu nhiên cho đủ 10 văn bản của kỳ. Seed công khai \"2026-06-gsts-2026-thidiem\", tính lại được.",
+      "diemRuiRo": 25,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    }
+  ],
+  "danhMucChinhThuc": [
+    "TH-001-1-2026",
+    "TH-003-1-2026",
+    "TH-014-1-2026",
+    "TH-016-2-2026",
+    "TH-021-1-2026",
+    "TH-034-1-2026",
+    "TH-087-1-2026",
+    "TH-137-1-2026",
+    "TH-163-1-2026"
+  ],
+  "vanBanQuyetDinh": "184/TB-HĐND",
+  "ngayMoDot": "2026-06-26",
+  "hanThamDinh": "2026-07-10",
+  "trangThai": "da_chot",
+  "seedNgauNhien": "2026-06-gsts-2026-thidiem",
+  "phanCongBan": {
+    "TH-001-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-003-1-2026": "Ban Pháp chế",
+    "TH-014-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-016-2-2026": "Ban Kinh tế - Ngân sách",
+    "TH-021-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-034-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-087-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-137-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-163-1-2026": "Ban Kinh tế - Ngân sách"
+  },
+  "nhatKyThayDoi": [
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-001-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-003-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-014-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-016-2-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-021-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-034-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-087-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-137-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-163-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-06-25",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "bo",
+      "idNghiQuyet": "TH-019-2-2026",
+      "ghiChu": "Đã rà soát trong đợt chuyên đề khác, không đưa vào kỳ này"
+    }
+  ]
+}

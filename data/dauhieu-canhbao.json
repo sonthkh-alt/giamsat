@@ -1,0 +1,124 @@
+{
+  "phienBan": "2026-07",
+  "ghiChu": "Bộ quy tắc phát hiện dấu hiệu cảnh báo. Đây là CẤU HÌNH: sửa tệp này khi quy định thay đổi, không sửa mã. Hệ thống chỉ chấm điểm rủi ro để xếp hạng đề xuất, KHÔNG kết luận thay người. Mọi cảnh báo phải nêu được lý do và vị trí trong văn bản, nếu không thì không hiển thị.",
+
+  "canCuHetHieuLuc": {
+    "diem": 30,
+    "mucDo": "cao",
+    "ghiChu": "Danh mục văn bản đã hết hiệu lực hoặc đã được thay thế. Bổ sung dần khi rà soát.",
+    "danhMuc": [
+      {
+        "mau": "Luật Ban hành văn bản quy phạm pháp luật số 80/2015/QH13",
+        "lyDo": "Đã được thay thế bởi Luật Ban hành văn bản quy phạm pháp luật số 64/2025/QH15",
+        "thayTheBoi": "Luật số 64/2025/QH15"
+      },
+      {
+        "mau": "Luật Hoạt động giám sát của Quốc hội và Hội đồng nhân dân số 87/2015/QH13",
+        "lyDo": "Đã được thay thế bởi Luật số 121/2025/QH15, hiệu lực 01/3/2026",
+        "thayTheBoi": "Luật số 121/2025/QH15"
+      },
+      {
+        "mau": "Luật Tổ chức chính quyền địa phương số 77/2015/QH13",
+        "lyDo": "Không còn phù hợp sau khi tổ chức chính quyền địa phương hai cấp từ 01/7/2025",
+        "thayTheBoi": "Luật Tổ chức chính quyền địa phương hiện hành"
+      },
+      {
+        "mau": "Nghị định số 34/2016/NĐ-CP",
+        "lyDo": "Quy định chi tiết Luật số 80/2015/QH13 đã hết hiệu lực",
+        "thayTheBoi": "Văn bản quy định chi tiết Luật số 64/2025/QH15"
+      }
+    ]
+  },
+
+  "tenKhongConDung": {
+    "diem": 25,
+    "mucDo": "cao",
+    "ghiChu": "Tên cơ quan, đơn vị hành chính không còn đúng sau sắp xếp 01/7/2025. Từ ngày này tỉnh vận hành chính quyền hai cấp, không còn cấp huyện.",
+    "danhMuc": [
+      {
+        "mau": "Ủy ban nhân dân huyện",
+        "lyDo": "Không còn cấp huyện sau sắp xếp đơn vị hành chính từ 01/7/2025"
+      },
+      {
+        "mau": "Hội đồng nhân dân huyện",
+        "lyDo": "Không còn cấp huyện sau sắp xếp đơn vị hành chính từ 01/7/2025"
+      },
+      {
+        "mau": "Ủy ban nhân dân thị xã",
+        "lyDo": "Không còn đơn vị hành chính cấp thị xã sau sắp xếp từ 01/7/2025"
+      },
+      {
+        "mau": "Ủy ban nhân dân thành phố Thanh Hóa",
+        "lyDo": "Thành phố Thanh Hóa đã được sắp xếp lại thành các phường từ 01/7/2025"
+      },
+      {
+        "mau": "Phòng Tài chính - Kế hoạch",
+        "lyDo": "Cơ quan chuyên môn cấp huyện, không còn sau sắp xếp từ 01/7/2025"
+      },
+      {
+        "mau": "Phòng Tài nguyên và Môi trường",
+        "lyDo": "Cơ quan chuyên môn cấp huyện, không còn sau sắp xếp từ 01/7/2025"
+      }
+    ]
+  },
+
+  "thamQuyenTheoLinhVuc": {
+    "diem": 20,
+    "mucDo": "trung_binh",
+    "ghiChu": "Dấu hiệu vượt thẩm quyền theo lĩnh vực. Chỉ là dấu hiệu để người thẩm định xem kỹ, không phải kết luận.",
+    "quyTac": [
+      {
+        "linhVuc": "phi_le_phi",
+        "loai": "quy_pham",
+        "lyDo": "Nghị quyết về phí, lệ phí phải nằm trong danh mục và khung mức thu do cơ quan có thẩm quyền ấn định. Cần đối chiếu khung mức thu trước khi kết luận."
+      },
+      {
+        "linhVuc": "dat_dai",
+        "loai": "quy_pham",
+        "lyDo": "Nội dung về đất đai phần lớn thuộc thẩm quyền cấp tỉnh. Cần kiểm tra căn cứ phân cấp cho cấp xã."
+      },
+      {
+        "linhVuc": "to_chuc_bo_may",
+        "loai": "quy_pham",
+        "lyDo": "Tổ chức bộ máy phải theo quy định khung của trung ương và cấp tỉnh. Cần đối chiếu quy định phân cấp."
+      }
+    ]
+  },
+
+  "thanhPhanHoSo": {
+    "diem": 15,
+    "mucDo": "trung_binh",
+    "ghiChu": "Thành phần bắt buộc của hồ sơ trình dự thảo nghị quyết quy phạm pháp luật.",
+    "batBuoc": [
+      { "ma": "to_trinh", "ten": "Tờ trình của Ủy ban nhân dân" },
+      { "ma": "du_thao", "ten": "Dự thảo nghị quyết" },
+      { "ma": "tong_hop_y_kien", "ten": "Bản tổng hợp, tiếp thu, giải trình ý kiến đối tượng chịu tác động" },
+      { "ma": "bao_cao_tham_tra", "ten": "Báo cáo thẩm tra của Ban của Hội đồng nhân dân" }
+    ]
+  },
+
+  "theThuc": {
+    "diem": 10,
+    "mucDo": "thap",
+    "ghiChu": "Thể thức và kỹ thuật trình bày theo Nghị định 30/2020/NĐ-CP.",
+    "quyTac": [
+      {
+        "ma": "ky_hieu_quy_pham",
+        "mauKyHieu": "NQ-HĐND",
+        "lyDo": "Nghị quyết quy phạm pháp luật phải có năm ban hành trong số, ký hiệu theo mẫu <số>/<năm>/NQ-HĐND"
+      },
+      {
+        "ma": "so_rong",
+        "lyDo": "Chưa ghi số nghị quyết"
+      },
+      {
+        "ma": "trich_yeu_rong",
+        "lyDo": "Chưa ghi trích yếu, không xác định được nội dung điều chỉnh"
+      },
+      {
+        "ma": "thieu_ky_hop",
+        "lyDo": "Chưa ghi kỳ họp thông qua, không đối chiếu được biên bản kỳ họp"
+      }
+    ]
+  }
+}

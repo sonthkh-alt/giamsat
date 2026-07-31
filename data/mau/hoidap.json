@@ -5,17 +5,17 @@
     "traLoi": "Khi nghị quyết chứa quy tắc xử sự chung, có hiệu lực bắt buộc chung, được áp dụng lặp đi lặp lại đối với cơ quan, tổ chức, cá nhân trên địa bàn. Nghị quyết chỉ giải quyết một vụ việc cụ thể, áp dụng một lần cho đối tượng xác định là nghị quyết cá biệt và không phải làm theo trình tự ban hành văn bản quy phạm pháp luật.",
     "chuDe": "Phân loại văn bản",
     "canCuPhapLy": [
-      "Luật Ban hành văn bản quy phạm pháp luật"
+      "Luật Ban hành văn bản quy phạm pháp luật số 64/2025/QH15"
     ],
     "ngayCapNhat": "2026-03-10"
   },
   {
     "id": "HD-002",
     "cauHoi": "Hồ sơ trình nghị quyết quy phạm pháp luật gồm những gì?",
-    "traLoi": "Tối thiểu gồm: tờ trình, dự thảo nghị quyết, bản tổng hợp và tiếp thu ý kiến của đối tượng chịu tác động, báo cáo thẩm tra của Ban của Hội đồng nhân dân, và các tài liệu liên quan khác. Thiếu bản tổng hợp ý kiến là lỗi bị trừ điểm nhiều nhất ở nhóm trình tự, thủ tục.",
+    "traLoi": "Tối thiểu gồm: tờ trình, dự thảo nghị quyết, bản tổng hợp và tiếp thu ý kiến của đối tượng chịu tác động, báo cáo thẩm tra của Ban của Hội đồng nhân dân. Thiếu bản tổng hợp ý kiến là dấu hiệu bị hệ thống cảnh báo và bị trừ điểm nhiều nhất ở nhóm trình tự, thủ tục.",
     "chuDe": "Trình tự, thủ tục",
     "canCuPhapLy": [
-      "Luật Ban hành văn bản quy phạm pháp luật"
+      "Luật Ban hành văn bản quy phạm pháp luật số 64/2025/QH15"
     ],
     "ngayCapNhat": "2026-03-10"
   },
@@ -31,22 +31,32 @@
   },
   {
     "id": "HD-004",
+    "cauHoi": "Danh mục văn bản rà soát hằng tháng do ai quyết định?",
+    "traLoi": "Thường trực Hội đồng nhân dân tỉnh quyết định, tại phiên họp và ghi vào thông báo kết luận. Phần mềm chỉ tập hợp, phân tích, xếp hạng và trình danh mục đề xuất kèm lý do từng văn bản. Thường trực có quyền thêm hoặc bỏ bất kỳ văn bản nào; mọi thay đổi đều được ghi lại ai sửa và sửa lúc nào. Không có bốc thăm tự động quyết định thay con người.",
+    "chuDe": "Danh mục rà soát",
+    "canCuPhapLy": [
+      "Quy chế rà soát văn bản quy phạm pháp luật của Hội đồng nhân dân cấp xã"
+    ],
+    "ngayCapNhat": "2026-06-01"
+  },
+  {
+    "id": "HD-005",
     "cauHoi": "Đơn vị không đồng ý với kết quả chấm điểm thì làm thế nào?",
-    "traLoi": "Đơn vị có 5 ngày làm việc kể từ ngày nhận kết quả để gửi giải trình. Giải trình được ghi vào phiếu thẩm định và xem xét trước khi chốt kết quả. Sau khi chốt, kết quả mới được công bố công khai.",
+    "traLoi": "Đơn vị có 5 ngày làm việc kể từ ngày nhận kết quả để gửi giải trình. Giải trình được ghi vào phiếu thẩm định và xem xét trước khi chốt kết quả. Sau khi chốt, kết quả mới được công bố công khai và báo cáo tại phiên họp tháng sau.",
     "chuDe": "Thẩm định và giải trình",
     "canCuPhapLy": [
-      "Quy chế kiểm tra ngẫu nhiên nghị quyết Hội đồng nhân dân cấp xã"
+      "Quy chế rà soát văn bản quy phạm pháp luật của Hội đồng nhân dân cấp xã"
     ],
     "ngayCapNhat": "2026-05-18"
   },
   {
-    "id": "HD-005",
-    "cauHoi": "Vì sao tin được rằng việc rút thăm là khách quan?",
-    "traLoi": "Vì rút thăm không dùng số ngẫu nhiên của máy mà dùng bộ sinh số có seed cố định, công thức seed là \"<năm>-W<tuần ISO>-<mã muối>\" với mã muối công bố trước. Toàn bộ danh sách ứng viên đầu vào, trọng số và kết quả được lưu vào kho công khai. Bất kỳ ai bấm nút \"Chạy lại để kiểm chứng\" cũng tính ra đúng kết quả cũ; nếu ai đó sửa danh sách trúng thì việc tính lại sẽ báo không khớp.",
-    "chuDe": "Rút thăm",
+    "id": "HD-006",
+    "cauHoi": "Kiến nghị sau giám sát quá hạn thì xử lý thế nào?",
+    "traLoi": "Hệ thống chuyển cảnh báo đỏ và khởi tạo quy trình yêu cầu giải trình theo Điều 40 Luật Hoạt động giám sát số 121/2025/QH15: thời hạn 15 ngày, trường hợp phức tạp không quá 30 ngày. Lưu ý đây là ngày dương lịch chứ không phải ngày làm việc. Sau đó áp dụng lần lượt bảy bước xử lý, từ đôn đốc đến báo cáo Hội đồng nhân dân xem xét trách nhiệm.",
+    "chuDe": "Theo dõi sau giám sát",
     "canCuPhapLy": [
-      "Quy chế kiểm tra ngẫu nhiên nghị quyết Hội đồng nhân dân cấp xã"
+      "Điều 40 Luật Hoạt động giám sát của Quốc hội và Hội đồng nhân dân số 121/2025/QH15"
     ],
-    "ngayCapNhat": "2026-06-01"
+    "ngayCapNhat": "2026-06-20"
   }
 ]

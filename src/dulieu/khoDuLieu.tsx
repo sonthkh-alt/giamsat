@@ -5,13 +5,15 @@ import type { ReactNode } from 'react';
 import type {
   BanTin,
   CauHinh,
+  CauHinhDauHieu,
   DonVi,
-  DotKiemTra,
+  DotRaSoat,
   HoiDap,
   KetQuaThamDinh,
-  KienNghi,
+  KhungNghiepVu,
   NgayLe,
   NghiQuyet,
+  NhiemVuSauGiamSat,
   NhomTieuChi,
   VanBanMau,
 } from '../kieu';
@@ -20,7 +22,9 @@ import { homNay as tinhHomNay } from '../nghiepvu/hanXuLy';
 
 export const CAU_HINH_MAC_DINH: CauHinh = {
   maMuoi: 'giamsat-thanhhoa',
-  soNghiQuyetRutMoiTuan: 5,
+  soVanBanRaSoatMoiThang: 10,
+  ngayTongHop: 20,
+  ngayTrinhDanhMuc: 25,
   chuKho: 'sonthkh-alt',
   tenKho: 'giamsat',
   nhanh: 'main',
@@ -28,15 +32,37 @@ export const CAU_HINH_MAC_DINH: CauHinh = {
   namLamViec: 2026,
 };
 
+const KHUNG_RONG: KhungNghiepVu = {
+  phienBan: '',
+  ghiChu: '',
+  chuThe: [],
+  cap: [],
+  nhom: [],
+  buocXuLySauGiamSat: [],
+  cachThucLapDanhMuc: [],
+};
+
+const DAU_HIEU_RONG: CauHinhDauHieu = {
+  phienBan: '',
+  ghiChu: '',
+  canCuHetHieuLuc: { diem: 0, mucDo: 'cao', ghiChu: '', danhMuc: [] },
+  tenKhongConDung: { diem: 0, mucDo: 'cao', ghiChu: '', danhMuc: [] },
+  thamQuyenTheoLinhVuc: { diem: 0, mucDo: 'trung_binh', ghiChu: '', quyTac: [] },
+  thanhPhanHoSo: { diem: 0, mucDo: 'trung_binh', ghiChu: '', batBuoc: [] },
+  theThuc: { diem: 0, mucDo: 'thap', ghiChu: '', quyTac: [] },
+};
+
 export type DuLieuHeThong = {
   cauHinh: CauHinh;
+  khung: KhungNghiepVu;
+  cauHinhDauHieu: CauHinhDauHieu;
   donVi: DonVi[];
   tieuChi: NhomTieuChi[];
   ngayLe: NgayLe[];
   nghiQuyet: NghiQuyet[];
-  dotKiemTra: DotKiemTra[];
+  dotRaSoat: DotRaSoat[];
   ketQua: KetQuaThamDinh[];
-  kienNghi: KienNghi[];
+  nhiemVu: NhiemVuSauGiamSat[];
   hoiDap: HoiDap[];
   vanBanMau: VanBanMau[];
   banTin: BanTin[];
@@ -64,36 +90,52 @@ async function tai(): Promise<DuLieuHeThong> {
   const cauHinh = ghiNhan(await docDuLieu<CauHinh>('cauhinh.json', CAU_HINH_MAC_DINH));
   const nam = cauHinh.namLamViec;
 
-  const [donVi, tieuChi, ngayLe, nghiQuyet, ketQua, kienNghi, hoiDap, vanBanMau, banTin, mucLuc] =
-    await Promise.all([
-      docDuLieu<DonVi[]>('donvi.json', []),
-      docDuLieu<NhomTieuChi[]>('tieuchi.json', []),
-      docDuLieu<NgayLe[]>('ngayle.json', []),
-      docDuLieu<NghiQuyet[]>(`nghiquyet/${nam}.json`, []),
-      docDuLieu<KetQuaThamDinh[]>(`ketqua/${nam}.json`, []),
-      docDuLieu<KienNghi[]>(`kiennghi/${nam}.json`, []),
-      docDuLieu<HoiDap[]>('hoidap.json', []),
-      docDuLieu<VanBanMau[]>('vanbanmau.json', []),
-      docDuLieu<BanTin[]>('bangtin.json', []),
-      docDuLieu<string[]>('dotkiemtra/muc-luc.json', []),
-    ]);
+  const [
+    khung,
+    cauHinhDauHieu,
+    donVi,
+    tieuChi,
+    ngayLe,
+    nghiQuyet,
+    ketQua,
+    nhiemVu,
+    hoiDap,
+    vanBanMau,
+    banTin,
+    mucLuc,
+  ] = await Promise.all([
+    docDuLieu<KhungNghiepVu>('khung-nghiep-vu.json', KHUNG_RONG),
+    docDuLieu<CauHinhDauHieu>('dauhieu-canhbao.json', DAU_HIEU_RONG),
+    docDuLieu<DonVi[]>('donvi.json', []),
+    docDuLieu<NhomTieuChi[]>('tieuchi.json', []),
+    docDuLieu<NgayLe[]>('ngayle.json', []),
+    docDuLieu<NghiQuyet[]>(`nghiquyet/${nam}.json`, []),
+    docDuLieu<KetQuaThamDinh[]>(`ketqua/${nam}.json`, []),
+    docDuLieu<NhiemVuSauGiamSat[]>(`nhiemvu/${nam}.json`, []),
+    docDuLieu<HoiDap[]>('hoidap.json', []),
+    docDuLieu<VanBanMau[]>('vanbanmau.json', []),
+    docDuLieu<BanTin[]>('bangtin.json', []),
+    docDuLieu<string[]>('dotrasoat/muc-luc.json', []),
+  ]);
 
-  const dotKiemTra = await Promise.all(
-    ghiNhan(mucLuc).map((ky) => docDuLieu<DotKiemTra | null>(`dotkiemtra/${ky}.json`, null)),
+  const dotRaSoat = await Promise.all(
+    ghiNhan(mucLuc).map((ky) => docDuLieu<DotRaSoat | null>(`dotrasoat/${ky}.json`, null)),
   );
 
   return {
     cauHinh,
+    khung: ghiNhan(khung),
+    cauHinhDauHieu: ghiNhan(cauHinhDauHieu),
     donVi: ghiNhan(donVi),
     tieuChi: ghiNhan(tieuChi),
     ngayLe: ghiNhan(ngayLe),
     nghiQuyet: ghiNhan(nghiQuyet),
-    dotKiemTra: dotKiemTra
+    dotRaSoat: dotRaSoat
       .map((d) => ghiNhan(d))
-      .filter((d): d is DotKiemTra => d !== null)
+      .filter((d): d is DotRaSoat => d !== null)
       .sort((a, b) => (a.ky < b.ky ? 1 : -1)),
     ketQua: ghiNhan(ketQua),
-    kienNghi: ghiNhan(kienNghi),
+    nhiemVu: ghiNhan(nhiemVu),
     hoiDap: ghiNhan(hoiDap),
     vanBanMau: ghiNhan(vanBanMau),
     banTin: ghiNhan(banTin),

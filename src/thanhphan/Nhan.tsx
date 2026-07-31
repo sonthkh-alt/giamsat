@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { TrangThaiKienNghi, XepLoai } from '../kieu';
+import type { XepLoai } from '../kieu';
 import { NHAN_XEP_LOAI } from '../nghiepvu/chamDiem';
 import { NHAN_CANH_BAO, type MucCanhBao } from '../nghiepvu/hanXuLy';
 
@@ -56,20 +56,3 @@ export function NhanHan({ muc, soNgay }: { muc: MucCanhBao; soNgay?: number }) {
   );
 }
 
-export const NHAN_TRANG_THAI_KIEN_NGHI: Record<TrangThaiKienNghi, string> = {
-  chua_thuc_hien: 'Chưa thực hiện',
-  dang_thuc_hien: 'Đang thực hiện',
-  da_hoan_thanh: 'Đã hoàn thành',
-  khong_con_phu_hop: 'Không còn phù hợp',
-};
-
-const SAC_KIEN_NGHI: Record<TrangThaiKienNghi, Sac> = {
-  chua_thuc_hien: 'luuy',
-  dang_thuc_hien: 'trung_tinh',
-  da_hoan_thanh: 'dat',
-  khong_con_phu_hop: 'trung_tinh',
-};
-
-export function NhanKienNghi({ trangThai }: { trangThai: TrangThaiKienNghi }) {
-  return <Nhan sac={SAC_KIEN_NGHI[trangThai]}>{NHAN_TRANG_THAI_KIEN_NGHI[trangThai]}</Nhan>;
-}

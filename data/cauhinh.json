@@ -1,6 +1,8 @@
 {
   "maMuoi": "gsts-2026-thidiem",
-  "soNghiQuyetRutMoiTuan": 5,
+  "soVanBanRaSoatMoiThang": 10,
+  "ngayTongHop": 20,
+  "ngayTrinhDanhMuc": 25,
   "chuKho": "sonthkh-alt",
   "tenKho": "giamsat",
   "nhanh": "main",

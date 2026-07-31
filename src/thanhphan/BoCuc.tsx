@@ -4,10 +4,11 @@ import { hienThiNgay } from '../nghiepvu/hanXuLy';
 
 const MUC_DIEU_HUONG = [
   { den: '/', nhan: 'Tổng quan', cuoi: true },
+  { den: '/khung-nghiep-vu', nhan: 'Khung nghiệp vụ' },
   { den: '/nghi-quyet', nhan: 'Nghị quyết' },
-  { den: '/rut-tham', nhan: 'Rút thăm' },
+  { den: '/danh-muc-ra-soat', nhan: 'Danh mục rà soát' },
   { den: '/tham-dinh', nhan: 'Thẩm định' },
-  { den: '/kien-nghi', nhan: 'Kiến nghị' },
+  { den: '/theo-doi-sau-giam-sat', nhan: 'Sau giám sát' },
   { den: '/hoi-dap', nhan: 'Hỏi đáp' },
   { den: '/quan-tri', nhan: 'Quản trị' },
 ];

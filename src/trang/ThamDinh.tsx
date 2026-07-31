@@ -16,32 +16,41 @@ import {
 } from '../nghiepvu/chamDiem';
 import {
   congNgayLamViec,
+  hienThiKyThang,
   hienThiNgay,
-  HAN_GIAI_TRINH,
+  kyThang,
   mucCanhBao,
   soNgayLamViecConLai,
+  HAN_GIAI_TRINH,
+  HAN_THAM_DINH,
 } from '../nghiepvu/hanXuLy';
-import { kyRutTham } from '../nghiepvu/rutTham';
 import ManHinhTrong from '../thanhphan/ManHinhTrong';
 import ThongBao from '../thanhphan/ThongBao';
 import { Nhan, NhanHan, NhanXepLoai } from '../thanhphan/Nhan';
+
+const CAC_BAN = [
+  'Ban Pháp chế',
+  'Ban Kinh tế - Ngân sách',
+  'Ban Văn hóa - Xã hội',
+  'Ban Dân tộc',
+];
 
 export default function ThamDinh() {
   const du = useDuLieu();
   const { coQuyenGhi } = usePhien();
   const ghi = useGhi();
 
-  const kyHienTai = kyRutTham(du.homNay);
+  const kyHienTai = kyThang(du.homNay);
   const [kyDangXem, datKyDangXem] = useState(kyHienTai);
   const [dangCham, datDangCham] = useState<string | null>(null);
 
   const danhSachKy = useMemo(() => {
-    const tap = new Set(du.dotKiemTra.map((d) => d.ky));
+    const tap = new Set(du.dotRaSoat.map((d) => d.ky));
     tap.add(kyHienTai);
     return [...tap].sort().reverse();
-  }, [du.dotKiemTra, kyHienTai]);
+  }, [du.dotRaSoat, kyHienTai]);
 
-  const dot = du.dotKiemTra.find((d) => d.ky === kyDangXem) ?? null;
+  const dot = du.dotRaSoat.find((d) => d.ky === kyDangXem) ?? null;
   const nghiQuyetTheoId = useMemo(
     () => new Map(du.nghiQuyet.map((nq) => [nq.id, nq])),
     [du.nghiQuyet],
@@ -67,49 +76,53 @@ export default function ThamDinh() {
     );
     await ghi.chay(async () => {
       await ghiJson(kho, `data/ketqua/${du.cauHinh.namLamViec}.json`, danhSach, thongDiep);
-      const phuThem = banGhi.trangThai === 'da_chot' ? await capNhatLanKiemTra(banGhi) : '';
+      const phuThem = banGhi.trangThai === 'da_chot' ? await capNhatLanRaSoat(banGhi) : '';
       return moTaThanhCong + phuThem;
     });
   }
 
   /**
-   * Chốt kết quả xong thì đơn vị coi như vừa được kiểm tra: cập nhật
-   * `lanKiemTraGanNhat` để lưới theo dõi và trọng số rút thăm phản ánh đúng.
+   * Chốt kết quả xong thì đơn vị coi như vừa được rà soát: cập nhật
+   * `lanRaSoatGanNhat` để lưới theo dõi và cách thức luân phiên phản ánh đúng.
    */
-  async function capNhatLanKiemTra(banGhi: KetQuaThamDinh): Promise<string> {
+  async function capNhatLanRaSoat(banGhi: KetQuaThamDinh): Promise<string> {
     const nq = nghiQuyetTheoId.get(banGhi.idNghiQuyet);
-    const dotCuaKy = du.dotKiemTra.find((d) => d.ky === banGhi.ky);
+    const dotCuaKy = du.dotRaSoat.find((d) => d.ky === banGhi.ky);
     if (!nq || !dotCuaKy) return '';
     const donViCanSua = du.donVi.find((d) => d.ma === nq.maDonVi);
     if (!donViCanSua) return '';
     if (
-      donViCanSua.lanKiemTraGanNhat !== null &&
-      donViCanSua.lanKiemTraGanNhat >= dotCuaKy.ngayRutTham
+      donViCanSua.lanRaSoatGanNhat !== null &&
+      donViCanSua.lanRaSoatGanNhat >= dotCuaKy.ngayMoDot
     ) {
       return '';
     }
     const danhSachDonVi = du.donVi.map((d) =>
-      d.ma === nq.maDonVi ? { ...d, lanKiemTraGanNhat: dotCuaKy.ngayRutTham } : d,
+      d.ma === nq.maDonVi ? { ...d, lanRaSoatGanNhat: dotCuaKy.ngayMoDot } : d,
     );
     await ghiJson(
       kho,
       'data/donvi.json',
       danhSachDonVi,
-      `donVi: cập nhật lần kiểm tra gần nhất của ${nq.maDonVi}`,
+      `donVi: cập nhật lần rà soát gần nhất của ${nq.maDonVi}`,
     );
-    return ` Lần kiểm tra gần nhất của ${donViCanSua.ten} đã cập nhật thành ${hienThiNgay(dotCuaKy.ngayRutTham)}.`;
+    return ` Lần rà soát gần nhất của ${donViCanSua.ten} đã cập nhật thành ${hienThiNgay(dotCuaKy.ngayMoDot)}.`;
   }
 
-  if (!dot) {
+  if (!dot || dot.danhMucChinhThuc.length === 0) {
     return (
       <div className="space-y-6">
-        <h2 className="text-xl">Thẩm định nghị quyết</h2>
+        <h2 className="text-xl">Thẩm định văn bản</h2>
         <ManHinhTrong
-          tieuDe={`Kỳ ${kyDangXem} chưa rút thăm`}
-          moTa="Phiếu thẩm định chỉ lập cho nghị quyết đã trúng thăm. Rút thăm trước rồi quay lại đây chấm điểm."
+          tieuDe={
+            dot
+              ? `Kỳ ${hienThiKyThang(kyDangXem)} chưa có danh mục chính thức`
+              : `Kỳ ${hienThiKyThang(kyDangXem)} chưa lập danh mục`
+          }
+          moTa="Phiếu thẩm định chỉ lập cho văn bản đã nằm trong danh mục chính thức do Thường trực quyết định. Sang trang Danh mục rà soát trước."
           hanhDong={
-            <Link to="/rut-tham" className="nut-chinh">
-              Sang trang Rút thăm
+            <Link to="/danh-muc-ra-soat" className="nut-chinh">
+              Sang trang Danh mục rà soát
             </Link>
           }
         />
@@ -121,10 +134,12 @@ export default function ThamDinh() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h2 className="text-xl">Thẩm định nghị quyết</h2>
-          <p className="text-[0.9375rem] text-[#4A536B]">
-            Thang 100 điểm, năm nhóm tiêu chí. Hạn thẩm định {HAN_GIAI_TRINH} ngày làm việc kể từ
-            ngày nhận hồ sơ.
+          <h2 className="text-xl">Thẩm định văn bản</h2>
+          <p className="max-w-[85ch] text-[0.9375rem] text-[#4A536B]">
+            Thang 100 điểm, năm nhóm tiêu chí. Hoàn thành thẩm định trong {HAN_THAM_DINH} ngày làm
+            việc kể từ ngày mở đợt — hạn kỳ này là{' '}
+            <span className="so">{hienThiNgay(dot.hanThamDinh)}</span>. Đơn vị có{' '}
+            {HAN_GIAI_TRINH} ngày làm việc để giải trình.
           </p>
         </div>
         <div>
@@ -150,6 +165,13 @@ export default function ThamDinh() {
         </div>
       </div>
 
+      {du.homNay > dot.hanThamDinh && (
+        <ThongBao loai="luu_y" tieuDe="Đã qua hạn hoàn thành thẩm định">
+          Hạn thẩm định của kỳ này là {hienThiNgay(dot.hanThamDinh)}. Các phiếu chưa lập cần hoàn
+          thành sớm để kịp công bố tại phiên họp tháng sau.
+        </ThongBao>
+      )}
+
       {ghi.loi && (
         <ThongBao loai="loi" tieuDe="Không lưu được kết quả">
           {ghi.loi}
@@ -162,7 +184,7 @@ export default function ThamDinh() {
       )}
 
       <ul className="space-y-4">
-        {dot.danhSachTrung.map((id) => {
+        {dot.danhMucChinhThuc.map((id) => {
           const nq = nghiQuyetTheoId.get(id);
           const ketQua = ketQuaTheoId.get(id) ?? null;
           const congKhai = ketQua?.trangThai === 'da_chot';
@@ -175,10 +197,15 @@ export default function ThamDinh() {
                   <h3 className="text-lg">
                     {nq ? `${nq.so}/${nq.kyHieu}` : id}{' '}
                     <span className="font-normal text-[#4A536B]">
-                      — {nq ? (tenDonVi.get(nq.maDonVi) ?? nq.maDonVi) : 'không tìm thấy nghị quyết'}
+                      — {nq ? (tenDonVi.get(nq.maDonVi) ?? nq.maDonVi) : 'không tìm thấy văn bản'}
                     </span>
                   </h3>
                   {nq && <p className="trichdan mt-1 max-w-[80ch]">{nq.trichYeu}</p>}
+                  {dot.phanCongBan[id] && (
+                    <p className="mt-1 text-[0.9375rem] text-[#4A536B]">
+                      Phân công: {dot.phanCongBan[id]}
+                    </p>
+                  )}
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   {!ketQua && <Nhan sac="luuy">Chưa chấm điểm</Nhan>}
@@ -203,8 +230,8 @@ export default function ThamDinh() {
 
               {ketQua && ketQua.trangThai === 'chua_chot' && !xemDuocChiTiet && (
                 <p className="mt-3 text-[0.9375rem] text-[#4A536B]">
-                  Kết quả chấm điểm chỉ công bố sau khi hết thời hạn giải trình{' '}
-                  {HAN_GIAI_TRINH} ngày làm việc và đã chốt. Hạn giải trình:{' '}
+                  Kết quả chấm điểm chỉ công bố sau khi hết thời hạn giải trình {HAN_GIAI_TRINH}{' '}
+                  ngày làm việc và đã chốt. Hạn giải trình:{' '}
                   <span className="so">{hienThiNgay(ketQua.hanGiaiTrinh)}</span>.
                 </p>
               )}
@@ -226,6 +253,7 @@ export default function ThamDinh() {
                       idNghiQuyet={id}
                       ky={kyDangXem}
                       dangGhi={ghi.dangGhi}
+                      banMacDinh={dot.phanCongBan[id] ?? CAC_BAN[0]!}
                       hanGiaiTrinh={congNgayLamViec(du.homNay, HAN_GIAI_TRINH, du.ngayLe)}
                       onHuy={() => datDangCham(null)}
                       onLuu={async (banGhi) => {
@@ -282,8 +310,8 @@ export default function ThamDinh() {
           </tbody>
         </table>
         <p className="mt-3 text-[0.9375rem] text-[#4A536B]">
-          Xếp loại: Tốt từ 90 điểm · Khá 75–89 · Đạt 60–74 · Chưa đạt dưới 60. Nếu nghị quyết có
-          nội dung trái pháp luật thì xếp loại Chưa đạt, bất kể tổng điểm.
+          Xếp loại: Tốt từ 90 điểm · Khá 75–89 · Đạt 60–74 · Chưa đạt dưới 60. Nếu văn bản có nội
+          dung trái pháp luật thì xếp loại Chưa đạt, bất kể tổng điểm.
         </p>
         {du.tieuChi.length > 0 && (
           <ul className="mt-3 space-y-2">
@@ -314,6 +342,7 @@ function PhieuChamDiem({
   idNghiQuyet,
   ky,
   hanGiaiTrinh,
+  banMacDinh,
   dangGhi,
   onLuu,
   onHuy,
@@ -321,6 +350,7 @@ function PhieuChamDiem({
   idNghiQuyet: string;
   ky: string;
   hanGiaiTrinh: string;
+  banMacDinh: string;
   dangGhi: boolean;
   onLuu: (banGhi: KetQuaThamDinh) => Promise<void>;
   onHuy: () => void;
@@ -329,6 +359,7 @@ function PhieuChamDiem({
   const [traiPhapLuat, datTraiPhapLuat] = useState(false);
   const [nhanXet, datNhanXet] = useState('');
   const [nguoiThamDinh, datNguoiThamDinh] = useState(layNguoiDung());
+  const [banThamDinh, datBanThamDinh] = useState(banMacDinh);
   const [loiNhap, datLoiNhap] = useState<string[]>([]);
 
   const { tongDiem, xepLoai } = chamDiem(diemNhom, traiPhapLuat);
@@ -351,6 +382,7 @@ function PhieuChamDiem({
       coNoiDungTraiPhapLuat: traiPhapLuat,
       nhanXet: nhanXet.trim(),
       nguoiThamDinh: nguoiThamDinh.trim(),
+      banThamDinh,
       hanGiaiTrinh,
       giaiTrinh: null,
       trangThai: 'chua_chot',
@@ -411,7 +443,7 @@ function PhieuChamDiem({
           onChange={(e) => datTraiPhapLuat(e.target.checked)}
         />
         <span>
-          Nghị quyết có nội dung trái pháp luật.
+          Văn bản có nội dung trái pháp luật.
           <span className="block text-[0.9375rem] text-[#4A536B]">
             Đánh dấu ô này thì xếp loại là Chưa đạt, bất kể tổng điểm.
           </span>
@@ -431,7 +463,7 @@ function PhieuChamDiem({
         />
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-3">
         <div>
           <label className="nhan-truong" htmlFor={`nguoi-${idNghiQuyet}`}>
             Người thẩm định
@@ -442,6 +474,23 @@ function PhieuChamDiem({
             value={nguoiThamDinh}
             onChange={(e) => datNguoiThamDinh(e.target.value)}
           />
+        </div>
+        <div>
+          <label className="nhan-truong" htmlFor={`ban-${idNghiQuyet}`}>
+            Ban thẩm định
+          </label>
+          <select
+            id={`ban-${idNghiQuyet}`}
+            className="o-nhap"
+            value={banThamDinh}
+            onChange={(e) => datBanThamDinh(e.target.value)}
+          >
+            {CAC_BAN.map((b) => (
+              <option key={b} value={b}>
+                {b}
+              </option>
+            ))}
+          </select>
         </div>
         <div>
           <p className="nhan-truong">Hạn giải trình của đơn vị</p>
@@ -510,7 +559,7 @@ function ChiTietKetQua({
 
       {ketQua.coNoiDungTraiPhapLuat && (
         <ThongBao loai="loi" tieuDe="Có nội dung trái pháp luật">
-          Nghị quyết bị xếp loại Chưa đạt theo quy định, không phụ thuộc tổng điểm.
+          Văn bản bị xếp loại Chưa đạt theo quy định, không phụ thuộc tổng điểm.
         </ThongBao>
       )}
 
@@ -518,7 +567,8 @@ function ChiTietKetQua({
         <p className="nhan-truong">Nhận xét của người thẩm định</p>
         <p className="trichdan whitespace-pre-line">{ketQua.nhanXet}</p>
         <p className="mt-1 text-[0.9375rem] text-[#4A536B]">
-          {ketQua.nguoiThamDinh} · hạn giải trình{' '}
+          {ketQua.nguoiThamDinh}
+          {ketQua.banThamDinh ? ` · ${ketQua.banThamDinh}` : ''} · hạn giải trình{' '}
           <span className="so">{hienThiNgay(ketQua.hanGiaiTrinh)}</span>
         </p>
       </div>

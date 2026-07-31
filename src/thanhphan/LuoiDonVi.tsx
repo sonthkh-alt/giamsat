@@ -3,18 +3,19 @@ import type { DonVi } from '../kieu';
 import { hienThiNgay } from '../nghiepvu/hanXuLy';
 import {
   mucTheoDoi,
-  soNgayTuLanKiemTra,
+  soNgayTuLanRaSoat,
   NHAN_MUC_THEO_DOI,
   type MucTheoDoi,
 } from '../nghiepvu/theoDoiDonVi';
 
 /**
- * Lưới các xã, phường — mỗi ô một đơn vị, đổ màu theo số ngày kể từ lần kiểm tra
- * gần nhất. Nhìn một cái là thấy đơn vị nào đang bị bỏ quên.
+ * Lưới các xã, phường — mỗi ô một đơn vị, đổ màu theo số ngày kể từ lần rà soát
+ * gần nhất. Nhìn một cái là thấy đơn vị nào đang bị bỏ quên; đây là cơ sở cho
+ * cách thức lập danh mục `luan_phien`.
  */
 
 const LOP_O: Record<MucTheoDoi, string> = {
-  moi_kiem_tra: 'bg-[#1F6F54] border-[#1F6F54]',
+  moi_ra_soat: 'bg-[#1F6F54] border-[#1F6F54]',
   binh_thuong: 'bg-[#A8CBBC] border-[#8FB9A8]',
   lau: 'bg-[#E8C271] border-[#C79E45]',
   rat_lau: 'bg-[#C8102E] border-[#C8102E]',
@@ -22,7 +23,7 @@ const LOP_O: Record<MucTheoDoi, string> = {
 };
 
 const THU_TU_CHU_GIAI: MucTheoDoi[] = [
-  'moi_kiem_tra',
+  'moi_ra_soat',
   'binh_thuong',
   'lau',
   'rat_lau',
@@ -55,11 +56,11 @@ export default function LuoiDonVi({
       >
         {danhSach.map((donVi) => {
           const muc = mucTheoDoi(donVi, ngayThamChieu);
-          const soNgay = soNgayTuLanKiemTra(donVi, ngayThamChieu);
+          const soNgay = soNgayTuLanRaSoat(donVi, ngayThamChieu);
           const moTa =
             soNgay === null
-              ? `${donVi.ten}: chưa từng được kiểm tra`
-              : `${donVi.ten}: kiểm tra gần nhất cách đây ${soNgay} ngày`;
+              ? `${donVi.ten}: chưa từng được rà soát`
+              : `${donVi.ten}: rà soát gần nhất cách đây ${soNgay} ngày`;
           return (
             <li key={donVi.ma}>
               <button
@@ -90,13 +91,13 @@ export default function LuoiDonVi({
         {dangChon ? (
           <p className="khung px-3 py-2">
             <strong>{dangChon.ten}</strong>{' '}
-            <span className="so text-[#4A536B]">({dangChon.ma})</span> — kiểm tra gần nhất:{' '}
-            <span className="so">{hienThiNgay(dangChon.lanKiemTraGanNhat)}</span>
-            {dangChon.lanKiemTraGanNhat === null && ' (chưa từng)'}
+            <span className="so text-[#4A536B]">({dangChon.ma})</span> — rà soát gần nhất:{' '}
+            <span className="so">{hienThiNgay(dangChon.lanRaSoatGanNhat)}</span>
+            {dangChon.lanRaSoatGanNhat === null && ' (chưa từng)'}
           </p>
         ) : (
           <p className="text-[0.9375rem] text-[#4A536B]">
-            Chọn một ô để xem tên đơn vị và ngày kiểm tra gần nhất.
+            Chọn một ô để xem tên đơn vị và ngày rà soát gần nhất.
           </p>
         )}
       </div>

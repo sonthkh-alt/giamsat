@@ -1,0 +1,190 @@
+{
+  "ky": "2026-07",
+  "thuocTinh": {
+    "nhomGS": "GS-02",
+    "chuThe": "thuong_truc",
+    "cap": "tinh"
+  },
+  "linhVucTrongTam": "Đất đai",
+  "danhMucDeXuat": [
+    {
+      "idNghiQuyet": "TH-046-1-2026",
+      "cachThuc": "chuyen_de",
+      "lyDo": "Thuộc lĩnh vực trọng tâm \"Đất đai\" Thường trực ấn định cho kỳ 2026-07.",
+      "diemRuiRo": 20,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-078-1-2026",
+      "cachThuc": "chuyen_de",
+      "lyDo": "Thuộc lĩnh vực trọng tâm \"Đất đai\" Thường trực ấn định cho kỳ 2026-07.",
+      "diemRuiRo": 20,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-076-1-2026",
+      "cachThuc": "chuyen_de",
+      "lyDo": "Thuộc lĩnh vực trọng tâm \"Đất đai\" Thường trực ấn định cho kỳ 2026-07.",
+      "diemRuiRo": 0,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-025-2-2026",
+      "cachThuc": "canh_bao",
+      "lyDo": "Điểm rủi ro 50. Hệ thống phát hiện 2 dấu hiệu cần rà soát.",
+      "diemRuiRo": 50,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-145-1-2026",
+      "cachThuc": "canh_bao",
+      "lyDo": "Điểm rủi ro 50. Hệ thống phát hiện 2 dấu hiệu cần rà soát.",
+      "diemRuiRo": 50,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-102-1-2026",
+      "cachThuc": "canh_bao",
+      "lyDo": "Điểm rủi ro 45. Hệ thống phát hiện 2 dấu hiệu cần rà soát.",
+      "diemRuiRo": 45,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-074-2-2026",
+      "cachThuc": "de_nghi",
+      "lyDo": "Theo đề nghị của Ban Thường trực Ủy ban Mặt trận Tổ quốc tỉnh: Có phản ánh của cử tri về mức thu chưa phù hợp với điều kiện địa bàn",
+      "diemRuiRo": 25,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-106-1-2026",
+      "cachThuc": "de_nghi",
+      "lyDo": "Theo đề nghị của Ban Kinh tế - Ngân sách Hội đồng nhân dân tỉnh: Phát hiện dấu hiệu chưa thống nhất với nghị quyết của Hội đồng nhân dân tỉnh",
+      "diemRuiRo": 30,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-004-1-2026",
+      "cachThuc": "luan_phien",
+      "lyDo": "Phường Hải Bình chưa từng được rà soát.",
+      "diemRuiRo": 0,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    },
+    {
+      "idNghiQuyet": "TH-007-1-2026",
+      "cachThuc": "luan_phien",
+      "lyDo": "Phường Nghi Sơn chưa từng được rà soát.",
+      "diemRuiRo": 40,
+      "canhBao": [],
+      "nguoiDeXuat": "Văn phòng Đoàn ĐBQH và HĐND tỉnh"
+    }
+  ],
+  "danhMucChinhThuc": [
+    "TH-004-1-2026",
+    "TH-025-2-2026",
+    "TH-046-1-2026",
+    "TH-074-2-2026",
+    "TH-076-1-2026",
+    "TH-078-1-2026",
+    "TH-102-1-2026",
+    "TH-106-1-2026",
+    "TH-145-1-2026"
+  ],
+  "vanBanQuyetDinh": "211/TB-HĐND",
+  "ngayMoDot": "2026-07-27",
+  "hanThamDinh": "2026-08-10",
+  "trangThai": "dang_tham_dinh",
+  "seedNgauNhien": null,
+  "phanCongBan": {
+    "TH-004-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-025-2-2026": "Ban Kinh tế - Ngân sách",
+    "TH-046-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-074-2-2026": "Ban Kinh tế - Ngân sách",
+    "TH-076-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-078-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-102-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-106-1-2026": "Ban Kinh tế - Ngân sách",
+    "TH-145-1-2026": "Ban Kinh tế - Ngân sách"
+  },
+  "nhatKyThayDoi": [
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-004-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-025-2-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-046-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-074-2-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-076-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-078-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-102-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-106-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "them",
+      "idNghiQuyet": "TH-145-1-2026",
+      "ghiChu": "Thường trực đưa vào danh mục tại phiên họp"
+    },
+    {
+      "luc": "2026-07-26",
+      "nguoi": "Nguyễn Văn A",
+      "hanhDong": "bo",
+      "idNghiQuyet": "TH-007-1-2026",
+      "ghiChu": "Đã rà soát trong đợt chuyên đề khác, không đưa vào kỳ này"
+    }
+  ]
+}

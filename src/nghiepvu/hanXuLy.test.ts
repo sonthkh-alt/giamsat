@@ -1,14 +1,22 @@
 import { describe, expect, it } from 'vitest';
 import {
+  congNgayDuongLich,
   congNgayLamViec,
+  hienThiKyThang,
   hienThiNgay,
   homNay,
+  kyThang,
+  kyThangTruoc,
   laCuoiTuan,
   laNgayLamViec,
   mucCanhBao,
+  ngayTrongKy,
   soNgayDuongLich,
   soNgayLamViecGiua,
   taoNgay,
+  HAN_GIAI_TRINH,
+  HAN_GIAI_TRINH_DIEU_40,
+  HAN_THAM_DINH,
   NgayKhongHopLe,
 } from './hanXuLy';
 import type { NgayLe } from '../kieu';
@@ -137,5 +145,62 @@ describe('soNgayDuongLich', () => {
   it('đếm cả cuối tuần và ngày lễ', () => {
     expect(soNgayDuongLich('2026-01-01', '2026-01-31')).toBe(30);
     expect(soNgayDuongLich('2026-01-31', '2026-01-01')).toBe(-30);
+  });
+});
+
+describe('congNgayDuongLich', () => {
+  it('cộng cả cuối tuần và ngày lễ', () => {
+    // 24/07/2026 là thứ Sáu; +3 ngày dương lịch là Chủ nhật 27/07
+    expect(congNgayDuongLich('2026-07-24', 3)).toBe('2026-07-27');
+  });
+
+  it('cộng 0 ngày trả về đúng ngày ban đầu', () => {
+    expect(congNgayDuongLich('2026-07-24', 0)).toBe('2026-07-24');
+  });
+
+  it('khác hẳn congNgayLamViec — đây là ngoại lệ của Điều 40', () => {
+    expect(congNgayDuongLich('2026-07-24', 5)).not.toBe(
+      congNgayLamViec('2026-07-24', 5, NGAY_LE),
+    );
+  });
+
+  it('từ chối số ngày âm', () => {
+    expect(() => congNgayDuongLich('2026-07-24', -1)).toThrow();
+  });
+});
+
+describe('hạn xử lý theo Quy chế', () => {
+  it('thẩm định 10 ngày làm việc, giải trình 5 ngày làm việc', () => {
+    expect(HAN_THAM_DINH).toBe(10);
+    expect(HAN_GIAI_TRINH).toBe(5);
+  });
+
+  it('Điều 40 là 15 ngày, và là ngày dương lịch', () => {
+    expect(HAN_GIAI_TRINH_DIEU_40).toBe(15);
+  });
+});
+
+describe('kỳ theo tháng', () => {
+  it('lấy đúng mã kỳ từ một ngày', () => {
+    expect(kyThang('2026-10-25')).toBe('2026-10');
+  });
+
+  it('từ chối ngày không hợp lệ', () => {
+    expect(() => kyThang('2026-13-01')).toThrow(NgayKhongHopLe);
+  });
+
+  it('hiển thị kỳ theo cách người dùng đọc', () => {
+    expect(hienThiKyThang('2026-10')).toBe('tháng 10/2026');
+    expect(hienThiKyThang('2026-01')).toBe('tháng 1/2026');
+  });
+
+  it('dựng được ngày cụ thể trong kỳ', () => {
+    expect(ngayTrongKy('2026-10', 20)).toBe('2026-10-20');
+    expect(ngayTrongKy('2026-10', 5)).toBe('2026-10-05');
+  });
+
+  it('lùi được về kỳ trước, kể cả qua năm', () => {
+    expect(kyThangTruoc('2026-10')).toBe('2026-09');
+    expect(kyThangTruoc('2026-01')).toBe('2025-12');
   });
 });

@@ -5,7 +5,7 @@
     "ten": "Phường Bỉm Sơn",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-002",
@@ -13,7 +13,7 @@
     "ten": "Phường Hàm Rồng",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-003",
@@ -21,7 +21,7 @@
     "ten": "Phường Hạc Thành",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-004",
@@ -29,7 +29,7 @@
     "ten": "Phường Hải Bình",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-005",
@@ -37,7 +37,7 @@
     "ten": "Phường Hải Lĩnh",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-09"
+    "lanRaSoatGanNhat": "2025-12-29"
   },
   {
     "ma": "TH-006",
@@ -45,7 +45,7 @@
     "ten": "Phường Nam Sầm Sơn",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-23"
+    "lanRaSoatGanNhat": "2025-12-13"
   },
   {
     "ma": "TH-007",
@@ -53,7 +53,7 @@
     "ten": "Phường Nghi Sơn",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-12"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-008",
@@ -61,7 +61,7 @@
     "ten": "Phường Nguyệt Viên",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-30"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-009",
@@ -69,7 +69,7 @@
     "ten": "Phường Ngọc Sơn",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-25"
+    "lanRaSoatGanNhat": "2026-01-18"
   },
   {
     "ma": "TH-010",
@@ -77,7 +77,7 @@
     "ten": "Phường Quang Trung",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-09-04"
+    "lanRaSoatGanNhat": "2026-02-11"
   },
   {
     "ma": "TH-011",
@@ -85,7 +85,7 @@
     "ten": "Phường Quảng Phú",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-02"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-012",
@@ -93,7 +93,7 @@
     "ten": "Phường Sầm Sơn",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-013",
@@ -101,7 +101,7 @@
     "ten": "Phường Trúc Lâm",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-04"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-014",
@@ -109,7 +109,7 @@
     "ten": "Phường Tân Dân",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-08-23"
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-015",
@@ -117,7 +117,7 @@
     "ten": "Phường Tĩnh Gia",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-09-20"
+    "lanRaSoatGanNhat": "2026-04-15"
   },
   {
     "ma": "TH-016",
@@ -125,7 +125,7 @@
     "ten": "Phường Đào Duy Từ",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-29"
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-017",
@@ -133,7 +133,7 @@
     "ten": "Phường Đông Quang",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-07-08"
+    "lanRaSoatGanNhat": "2025-09-17"
   },
   {
     "ma": "TH-018",
@@ -141,7 +141,7 @@
     "ten": "Phường Đông Sơn",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-30"
+    "lanRaSoatGanNhat": "2025-10-23"
   },
   {
     "ma": "TH-019",
@@ -149,7 +149,7 @@
     "ten": "Phường Đông Tiến",
     "loai": "phuong",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-21"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-020",
@@ -157,7 +157,7 @@
     "ten": "Xã An Nông",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-29"
+    "lanRaSoatGanNhat": "2025-12-15"
   },
   {
     "ma": "TH-021",
@@ -165,7 +165,7 @@
     "ten": "Xã Ba Đình",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-022",
@@ -173,7 +173,7 @@
     "ten": "Xã Biện Thượng",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-18"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-023",
@@ -181,7 +181,7 @@
     "ten": "Xã Bá Thước",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-08-19"
+    "lanRaSoatGanNhat": "2026-05-08"
   },
   {
     "ma": "TH-024",
@@ -189,7 +189,7 @@
     "ten": "Xã Bát Mọt",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-23"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-025",
@@ -197,7 +197,7 @@
     "ten": "Xã Các Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-04"
+    "lanRaSoatGanNhat": "2025-10-13"
   },
   {
     "ma": "TH-026",
@@ -205,7 +205,7 @@
     "ten": "Xã Công Chính",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-23"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-027",
@@ -213,7 +213,7 @@
     "ten": "Xã Cẩm Thuỷ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-08-12"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-028",
@@ -221,7 +221,7 @@
     "ten": "Xã Cẩm Thạch",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-13"
+    "lanRaSoatGanNhat": "2026-05-02"
   },
   {
     "ma": "TH-029",
@@ -229,7 +229,7 @@
     "ten": "Xã Cẩm Tân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-14"
+    "lanRaSoatGanNhat": "2026-03-18"
   },
   {
     "ma": "TH-030",
@@ -237,7 +237,7 @@
     "ten": "Xã Cẩm Tú",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-11"
+    "lanRaSoatGanNhat": "2025-10-17"
   },
   {
     "ma": "TH-031",
@@ -245,7 +245,7 @@
     "ten": "Xã Cẩm Vân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-08"
+    "lanRaSoatGanNhat": "2025-08-11"
   },
   {
     "ma": "TH-032",
@@ -253,7 +253,7 @@
     "ten": "Xã Cổ Lũng",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-10-08"
   },
   {
     "ma": "TH-033",
@@ -261,7 +261,7 @@
     "ten": "Xã Giao An",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-19"
+    "lanRaSoatGanNhat": "2025-10-09"
   },
   {
     "ma": "TH-034",
@@ -269,7 +269,7 @@
     "ten": "Xã Hiền Kiệt",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-11-28"
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-035",
@@ -277,7 +277,7 @@
     "ten": "Xã Hoa Lộc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-05"
+    "lanRaSoatGanNhat": "2026-05-17"
   },
   {
     "ma": "TH-036",
@@ -285,7 +285,7 @@
     "ten": "Xã Hoá Quỳ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-037",
@@ -293,7 +293,7 @@
     "ten": "Xã Hoạt Giang",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-038",
@@ -301,7 +301,7 @@
     "ten": "Xã Hoằng Châu",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-09-10"
+    "lanRaSoatGanNhat": "2026-03-17"
   },
   {
     "ma": "TH-039",
@@ -309,7 +309,7 @@
     "ten": "Xã Hoằng Giang",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-08-03"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-040",
@@ -317,7 +317,7 @@
     "ten": "Xã Hoằng Hoá",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-24"
+    "lanRaSoatGanNhat": "2026-05-14"
   },
   {
     "ma": "TH-041",
@@ -325,7 +325,7 @@
     "ten": "Xã Hoằng Lộc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-11-08"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-042",
@@ -333,7 +333,7 @@
     "ten": "Xã Hoằng Phú",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-05"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-043",
@@ -341,7 +341,7 @@
     "ten": "Xã Hoằng Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-09-07"
   },
   {
     "ma": "TH-044",
@@ -349,7 +349,7 @@
     "ten": "Xã Hoằng Thanh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-06"
+    "lanRaSoatGanNhat": "2025-08-03"
   },
   {
     "ma": "TH-045",
@@ -357,7 +357,7 @@
     "ten": "Xã Hoằng Tiến",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-09"
+    "lanRaSoatGanNhat": "2026-04-05"
   },
   {
     "ma": "TH-046",
@@ -365,7 +365,7 @@
     "ten": "Xã Hà Long",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-11-01"
   },
   {
     "ma": "TH-047",
@@ -373,7 +373,7 @@
     "ten": "Xã Hà Trung",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-01-23"
   },
   {
     "ma": "TH-048",
@@ -381,7 +381,7 @@
     "ten": "Xã Hậu Lộc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-31"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-049",
@@ -389,7 +389,7 @@
     "ten": "Xã Hồ Vương",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-10-01"
   },
   {
     "ma": "TH-050",
@@ -397,7 +397,7 @@
     "ten": "Xã Hồi Xuân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-29"
+    "lanRaSoatGanNhat": "2026-01-27"
   },
   {
     "ma": "TH-051",
@@ -405,7 +405,7 @@
     "ten": "Xã Hợp Tiến",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-08"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-052",
@@ -413,7 +413,7 @@
     "ten": "Xã Kim Tân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-14"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-053",
@@ -421,7 +421,7 @@
     "ten": "Xã Kiên Thọ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-27"
+    "lanRaSoatGanNhat": "2026-01-18"
   },
   {
     "ma": "TH-054",
@@ -429,7 +429,7 @@
     "ten": "Xã Lam Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-055",
@@ -437,7 +437,7 @@
     "ten": "Xã Linh Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-16"
+    "lanRaSoatGanNhat": "2025-12-19"
   },
   {
     "ma": "TH-056",
@@ -445,7 +445,7 @@
     "ten": "Xã Luận Thành",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-03-10"
+    "lanRaSoatGanNhat": "2026-01-26"
   },
   {
     "ma": "TH-057",
@@ -453,7 +453,7 @@
     "ten": "Xã Lĩnh Toại",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-08-24"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-058",
@@ -461,7 +461,7 @@
     "ten": "Xã Lưu Vệ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-08-07"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-059",
@@ -469,7 +469,7 @@
     "ten": "Xã Lương Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-19"
+    "lanRaSoatGanNhat": "2026-02-12"
   },
   {
     "ma": "TH-060",
@@ -477,7 +477,7 @@
     "ten": "Xã Minh Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-061",
@@ -485,7 +485,7 @@
     "ten": "Xã Mường Chanh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-16"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-062",
@@ -493,7 +493,7 @@
     "ten": "Xã Mường Lát",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-31"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-063",
@@ -501,7 +501,7 @@
     "ten": "Xã Mường Lý",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-16"
+    "lanRaSoatGanNhat": "2026-02-23"
   },
   {
     "ma": "TH-064",
@@ -509,7 +509,7 @@
     "ten": "Xã Mường Mìn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-03"
+    "lanRaSoatGanNhat": "2025-08-22"
   },
   {
     "ma": "TH-065",
@@ -517,7 +517,7 @@
     "ten": "Xã Mậu Lâm",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-08-07"
   },
   {
     "ma": "TH-066",
@@ -525,7 +525,7 @@
     "ten": "Xã Na Mèo",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-25"
+    "lanRaSoatGanNhat": "2026-02-05"
   },
   {
     "ma": "TH-067",
@@ -533,7 +533,7 @@
     "ten": "Xã Nam Xuân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-09-30"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-068",
@@ -541,7 +541,7 @@
     "ten": "Xã Nga An",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-03-29"
   },
   {
     "ma": "TH-069",
@@ -549,7 +549,7 @@
     "ten": "Xã Nga Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-12-20"
   },
   {
     "ma": "TH-070",
@@ -557,7 +557,7 @@
     "ten": "Xã Nga Thắng",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-31"
+    "lanRaSoatGanNhat": "2026-02-02"
   },
   {
     "ma": "TH-071",
@@ -565,7 +565,7 @@
     "ten": "Xã Nguyệt Ấn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-06"
+    "lanRaSoatGanNhat": "2025-11-24"
   },
   {
     "ma": "TH-072",
@@ -573,7 +573,7 @@
     "ten": "Xã Ngọc Liên",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-073",
@@ -581,7 +581,7 @@
     "ten": "Xã Ngọc Lặc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-06-03"
   },
   {
     "ma": "TH-074",
@@ -589,7 +589,7 @@
     "ten": "Xã Ngọc Trạo",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-09-11"
+    "lanRaSoatGanNhat": "2025-09-26"
   },
   {
     "ma": "TH-075",
@@ -597,7 +597,7 @@
     "ten": "Xã Nhi Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-03-21"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-076",
@@ -605,7 +605,7 @@
     "ten": "Xã Như Thanh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-077",
@@ -613,7 +613,7 @@
     "ten": "Xã Như Xuân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-20"
+    "lanRaSoatGanNhat": "2025-10-25"
   },
   {
     "ma": "TH-078",
@@ -621,7 +621,7 @@
     "ten": "Xã Nông Cống",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-11-27"
   },
   {
     "ma": "TH-079",
@@ -629,7 +629,7 @@
     "ten": "Xã Phú Lệ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-08-20"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-080",
@@ -637,7 +637,7 @@
     "ten": "Xã Phú Xuân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-14"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-081",
@@ -645,7 +645,7 @@
     "ten": "Xã Pù Luông",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-07-05"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-082",
@@ -653,7 +653,7 @@
     "ten": "Xã Pù Nhi",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-083",
@@ -661,7 +661,7 @@
     "ten": "Xã Quan Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-10"
+    "lanRaSoatGanNhat": "2026-03-05"
   },
   {
     "ma": "TH-084",
@@ -669,7 +669,7 @@
     "ten": "Xã Quang Chiểu",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-085",
@@ -677,7 +677,7 @@
     "ten": "Xã Quý Lương",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-22"
+    "lanRaSoatGanNhat": "2026-05-28"
   },
   {
     "ma": "TH-086",
@@ -685,7 +685,7 @@
     "ten": "Xã Quý Lộc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-087",
@@ -693,7 +693,7 @@
     "ten": "Xã Quảng Bình",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-088",
@@ -701,7 +701,7 @@
     "ten": "Xã Quảng Chính",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-089",
@@ -709,7 +709,7 @@
     "ten": "Xã Quảng Ngọc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-11-12"
   },
   {
     "ma": "TH-090",
@@ -717,7 +717,7 @@
     "ten": "Xã Quảng Ninh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-07"
+    "lanRaSoatGanNhat": "2025-10-10"
   },
   {
     "ma": "TH-091",
@@ -725,7 +725,7 @@
     "ten": "Xã Quảng Yên",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-11-30"
+    "lanRaSoatGanNhat": "2025-10-05"
   },
   {
     "ma": "TH-092",
@@ -733,7 +733,7 @@
     "ten": "Xã Sao Vàng",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-093",
@@ -741,7 +741,7 @@
     "ten": "Xã Sơn Thuỷ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-30"
+    "lanRaSoatGanNhat": "2026-01-10"
   },
   {
     "ma": "TH-094",
@@ -749,7 +749,7 @@
     "ten": "Xã Sơn Điện",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-23"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-095",
@@ -757,7 +757,7 @@
     "ten": "Xã Tam Chung",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-096",
@@ -765,7 +765,7 @@
     "ten": "Xã Tam Lư",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-097",
@@ -773,7 +773,7 @@
     "ten": "Xã Tam Thanh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-098",
@@ -781,7 +781,7 @@
     "ten": "Xã Thanh Kỳ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-04"
+    "lanRaSoatGanNhat": "2026-03-21"
   },
   {
     "ma": "TH-099",
@@ -789,7 +789,7 @@
     "ten": "Xã Thanh Phong",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-18"
+    "lanRaSoatGanNhat": "2025-11-21"
   },
   {
     "ma": "TH-100",
@@ -797,7 +797,7 @@
     "ten": "Xã Thanh Quân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-11"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-101",
@@ -805,7 +805,7 @@
     "ten": "Xã Thiên Phủ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-03-30"
+    "lanRaSoatGanNhat": "2026-05-09"
   },
   {
     "ma": "TH-102",
@@ -813,7 +813,7 @@
     "ten": "Xã Thiết Ống",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-24"
+    "lanRaSoatGanNhat": "2026-05-02"
   },
   {
     "ma": "TH-103",
@@ -821,7 +821,7 @@
     "ten": "Xã Thiệu Hoá",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-22"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-104",
@@ -829,7 +829,7 @@
     "ten": "Xã Thiệu Quang",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-13"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-105",
@@ -837,7 +837,7 @@
     "ten": "Xã Thiệu Tiến",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-09"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-106",
@@ -845,7 +845,7 @@
     "ten": "Xã Thiệu Toán",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-05-13"
   },
   {
     "ma": "TH-107",
@@ -853,7 +853,7 @@
     "ten": "Xã Thiệu Trung",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-20"
+    "lanRaSoatGanNhat": "2025-10-12"
   },
   {
     "ma": "TH-108",
@@ -861,7 +861,7 @@
     "ten": "Xã Thành Vinh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-15"
+    "lanRaSoatGanNhat": "2026-03-24"
   },
   {
     "ma": "TH-109",
@@ -869,7 +869,7 @@
     "ten": "Xã Thăng Bình",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-07-20"
+    "lanRaSoatGanNhat": "2026-03-13"
   },
   {
     "ma": "TH-110",
@@ -877,7 +877,7 @@
     "ten": "Xã Thường Xuân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-06-01"
   },
   {
     "ma": "TH-111",
@@ -885,7 +885,7 @@
     "ten": "Xã Thượng Ninh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-01-10"
   },
   {
     "ma": "TH-112",
@@ -893,7 +893,7 @@
     "ten": "Xã Thạch Bình",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-113",
@@ -901,7 +901,7 @@
     "ten": "Xã Thạch Lập",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-01-17"
   },
   {
     "ma": "TH-114",
@@ -909,7 +909,7 @@
     "ten": "Xã Thạch Quảng",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-07-20"
+    "lanRaSoatGanNhat": "2025-11-06"
   },
   {
     "ma": "TH-115",
@@ -917,7 +917,7 @@
     "ten": "Xã Thắng Lộc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-23"
+    "lanRaSoatGanNhat": "2026-01-08"
   },
   {
     "ma": "TH-116",
@@ -925,7 +925,7 @@
     "ten": "Xã Thắng Lợi",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-21"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-117",
@@ -933,7 +933,7 @@
     "ten": "Xã Thọ Bình",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-118",
@@ -941,7 +941,7 @@
     "ten": "Xã Thọ Long",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-17"
+    "lanRaSoatGanNhat": "2025-08-06"
   },
   {
     "ma": "TH-119",
@@ -949,7 +949,7 @@
     "ten": "Xã Thọ Lập",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-03-20"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-120",
@@ -957,7 +957,7 @@
     "ten": "Xã Thọ Ngọc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-18"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-121",
@@ -965,7 +965,7 @@
     "ten": "Xã Thọ Phú",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-122",
@@ -973,7 +973,7 @@
     "ten": "Xã Thọ Xuân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-23"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-123",
@@ -981,7 +981,7 @@
     "ten": "Xã Tiên Trang",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-124",
@@ -989,7 +989,7 @@
     "ten": "Xã Triệu Lộc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-07"
+    "lanRaSoatGanNhat": "2026-04-04"
   },
   {
     "ma": "TH-125",
@@ -997,7 +997,7 @@
     "ten": "Xã Triệu Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-12-11"
   },
   {
     "ma": "TH-126",
@@ -1005,7 +1005,7 @@
     "ten": "Xã Trung Chính",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-11"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-127",
@@ -1013,7 +1013,7 @@
     "ten": "Xã Trung Hạ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-03-30"
   },
   {
     "ma": "TH-128",
@@ -1021,7 +1021,7 @@
     "ten": "Xã Trung Lý",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-20"
+    "lanRaSoatGanNhat": "2026-03-04"
   },
   {
     "ma": "TH-129",
@@ -1029,7 +1029,7 @@
     "ten": "Xã Trung Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-09-29"
+    "lanRaSoatGanNhat": "2026-05-26"
   },
   {
     "ma": "TH-130",
@@ -1037,7 +1037,7 @@
     "ten": "Xã Trung Thành",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-11"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-131",
@@ -1045,7 +1045,7 @@
     "ten": "Xã Trường Lâm",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-11-17"
+    "lanRaSoatGanNhat": "2026-05-03"
   },
   {
     "ma": "TH-132",
@@ -1053,7 +1053,7 @@
     "ten": "Xã Trường Văn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-12"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-133",
@@ -1061,7 +1061,7 @@
     "ten": "Xã Tân Ninh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-11-09"
+    "lanRaSoatGanNhat": "2026-05-17"
   },
   {
     "ma": "TH-134",
@@ -1069,7 +1069,7 @@
     "ten": "Xã Tân Thành",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-22"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-135",
@@ -1077,7 +1077,7 @@
     "ten": "Xã Tân Tiến",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-136",
@@ -1085,7 +1085,7 @@
     "ten": "Xã Tây Đô",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-05"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-137",
@@ -1093,7 +1093,7 @@
     "ten": "Xã Tượng Lĩnh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-08"
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-138",
@@ -1101,7 +1101,7 @@
     "ten": "Xã Tống Sơn",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-08-18"
+    "lanRaSoatGanNhat": "2025-10-15"
   },
   {
     "ma": "TH-139",
@@ -1109,7 +1109,7 @@
     "ten": "Xã Vân Du",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-09-25"
   },
   {
     "ma": "TH-140",
@@ -1117,7 +1117,7 @@
     "ten": "Xã Văn Nho",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-25"
+    "lanRaSoatGanNhat": "2026-04-21"
   },
   {
     "ma": "TH-141",
@@ -1125,7 +1125,7 @@
     "ten": "Xã Văn Phú",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2025-11-09"
   },
   {
     "ma": "TH-142",
@@ -1133,7 +1133,7 @@
     "ten": "Xã Vĩnh Lộc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-06"
+    "lanRaSoatGanNhat": "2026-04-23"
   },
   {
     "ma": "TH-143",
@@ -1141,7 +1141,7 @@
     "ten": "Xã Vạn Lộc",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-11-11"
+    "lanRaSoatGanNhat": "2025-11-02"
   },
   {
     "ma": "TH-144",
@@ -1149,7 +1149,7 @@
     "ten": "Xã Vạn Xuân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-17"
+    "lanRaSoatGanNhat": "2026-04-03"
   },
   {
     "ma": "TH-145",
@@ -1157,7 +1157,7 @@
     "ten": "Xã Xuân Bình",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-26"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-146",
@@ -1165,7 +1165,7 @@
     "ten": "Xã Xuân Chinh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-01-23"
   },
   {
     "ma": "TH-147",
@@ -1173,7 +1173,7 @@
     "ten": "Xã Xuân Du",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-09-11"
+    "lanRaSoatGanNhat": "2025-12-28"
   },
   {
     "ma": "TH-148",
@@ -1181,7 +1181,7 @@
     "ten": "Xã Xuân Hoà",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-03-13"
+    "lanRaSoatGanNhat": "2025-08-17"
   },
   {
     "ma": "TH-149",
@@ -1189,7 +1189,7 @@
     "ten": "Xã Xuân Lập",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-16"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-150",
@@ -1197,7 +1197,7 @@
     "ten": "Xã Xuân Thái",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-151",
@@ -1205,7 +1205,7 @@
     "ten": "Xã Xuân Tín",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-07-20"
+    "lanRaSoatGanNhat": "2025-10-08"
   },
   {
     "ma": "TH-152",
@@ -1213,7 +1213,7 @@
     "ten": "Xã Yên Khương",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-03-31"
+    "lanRaSoatGanNhat": "2026-01-24"
   },
   {
     "ma": "TH-153",
@@ -1221,7 +1221,7 @@
     "ten": "Xã Yên Nhân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-29"
+    "lanRaSoatGanNhat": "2025-11-04"
   },
   {
     "ma": "TH-154",
@@ -1229,7 +1229,7 @@
     "ten": "Xã Yên Ninh",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-09-29"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-155",
@@ -1237,7 +1237,7 @@
     "ten": "Xã Yên Phú",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-13"
+    "lanRaSoatGanNhat": "2026-06-01"
   },
   {
     "ma": "TH-156",
@@ -1245,7 +1245,7 @@
     "ten": "Xã Yên Thắng",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-27"
+    "lanRaSoatGanNhat": "2025-08-21"
   },
   {
     "ma": "TH-157",
@@ -1253,7 +1253,7 @@
     "ten": "Xã Yên Thọ",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-04"
+    "lanRaSoatGanNhat": "2025-09-09"
   },
   {
     "ma": "TH-158",
@@ -1261,7 +1261,7 @@
     "ten": "Xã Yên Trường",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-04-12"
+    "lanRaSoatGanNhat": "2026-02-26"
   },
   {
     "ma": "TH-159",
@@ -1269,7 +1269,7 @@
     "ten": "Xã Yên Định",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-11-03"
+    "lanRaSoatGanNhat": "2026-05-25"
   },
   {
     "ma": "TH-160",
@@ -1277,7 +1277,7 @@
     "ten": "Xã Điền Lư",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-05-22"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-161",
@@ -1285,7 +1285,7 @@
     "ten": "Xã Điền Quang",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-02-05"
+    "lanRaSoatGanNhat": "2025-12-09"
   },
   {
     "ma": "TH-162",
@@ -1293,7 +1293,7 @@
     "ten": "Xã Đông Thành",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-06-24"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-163",
@@ -1301,7 +1301,7 @@
     "ten": "Xã Định Hoà",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-10-04"
+    "lanRaSoatGanNhat": "2026-06-26"
   },
   {
     "ma": "TH-164",
@@ -1309,7 +1309,7 @@
     "ten": "Xã Định Tân",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2025-12-15"
+    "lanRaSoatGanNhat": "2026-05-30"
   },
   {
     "ma": "TH-165",
@@ -1317,7 +1317,7 @@
     "ten": "Xã Đồng Lương",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": "2026-01-02"
+    "lanRaSoatGanNhat": null
   },
   {
     "ma": "TH-166",
@@ -1325,6 +1325,6 @@
     "ten": "Xã Đồng Tiến",
     "loai": "xa",
     "vung": "chua_phan_loai",
-    "lanKiemTraGanNhat": null
+    "lanRaSoatGanNhat": "2026-01-30"
   }
 ]
