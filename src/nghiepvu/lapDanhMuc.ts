@@ -1,14 +1,3 @@
-// Lập danh mục nghị quyết cấp xã đề xuất rà soát hằng tháng (GS-02).
-//
-// NGUYÊN TẮC KHÔNG ĐƯỢC LÀM SAI:
-// Không có bốc thăm tự động. Không có Math.random() quyết định thay con người.
-// Thẩm quyền quyết định danh mục thuộc Thường trực HĐND tỉnh. Phần mềm chỉ tập
-// hợp, phân tích, xếp hạng và TRÌNH danh mục đề xuất; mỗi mục bắt buộc nêu rõ
-// áp dụng cách thức nào và vì sao.
-//
-// Cách thức `ngau_nhien` chỉ bổ sung phần còn lại của danh mục, không thay thế
-// bốn cách trên, và vẫn ghi seed để tra lại được.
-
 import type {
   CachThucLapDanhMuc,
   CanhBao,
@@ -25,11 +14,6 @@ import { congNgayLamViec, ngayTrongKy, soNgayDuongLich, HAN_THAM_DINH } from './
 import { NHAN_LINH_VUC } from './nhan';
 import { tomTatCanhBao, xepHangTheoRuiRo } from './xepHangRuiRo';
 
-/**
- * Tỷ lệ mục tiêu của bốn cách thức chủ động trong danh mục.
- * Phần chưa dùng hết được chuyển sang cách thức kế tiếp; còn thừa bao nhiêu thì
- * `ngau_nhien` bổ sung nốt.
- */
 export const TY_LE_CACH_THUC: Readonly<Record<Exclude<CachThucLapDanhMuc, 'ngau_nhien'>, number>> =
   {
     chuyen_de: 0.3,
@@ -38,7 +22,6 @@ export const TY_LE_CACH_THUC: Readonly<Record<Exclude<CachThucLapDanhMuc, 'ngau_
     luan_phien: 0.2,
   };
 
-/** Thứ tự áp dụng các cách thức, đúng như mục 3.1 của Quy chế. */
 export const THU_TU_CACH_THUC: readonly CachThucLapDanhMuc[] = [
   'chuyen_de',
   'canh_bao',
@@ -61,11 +44,6 @@ export type DeNghiRaSoat = {
   lyDo: string;
 };
 
-// ---------------------------------------------------------------------------
-// Bộ sinh số có seed — chỉ dùng cho phần bổ sung ngẫu nhiên
-// ---------------------------------------------------------------------------
-
-/** Băm chuỗi seed thành số nguyên 32 bit (FNV-1a). */
 export function bam32(chuoi: string): number {
   let h = 2166136261 >>> 0;
   for (let i = 0; i < chuoi.length; i += 1) {
@@ -75,7 +53,6 @@ export function bam32(chuoi: string): number {
   return h >>> 0;
 }
 
-/** mulberry32 — nhỏ, tái lập được trên mọi trình duyệt. */
 export function mulberry32(hat: number): () => number {
   let a = hat >>> 0;
   return function ngauNhien(): number {
@@ -86,7 +63,6 @@ export function mulberry32(hat: number): () => number {
   };
 }
 
-/** seed = "<kỳ>-<mã muối>". Mã muối công bố trước trong data/cauhinh.json. */
 export function taoSeed(ky: string, maMuoi: string): string {
   if (!maMuoi) {
     throw new Error('Thiếu mã muối. Mã muối phải được công bố trước trong data/cauhinh.json.');
@@ -94,17 +70,12 @@ export function taoSeed(ky: string, maMuoi: string): string {
   return `${ky}-${maMuoi}`;
 }
 
-// ---------------------------------------------------------------------------
-// Mốc thời gian của chu kỳ tháng
-// ---------------------------------------------------------------------------
-
 export type MocChuKy = {
   ky: string;
   ngayTongHop: string;
   ngayTrinhDanhMuc: string;
 };
 
-/** Các mốc cố định trong tháng: ngày tổng hợp và ngày trình danh mục. */
 export function mocChuKy(
   ky: string,
   cauHinh: { ngayTongHop: number; ngayTrinhDanhMuc: number },
@@ -116,20 +87,15 @@ export function mocChuKy(
   };
 }
 
-/** Hạn hoàn thành thẩm định: 10 ngày làm việc kể từ ngày mở đợt. */
 export function tinhHanThamDinh(ngayMoDot: string, ngayLe: readonly NgayLe[] = []): string {
   return congNgayLamViec(ngayMoDot, HAN_THAM_DINH, ngayLe);
 }
-
-// ---------------------------------------------------------------------------
-// Lập danh mục đề xuất
-// ---------------------------------------------------------------------------
 
 export type ThamSoLapDanhMuc = {
   ky: string;
   nghiQuyet: readonly NghiQuyet[];
   donVi: readonly DonVi[];
-  /** Các đợt đã có, để loại văn bản đã rà soát ở đợt khác. */
+
   dotDaCo: readonly DotRaSoat[];
   cauHinhDauHieu: CauHinhDauHieu;
   linhVucTrongTam: LinhVuc | null;
@@ -143,17 +109,13 @@ export type ThamSoLapDanhMuc = {
 export type KetQuaLapDanhMuc = {
   ky: string;
   danhMucDeXuat: MucDeXuat[];
-  /** null khi danh mục không cần bổ sung ngẫu nhiên. */
+
   seedNgauNhien: string | null;
   soUngVien: number;
-  /** Số mục mỗi cách thức đóng góp, để giải trình cách lập danh mục. */
+
   thongKeCachThuc: Record<CachThucLapDanhMuc, number>;
 };
 
-/**
- * Ứng viên của một kỳ: nghị quyết còn hiệu lực, thuộc đơn vị có trong danh sách,
- * và chưa nằm trong danh mục chính thức của một đợt khác.
- */
 export function lapDanhSachUngVien(
   nghiQuyet: readonly NghiQuyet[],
   donVi: readonly DonVi[],
@@ -182,10 +144,6 @@ function suatMucTieu(tong: number, tyLe: number): number {
   return Math.max(1, Math.round(tong * tyLe));
 }
 
-/**
- * Lập danh mục đề xuất cho một kỳ. Hàm thuần, tất định: cùng đầu vào luôn cho
- * cùng danh mục, kể cả phần bổ sung ngẫu nhiên.
- */
 export function lapDanhMucDeXuat(thamSo: ThamSoLapDanhMuc): KetQuaLapDanhMuc {
   const {
     ky,
@@ -239,7 +197,6 @@ export function lapDanhMucDeXuat(thamSo: ThamSoLapDanhMuc): KetQuaLapDanhMuc {
 
   const conThieu = (): number => soLuongMucTieu - danhMuc.length;
 
-  // 1. Chuyên đề — theo lĩnh vực trọng tâm Thường trực ấn định cho tháng đó.
   if (linhVucTrongTam) {
     const suat = Math.min(suatMucTieu(soLuongMucTieu, TY_LE_CACH_THUC.chuyen_de), conThieu());
     const theoLinhVuc = [...conLai.values()]
@@ -254,7 +211,6 @@ export function lapDanhMucDeXuat(thamSo: ThamSoLapDanhMuc): KetQuaLapDanhMuc {
     }
   }
 
-  // 2. Cảnh báo — xếp hạng theo điểm rủi ro, chỉ lấy văn bản thật sự có dấu hiệu.
   {
     const suat = Math.min(suatMucTieu(soLuongMucTieu, TY_LE_CACH_THUC.canh_bao), conThieu());
     const coCanhBao = [...conLai.values()]
@@ -272,7 +228,6 @@ export function lapDanhMucDeXuat(thamSo: ThamSoLapDanhMuc): KetQuaLapDanhMuc {
     }
   }
 
-  // 3. Đề nghị — của cơ quan, đại biểu, cử tri, báo chí.
   {
     const suat = Math.min(suatMucTieu(soLuongMucTieu, TY_LE_CACH_THUC.de_nghi), conThieu());
     let daLay = 0;
@@ -285,7 +240,6 @@ export function lapDanhMucDeXuat(thamSo: ThamSoLapDanhMuc): KetQuaLapDanhMuc {
     }
   }
 
-  // 4. Luân phiên — ưu tiên đơn vị lâu chưa được rà soát, để không đơn vị nào bị bỏ sót.
   {
     const suat = Math.min(suatMucTieu(soLuongMucTieu, TY_LE_CACH_THUC.luan_phien), conThieu());
     const daChonDonVi = new Set(
@@ -320,12 +274,11 @@ export function lapDanhMucDeXuat(thamSo: ThamSoLapDanhMuc): KetQuaLapDanhMuc {
     }
   }
 
-  // 5. Ngẫu nhiên — CHỈ bổ sung phần còn lại, và ghi seed để tra lại được.
   let seedNgauNhien: string | null = null;
   if (conThieu() > 0 && conLai.size > 0) {
     seedNgauNhien = taoSeed(ky, maMuoi);
     const boSinhSo = mulberry32(bam32(seedNgauNhien));
-    // Sắp theo id trước khi bốc để thứ tự đầu vào không ảnh hưởng kết quả.
+
     const con = [...conLai.values()].sort((a, b) => (a.nghiQuyet.id < b.nghiQuyet.id ? -1 : 1));
     const canLay = Math.min(conThieu(), con.length);
     for (let i = 0; i < canLay; i += 1) {
@@ -348,14 +301,6 @@ export function lapDanhMucDeXuat(thamSo: ThamSoLapDanhMuc): KetQuaLapDanhMuc {
   };
 }
 
-// ---------------------------------------------------------------------------
-// Thường trực quyết định danh mục chính thức
-// ---------------------------------------------------------------------------
-
-/**
- * Thêm hoặc bỏ một văn bản khỏi danh mục chính thức, kèm ghi nhật ký ai sửa và
- * sửa lúc nào. Trả về bản ghi đợt mới, không sửa tại chỗ.
- */
 export function suaDanhMucChinhThuc(
   dot: DotRaSoat,
   thayDoi: { hanhDong: 'them' | 'bo'; idNghiQuyet: string; nguoi: string; ghiChu: string; luc: string },
@@ -378,7 +323,6 @@ export function suaDanhMucChinhThuc(
   return { ...dot, danhMucChinhThuc, nhatKyThayDoi: [...dot.nhatKyThayDoi, buoc] };
 }
 
-/** Nhãn tiếng Việt của trạng thái đợt rà soát. */
 export const NHAN_TRANG_THAI_DOT: Readonly<Record<DotRaSoat['trangThai'], string>> = {
   de_xuat: 'Đang đề xuất',
   da_quyet_dinh: 'Đã quyết định danh mục',

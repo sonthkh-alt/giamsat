@@ -77,7 +77,6 @@ function boDuLieu(soDonVi = 20, soVanBanMoiDonVi = 2) {
   const dv: DonVi[] = [];
   const nq: NghiQuyet[] = [];
   for (let i = 1; i <= soDonVi; i += 1) {
-    // Một phần đơn vị chưa từng rà soát, phần còn lại rà soát rải rác.
     dv.push(donVi(i, i % 4 === 0 ? null : `2026-0${(i % 6) + 1}-10`));
     for (let j = 1; j <= soVanBanMoiDonVi; j += 1) {
       nq.push(nghiQuyet(`TH-${String(i).padStart(3, '0')}`, j));
@@ -118,7 +117,6 @@ describe('mốc chu kỳ tháng', () => {
   });
 
   it('hạn thẩm định là 10 ngày làm việc kể từ ngày mở đợt', () => {
-    // Thứ Hai 27/07/2026 + 10 ngày làm việc = thứ Hai 10/08/2026
     expect(tinhHanThamDinh('2026-07-27', [])).toBe('2026-08-10');
   });
 });
@@ -248,7 +246,7 @@ describe('lapDanhMucDeXuat', () => {
     const muc = kq.danhMucDeXuat.find((m) => m.idNghiQuyet === nq[3]!.id);
     expect(muc).toBeDefined();
     expect(muc!.cachThuc).toBe('canh_bao');
-    expect(muc!.diemRuiRo).toBe(55); // 30 + 25
+    expect(muc!.diemRuiRo).toBe(55);
     expect(muc!.canhBao.length).toBe(2);
   });
 
@@ -282,7 +280,7 @@ describe('lapDanhMucDeXuat', () => {
       (s, c) => s + kq.thongKeCachThuc[c],
       0,
     );
-    // Phần ngẫu nhiên chỉ được lấp chỗ trống sau khi bốn cách chủ động đã chạy.
+
     expect(kq.thongKeCachThuc.ngau_nhien).toBe(kq.danhMucDeXuat.length - chuDong);
     expect(chuDong).toBeGreaterThan(0);
   });
@@ -316,7 +314,7 @@ describe('lapDanhMucDeXuat', () => {
     const kq = lapDanhMucDeXuat(
       thamSo({ nghiQuyet: nq, donVi: bo.donVi, soLuongMucTieu: 3, linhVucTrongTam: 'dat_dai' }),
     );
-    // chuyên đề 1 + luân phiên 1, không có cảnh báo và đề nghị ⇒ còn thiếu 1.
+
     expect(kq.thongKeCachThuc.ngau_nhien).toBe(1);
     expect(kq.seedNgauNhien).toBe(`${KY}-${MUOI}`);
   });

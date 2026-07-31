@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit && tsc -p tsconfig.node.json",
     "lint": "eslint .",
     "sinh-du-lieu-mau": "node scripts/sinh-du-lieu-mau.mjs",
-    "test": "vitest run"
+    "test": "vitest run",
+    "tai-khoan": "node scripts/tai-khoan.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

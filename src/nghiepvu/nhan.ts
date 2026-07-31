@@ -1,6 +1,3 @@
-// Nhãn tiếng Việt của các giá trị liệt kê, dùng chung cho mọi màn hình.
-// Mã trong dữ liệu là tiếng Việt không dấu; ra giao diện phải là tiếng Việt có dấu.
-
 import type { HieuLuc, LinhVuc, LoaiDonVi, LoaiNghiQuyet, Vung } from '../kieu';
 
 export const NHAN_LINH_VUC: Readonly<Record<LinhVuc, string>> = {
@@ -36,10 +33,8 @@ export const NHAN_VUNG: Readonly<Record<Vung, string>> = {
   chua_phan_loai: 'Chưa phân loại',
 };
 
-/** Dấu thanh và dấu phụ tổ hợp trong bảng Unicode. */
 const DAU_TO_HOP = /[̀-ͯ]/g;
 
-/** Bỏ dấu tiếng Việt để tìm kiếm không phụ thuộc dấu. */
 export function boDau(chuoi: string): string {
   return chuoi.normalize('NFD').replace(DAU_TO_HOP, '').replace(/[đĐ]/g, 'd').toLowerCase();
 }

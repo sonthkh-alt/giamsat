@@ -1,5 +1,3 @@
-// Chấm điểm thẩm định nghị quyết. Thang 100 điểm, chia năm nhóm.
-
 import type { DiemNhom, XepLoai } from '../kieu';
 
 export const DIEM_TOI_DA: Readonly<Record<keyof DiemNhom, number>> = {
@@ -27,17 +25,12 @@ export const NHAN_XEP_LOAI: Readonly<Record<XepLoai, string>> = {
   chua_dat: 'Chưa đạt',
 };
 
-/** Ngưỡng xếp loại: Tốt ≥ 90 · Khá 75–89 · Đạt 60–74 · Chưa đạt < 60. */
 export const NGUONG = { tot: 90, kha: 75, dat: 60 } as const;
 
 export function tongDiem(diemNhom: DiemNhom): number {
   return MA_NHOM.reduce((tong, ma) => tong + diemNhom[ma], 0);
 }
 
-/**
- * Kiểm tra điểm từng nhóm nằm trong khoảng cho phép.
- * Trả về danh sách lỗi bằng tiếng Việt, rỗng nghĩa là hợp lệ.
- */
 export function kiemTraDiem(diemNhom: DiemNhom): string[] {
   const loi: string[] = [];
   for (const ma of MA_NHOM) {
@@ -52,10 +45,6 @@ export function kiemTraDiem(diemNhom: DiemNhom): string[] {
   return loi;
 }
 
-/**
- * Xếp loại theo tổng điểm.
- * Nếu nghị quyết có nội dung trái pháp luật thì luôn là "chưa đạt", bất kể tổng điểm.
- */
 export function xepLoai(tong: number, coNoiDungTraiPhapLuat: boolean): XepLoai {
   if (coNoiDungTraiPhapLuat) return 'chua_dat';
   if (tong >= NGUONG.tot) return 'tot';
@@ -64,7 +53,6 @@ export function xepLoai(tong: number, coNoiDungTraiPhapLuat: boolean): XepLoai {
   return 'chua_dat';
 }
 
-/** Tính một lượt tổng điểm và xếp loại từ bảng điểm nhóm. */
 export function chamDiem(
   diemNhom: DiemNhom,
   coNoiDungTraiPhapLuat: boolean,

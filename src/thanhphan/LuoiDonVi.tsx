@@ -8,12 +8,6 @@ import {
   type MucTheoDoi,
 } from '../nghiepvu/theoDoiDonVi';
 
-/**
- * Lưới các xã, phường — mỗi ô một đơn vị, đổ màu theo số ngày kể từ lần rà soát
- * gần nhất. Nhìn một cái là thấy đơn vị nào đang bị bỏ quên; đây là cơ sở cho
- * cách thức lập danh mục `luan_phien`.
- */
-
 const LOP_O: Record<MucTheoDoi, string> = {
   moi_ra_soat: 'bg-[#1F6F54] border-[#1F6F54]',
   binh_thuong: 'bg-[#A8CBBC] border-[#8FB9A8]',

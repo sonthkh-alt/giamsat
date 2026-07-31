@@ -1,0 +1,232 @@
+[
+  {
+    "id": "GS-01-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-01",
+      "chuThe": "hdnd",
+      "cap": "tinh"
+    },
+    "tieuDe": "Xem xét, thẩm tra báo cáo — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "du_thao",
+    "dauMuc": {
+      "loaiBaoCao": "Nhóm báo cáo theo Điều 15 (dữ liệu giả lập)",
+      "coQuanBaoCao": "Cơ quan gửi báo cáo (dữ liệu giả lập)",
+      "kyBaoCao": "Kỳ báo cáo (dữ liệu giả lập)",
+      "ngayNhan": "2026-06-15",
+      "baoCaoThamTra": ""
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-02-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-02",
+      "chuThe": "thuong_truc",
+      "cap": "tinh"
+    },
+    "tieuDe": "Giám sát văn bản quy phạm pháp luật — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "dang_thuc_hien",
+    "dauMuc": {
+      "kyRaSoat": "Kỳ rà soát (dữ liệu giả lập)",
+      "linhVucTrongTam": "Lĩnh vực trọng tâm (dữ liệu giả lập)",
+      "danhMucChinhThuc": "Nội dung giả lập dòng 1\nNội dung giả lập dòng 2",
+      "vanBanQuyetDinh": "Thông báo kết luận phiên họp (dữ liệu giả lập)",
+      "ketQuaThamDinh": "Nội dung giả lập dòng 1\nNội dung giả lập dòng 2"
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-03-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-03",
+      "chuThe": "hdnd",
+      "cap": "tinh"
+    },
+    "tieuDe": "Chất vấn và xem xét trả lời chất vấn — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "du_thao",
+    "dauMuc": {
+      "nguoiChatVan": "Đại biểu chất vấn (dữ liệu giả lập)",
+      "nguoiTraLoi": "Người bị chất vấn (dữ liệu giả lập)",
+      "noiDung": "Nội dung chất vấn (dữ liệu giả lập)",
+      "nghiQuyetSauChatVan": "Nghị quyết sau chất vấn (dữ liệu giả lập)"
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-04-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-04",
+      "chuThe": "thuong_truc",
+      "cap": "tinh"
+    },
+    "tieuDe": "Hoạt động giải trình — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "du_thao",
+    "dauMuc": {
+      "vanDeGiaiTrinh": "Vấn đề yêu cầu giải trình (dữ liệu giả lập)",
+      "coQuanGiaiTrinh": "Cơ quan giải trình (dữ liệu giả lập)",
+      "ngayToChuc": "2026-06-15",
+      "ketLuan": ""
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-05-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-05",
+      "chuThe": "hdnd",
+      "cap": "tinh"
+    },
+    "tieuDe": "Giám sát chuyên đề — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "du_thao",
+    "dauMuc": {
+      "chuyenDe": "Tên chuyên đề (dữ liệu giả lập)",
+      "nghiQuyetThanhLap": "Nghị quyết thành lập Đoàn giám sát (dữ liệu giả lập)",
+      "thanhPhanDoan": "Nội dung giả lập dòng 1\nNội dung giả lập dòng 2",
+      "keHoach": "",
+      "baoCaoKetQua": ""
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-06-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-06",
+      "chuThe": "thuong_truc",
+      "cap": "tinh"
+    },
+    "tieuDe": "Giám sát giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "du_thao",
+    "dauMuc": {
+      "soVuViec": "12",
+      "coQuanGiaiQuyet": "Cơ quan giải quyết (dữ liệu giả lập)",
+      "tyLeGiaiQuyet": "12"
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-07-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-07",
+      "chuThe": "thuong_truc",
+      "cap": "tinh"
+    },
+    "tieuDe": "Giám sát giải quyết, trả lời kiến nghị cử tri — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "du_thao",
+    "dauMuc": {
+      "kyTiepXucCuTri": "Kỳ tiếp xúc cử tri (dữ liệu giả lập)",
+      "soKienNghi": "12",
+      "soDaTraLoi": "12"
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-08-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-08",
+      "chuThe": "to_dai_bieu",
+      "cap": "tinh"
+    },
+    "tieuDe": "Giám sát việc thi hành pháp luật ở địa phương — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "du_thao",
+    "dauMuc": {
+      "toDaiBieu": "Tổ đại biểu thực hiện (dữ liệu giả lập)",
+      "linhVuc": "Lĩnh vực thi hành pháp luật (dữ liệu giả lập)",
+      "diaBan": "Địa bàn giám sát (dữ liệu giả lập)"
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-10-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-10",
+      "chuThe": "hdnd",
+      "cap": "tinh"
+    },
+    "tieuDe": "Giám sát việc thực hiện nghị quyết về giám sát — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "du_thao",
+    "dauMuc": {
+      "nghiQuyetGiamSat": "Nghị quyết về giám sát (dữ liệu giả lập)",
+      "noiDungTheoDoi": "Nội dung theo dõi (dữ liệu giả lập)"
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-11-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-11",
+      "chuThe": "thuong_truc",
+      "cap": "tinh"
+    },
+    "tieuDe": "Theo dõi thực hiện kết luận, kiến nghị giám sát — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "dang_thuc_hien",
+    "dauMuc": {
+      "nguonGoc": "Văn bản kết luận, kiến nghị (dữ liệu giả lập)",
+      "noiDungYeuCau": "Nội dung yêu cầu (dữ liệu giả lập)",
+      "coQuanChuTri": "Cơ quan chủ trì (dữ liệu giả lập)",
+      "sanPhamPhaiHoanThanh": "Sản phẩm phải hoàn thành (dữ liệu giả lập)",
+      "hanHoanThanh": "2026-06-15",
+      "minhChung": ""
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  },
+  {
+    "id": "GS-12-2026-001",
+    "thuocTinh": {
+      "nhomGS": "GS-12",
+      "chuThe": "hdnd",
+      "cap": "tinh"
+    },
+    "tieuDe": "Giám sát lại, xem xét trách nhiệm, xử lý sau giám sát — hồ sơ giả lập kỳ tháng 6/2026",
+    "ky": "2026-06",
+    "ngayLap": "2026-06-15",
+    "nguoiLap": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+    "trangThai": "dang_thuc_hien",
+    "dauMuc": {
+      "nhiemVuLienQuan": "Nhiệm vụ chưa hoàn thành (dữ liệu giả lập)",
+      "buocXuLy": "Bước xử lý đang áp dụng (dữ liệu giả lập)",
+      "vanBanXuLy": "Văn bản của bước xử lý (dữ liệu giả lập)"
+    },
+    "tepDinhKem": [],
+    "ngayCapNhat": "2026-06-20"
+  }
+]

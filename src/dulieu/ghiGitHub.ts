@@ -1,14 +1,7 @@
-// Ghi dữ liệu lên kho GitHub bằng Contents API.
-//
-// Trang chạy trên GitHub Pages nên không có backend: mọi thao tác ghi đều do
-// trình duyệt của người dùng thực hiện, xác thực bằng fine-grained PAT do chính
-// họ dán vào. Không thêm SDK, chỉ dùng fetch.
-
-import { layToken } from './phienLamViec';
+import { layMaKetNoi } from './xacThuc';
 
 const GOC_API = 'https://api.github.com';
 
-/** Giới hạn kích thước tệp đính kèm: 10 MB. */
 export const KICH_THUOC_TOI_DA = 10 * 1024 * 1024;
 
 export type ThongTinKho = {
@@ -28,10 +21,10 @@ export class LoiGhiGitHub extends Error {
 }
 
 function tokenBatBuoc(): string {
-  const token = layToken();
+  const token = layMaKetNoi();
   if (!token) {
     throw new LoiGhiGitHub(
-      'Chưa có mã truy cập. Vào trang Quản trị và dán mã truy cập GitHub trước khi ghi dữ liệu.',
+      'Máy trạm này chưa cấu hình kết nối kho. Liên hệ quản trị hệ thống để mở kết nối trước khi ghi dữ liệu.',
     );
   }
   return token;
@@ -40,9 +33,9 @@ function tokenBatBuoc(): string {
 function dienGiaiLoi(ma: number, thongDiepGoc: string): string {
   switch (ma) {
     case 401:
-      return 'Mã truy cập không hợp lệ hoặc đã hết hạn. Tạo mã mới rồi dán lại ở trang Quản trị.';
+      return 'Mã kết nối kho không hợp lệ hoặc đã hết hạn. Liên hệ quản trị hệ thống để cấp lại.';
     case 403:
-      return 'Mã truy cập không đủ quyền ghi vào kho, hoặc đã chạm giới hạn số lần gọi của GitHub. Kiểm tra quyền "Contents: Read and write".';
+      return 'Mã kết nối kho không đủ quyền ghi, hoặc đã chạm giới hạn số lần gọi của GitHub. Kiểm tra quyền "Contents: Read and write".';
     case 404:
       return 'Không tìm thấy kho hoặc đường dẫn. Kiểm tra lại tên chủ kho, tên kho và nhánh trong data/cauhinh.json.';
     case 409:
@@ -72,7 +65,6 @@ async function goiAPI<T>(duongDan: string, tuyChon: RequestInit = {}): Promise<T
       const than = (await phanHoi.json()) as { message?: string };
       if (than.message) thongDiep = than.message;
     } catch {
-      // Phản hồi không phải JSON — giữ nguyên statusText.
       thongDiep = phanHoi.statusText || 'không rõ nguyên nhân';
     }
     throw new LoiGhiGitHub(dienGiaiLoi(phanHoi.status, thongDiep), phanHoi.status);
@@ -97,7 +89,6 @@ function chuoiSangBase64(noiDung: string): string {
 
 type TepGitHub = { sha: string; content?: string; encoding?: string };
 
-/** Lấy sha hiện tại của một tệp; null nếu tệp chưa tồn tại. */
 export async function laySha(kho: ThongTinKho, duongDan: string): Promise<string | null> {
   try {
     const tep = await goiAPI<TepGitHub>(
@@ -121,7 +112,6 @@ type PhanHoiGhi = {
   commit: { html_url?: string };
 };
 
-/** Commit một tệp (tạo mới hoặc cập nhật) thẳng vào nhánh làm việc. */
 export async function ghiTep(
   kho: ThongTinKho,
   duongDan: string,
@@ -148,7 +138,6 @@ export async function ghiTep(
   };
 }
 
-/** Ghi một tệp JSON, tự thụt lề 2 khoảng trắng và xuống dòng cuối tệp. */
 export async function ghiJson(
   kho: ThongTinKho,
   duongDan: string,
@@ -159,7 +148,6 @@ export async function ghiJson(
   return ghiTep(kho, duongDan, chuoiSangBase64(noiDung), thongDiep);
 }
 
-/** Tải một tệp đính kèm (PDF nghị quyết) lên data/files/<năm>/. */
 export async function taiTepLen(
   kho: ThongTinKho,
   duongDan: string,
@@ -182,7 +170,6 @@ export type QuyenGhi = {
   moTa: string;
 };
 
-/** Kiểm tra mã truy cập có ghi được vào kho hay không, trước khi người dùng nhập liệu. */
 export async function kiemTraQuyenGhi(kho: ThongTinKho): Promise<QuyenGhi> {
   const nguoiDung = await goiAPI<{ login: string }>('/user');
   const thongTinKho = await goiAPI<{ permissions?: { push?: boolean } }>(
@@ -194,7 +181,7 @@ export async function kiemTraQuyenGhi(kho: ThongTinKho): Promise<QuyenGhi> {
     tenDangNhap: nguoiDung.login,
     ghiDuoc,
     moTa: ghiDuoc
-      ? `Mã truy cập hợp lệ, tài khoản "${nguoiDung.login}" ghi được vào ${kho.chuKho}/${kho.tenKho}.`
-      : `Tài khoản "${nguoiDung.login}" chỉ đọc được kho ${kho.chuKho}/${kho.tenKho}. Cấp thêm quyền "Contents: Read and write" cho mã truy cập.`,
+      ? `Kết nối hợp lệ, tài khoản "${nguoiDung.login}" ghi được vào ${kho.chuKho}/${kho.tenKho}.`
+      : `Tài khoản "${nguoiDung.login}" chỉ đọc được kho ${kho.chuKho}/${kho.tenKho}. Cấp thêm quyền "Contents: Read and write" cho mã kết nối.`,
   };
 }

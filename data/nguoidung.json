@@ -1,0 +1,69 @@
+{
+  "phienBan": "2026-07",
+  "thamSoBam": {
+    "thuatToan": "PBKDF2-SHA256",
+    "soVongLap": 210000
+  },
+  "taiKhoan": [
+    {
+      "tenDangNhap": "quantri",
+      "hoTen": "Quản trị hệ thống",
+      "vaiTro": "quan_tri",
+      "maDonVi": null,
+      "muoi": "74604bf0f6c0f33d431ae40975b9770e",
+      "bam": "5914e805430a69bd48def1f65835663cb5953b65440392b5c747b12f7afad5b1",
+      "hoatDong": true,
+      "ngayCap": "2026-07-31"
+    },
+    {
+      "tenDangNhap": "thuongtruc",
+      "hoTen": "Thường trực Hội đồng nhân dân tỉnh",
+      "vaiTro": "thuong_truc",
+      "maDonVi": null,
+      "muoi": "3cb760cd4572b318b8c83b9f9b9e3a19",
+      "bam": "fb709584e14ef8f2e059cc8d06038867bd0db17425e405b3321bdc83d2210724",
+      "hoatDong": true,
+      "ngayCap": "2026-07-31"
+    },
+    {
+      "tenDangNhap": "vanphong",
+      "hoTen": "Văn phòng Đoàn ĐBQH và HĐND tỉnh",
+      "vaiTro": "van_phong",
+      "maDonVi": null,
+      "muoi": "d05981d95a51ff85dd0435d31286f6c5",
+      "bam": "7aa72925afd17d68aa302675a6e66112dcc145c59969b39add05feaf1de43b59",
+      "hoatDong": true,
+      "ngayCap": "2026-07-31"
+    },
+    {
+      "tenDangNhap": "banphapche",
+      "hoTen": "Ban Pháp chế",
+      "vaiTro": "ban",
+      "maDonVi": null,
+      "muoi": "2c01637a0dcfd473dcbc8e087aebff69",
+      "bam": "1dd205db10bfd7cffde8a0fde6fc25ae603ce209993e0c5db100933b61e53703",
+      "hoatDong": true,
+      "ngayCap": "2026-07-31"
+    },
+    {
+      "tenDangNhap": "daibieu",
+      "hoTen": "Đại biểu Hội đồng nhân dân tỉnh",
+      "vaiTro": "dai_bieu",
+      "maDonVi": null,
+      "muoi": "d108470def45342dcac4bb28107a05e0",
+      "bam": "6f14381a72e74c762628578742f531a7fa29596be6392d75f0f74823edd2f403",
+      "hoatDong": true,
+      "ngayCap": "2026-07-31"
+    },
+    {
+      "tenDangNhap": "xamau",
+      "hoTen": "Thường trực HĐND Phường Bỉm Sơn",
+      "vaiTro": "don_vi",
+      "maDonVi": "TH-001",
+      "muoi": "9438295b8037f712d98f39ea3481e4f5",
+      "bam": "326f0d2c57dfb1b031ff143686df266f72b079254d1e60a0dc9cb818d37649be",
+      "hoatDong": true,
+      "ngayCap": "2026-07-31"
+    }
+  ]
+}

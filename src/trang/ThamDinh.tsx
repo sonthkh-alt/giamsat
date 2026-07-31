@@ -5,7 +5,6 @@ import { useDuLieu } from '../dulieu/khoDuLieu';
 import { useGhi } from '../dulieu/useGhi';
 import { usePhien } from '../dulieu/usePhien';
 import { ghiJson, type ThongTinKho } from '../dulieu/ghiGitHub';
-import { layNguoiDung, luuNguoiDung } from '../dulieu/phienLamViec';
 import {
   chamDiem,
   DIEM_NHOM_RONG,
@@ -24,6 +23,7 @@ import {
   HAN_GIAI_TRINH,
   HAN_THAM_DINH,
 } from '../nghiepvu/hanXuLy';
+import { thieuQuyen } from '../nghiepvu/phanQuyen';
 import ManHinhTrong from '../thanhphan/ManHinhTrong';
 import ThongBao from '../thanhphan/ThongBao';
 import { Nhan, NhanHan, NhanXepLoai } from '../thanhphan/Nhan';
@@ -37,7 +37,11 @@ const CAC_BAN = [
 
 export default function ThamDinh() {
   const du = useDuLieu();
-  const { coQuyenGhi } = usePhien();
+  const { ghiDuoc, duocPhep, phien } = usePhien();
+  const chamDuoc = ghiDuoc('thamDinh');
+  const chotDuoc = ghiDuoc('chotKetQua');
+  const giaiTrinhDuoc = ghiDuoc('ghiGiaiTrinh');
+  const xemNoiBo = duocPhep('thamDinh') || duocPhep('chotKetQua') || duocPhep('ghiGiaiTrinh');
   const ghi = useGhi();
 
   const kyHienTai = kyThang(du.homNay);
@@ -81,10 +85,6 @@ export default function ThamDinh() {
     });
   }
 
-  /**
-   * Chốt kết quả xong thì đơn vị coi như vừa được rà soát: cập nhật
-   * `lanRaSoatGanNhat` để lưới theo dõi và cách thức luân phiên phản ánh đúng.
-   */
   async function capNhatLanRaSoat(banGhi: KetQuaThamDinh): Promise<string> {
     const nq = nghiQuyetTheoId.get(banGhi.idNghiQuyet);
     const dotCuaKy = du.dotRaSoat.find((d) => d.ky === banGhi.ky);
@@ -188,7 +188,7 @@ export default function ThamDinh() {
           const nq = nghiQuyetTheoId.get(id);
           const ketQua = ketQuaTheoId.get(id) ?? null;
           const congKhai = ketQua?.trangThai === 'da_chot';
-          const xemDuocChiTiet = congKhai || coQuyenGhi;
+          const xemDuocChiTiet = congKhai || xemNoiBo;
 
           return (
             <li key={id} className="khung p-4">
@@ -239,14 +239,15 @@ export default function ThamDinh() {
               {ketQua && xemDuocChiTiet && (
                 <ChiTietKetQua
                   ketQua={ketQua}
-                  coQuyenGhi={coQuyenGhi}
+                  chotDuoc={chotDuoc}
+                  giaiTrinhDuoc={giaiTrinhDuoc}
                   dangGhi={ghi.dangGhi}
                   homNayISO={du.homNay}
                   onLuu={luuKetQua}
                 />
               )}
 
-              {!ketQua && coQuyenGhi && (
+              {!ketQua && chamDuoc && (
                 <div className="mt-3">
                   {dangCham === id ? (
                     <PhieuChamDiem
@@ -254,6 +255,7 @@ export default function ThamDinh() {
                       ky={kyDangXem}
                       dangGhi={ghi.dangGhi}
                       banMacDinh={dot.phanCongBan[id] ?? CAC_BAN[0]!}
+                      nguoiMacDinh={phien?.hoTen ?? ''}
                       hanGiaiTrinh={congNgayLamViec(du.homNay, HAN_GIAI_TRINH, du.ngayLe)}
                       onHuy={() => datDangCham(null)}
                       onLuu={async (banGhi) => {
@@ -273,13 +275,12 @@ export default function ThamDinh() {
                 </div>
               )}
 
-              {!ketQua && !coQuyenGhi && (
+              {!ketQua && !chamDuoc && (
                 <p className="mt-3 text-[0.9375rem] text-[#4A536B]">
-                  Chưa có phiếu thẩm định. Người được phân công cần dán mã truy cập ở trang{' '}
-                  <Link to="/quan-tri" className="underline">
-                    Quản trị
-                  </Link>{' '}
-                  để chấm điểm.
+                  Chưa có phiếu thẩm định.{' '}
+                  {duocPhep('thamDinh')
+                    ? 'Máy trạm này chưa kết nối kho nên chưa chấm điểm được.'
+                    : thieuQuyen('thamDinh')}
                 </p>
               )}
             </li>
@@ -336,13 +337,12 @@ export default function ThamDinh() {
   );
 }
 
-// ---------------------------------------------------------------------------
-
 function PhieuChamDiem({
   idNghiQuyet,
   ky,
   hanGiaiTrinh,
   banMacDinh,
+  nguoiMacDinh,
   dangGhi,
   onLuu,
   onHuy,
@@ -351,6 +351,7 @@ function PhieuChamDiem({
   ky: string;
   hanGiaiTrinh: string;
   banMacDinh: string;
+  nguoiMacDinh: string;
   dangGhi: boolean;
   onLuu: (banGhi: KetQuaThamDinh) => Promise<void>;
   onHuy: () => void;
@@ -358,7 +359,7 @@ function PhieuChamDiem({
   const [diemNhom, datDiemNhom] = useState<DiemNhom>({ ...DIEM_NHOM_RONG });
   const [traiPhapLuat, datTraiPhapLuat] = useState(false);
   const [nhanXet, datNhanXet] = useState('');
-  const [nguoiThamDinh, datNguoiThamDinh] = useState(layNguoiDung());
+  const [nguoiThamDinh, datNguoiThamDinh] = useState(nguoiMacDinh);
   const [banThamDinh, datBanThamDinh] = useState(banMacDinh);
   const [loiNhap, datLoiNhap] = useState<string[]>([]);
 
@@ -372,7 +373,6 @@ function PhieuChamDiem({
     datLoiNhap(loi);
     if (loi.length > 0) return;
 
-    luuNguoiDung(nguoiThamDinh);
     await onLuu({
       idNghiQuyet,
       ky,
@@ -510,17 +510,17 @@ function PhieuChamDiem({
   );
 }
 
-// ---------------------------------------------------------------------------
-
 function ChiTietKetQua({
   ketQua,
-  coQuyenGhi,
+  chotDuoc,
+  giaiTrinhDuoc,
   dangGhi,
   homNayISO,
   onLuu,
 }: {
   ketQua: KetQuaThamDinh;
-  coQuyenGhi: boolean;
+  chotDuoc: boolean;
+  giaiTrinhDuoc: boolean;
   dangGhi: boolean;
   homNayISO: string;
   onLuu: (banGhi: KetQuaThamDinh, thongDiep: string, moTa: string) => Promise<void>;
@@ -580,7 +580,7 @@ function ChiTietKetQua({
         </div>
       )}
 
-      {coQuyenGhi && ketQua.trangThai === 'chua_chot' && (
+      {(chotDuoc || giaiTrinhDuoc) && ketQua.trangThai === 'chua_chot' && (
         <div className="space-y-3 border-t border-vien pt-3">
           <div>
             <label className="nhan-truong" htmlFor={`giai-trinh-${ketQua.idNghiQuyet}`}>
@@ -598,7 +598,7 @@ function ChiTietKetQua({
             <button
               type="button"
               className="nut-phu"
-              disabled={dangGhi || giaiTrinh.trim() === (ketQua.giaiTrinh ?? '')}
+              disabled={dangGhi || !giaiTrinhDuoc || giaiTrinh.trim() === (ketQua.giaiTrinh ?? '')}
               onClick={() =>
                 onLuu(
                   { ...ketQua, giaiTrinh: giaiTrinh.trim() || null },
@@ -612,7 +612,7 @@ function ChiTietKetQua({
             <button
               type="button"
               className="nut-chinh"
-              disabled={dangGhi || !daHetHanGiaiTrinh}
+              disabled={dangGhi || !chotDuoc || !daHetHanGiaiTrinh}
               onClick={() =>
                 onLuu(
                   { ...ketQua, giaiTrinh: giaiTrinh.trim() || null, trangThai: 'da_chot' },

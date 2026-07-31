@@ -1,22 +1,12 @@
-// Phát hiện dấu hiệu cảnh báo và chấm điểm rủi ro cho nghị quyết cấp xã.
-//
-// NGUYÊN TẮC: hệ thống chỉ chấm điểm để XẾP HẠNG ĐỀ XUẤT, không kết luận thay
-// người. Điểm rủi ro cao không có nghĩa là văn bản sai — chỉ nghĩa là nên xem trước.
-//
-// Mọi cảnh báo phải kèm lý do cụ thể và trích dẫn vị trí trong văn bản.
-// Cảnh báo không giải thích được lý do thì không hiển thị: xem locCanhBaoHopLe().
-
 import type { CanhBao, CauHinhDauHieu, NghiQuyet } from '../kieu';
 import { boDau } from './nhan';
 
-/** Điểm rủi ro tối đa để quy về thang phần trăm khi hiển thị. */
 export const DIEM_RUI_RO_TOI_DA = 100;
 
 function chuaCumTu(vanBan: string, cumTu: string): boolean {
   return boDau(vanBan).includes(boDau(cumTu));
 }
 
-/** Cắt một đoạn quanh vị trí khớp để trích dẫn cho người đọc. */
 function trichDoan(vanBan: string, cumTu: string, doDai = 120): string {
   const viTri = boDau(vanBan).indexOf(boDau(cumTu));
   if (viTri < 0) return vanBan.slice(0, doDai);
@@ -25,10 +15,6 @@ function trichDoan(vanBan: string, cumTu: string, doDai = 120): string {
   return `${dau > 0 ? '…' : ''}${vanBan.slice(dau, cuoi).trim()}${cuoi < vanBan.length ? '…' : ''}`;
 }
 
-/**
- * Chỉ giữ lại cảnh báo nói được lý do và chỉ được vị trí trong văn bản.
- * Đây là hàng rào cuối: dữ liệu cấu hình thiếu lý do thì cảnh báo bị bỏ, không hiển thị.
- */
 export function locCanhBaoHopLe(danhSach: readonly CanhBao[]): CanhBao[] {
   return danhSach.filter(
     (cb) =>
@@ -37,10 +23,6 @@ export function locCanhBaoHopLe(danhSach: readonly CanhBao[]): CanhBao[] {
       cb.viTri.trichDan.trim().length > 0,
   );
 }
-
-// ---------------------------------------------------------------------------
-// Năm nhóm dấu hiệu
-// ---------------------------------------------------------------------------
 
 function canCuHetHieuLuc(nghiQuyet: NghiQuyet, cauHinh: CauHinhDauHieu): CanhBao[] {
   const { diem, mucDo, danhMuc } = cauHinh.canCuHetHieuLuc;
@@ -99,7 +81,6 @@ function thamQuyenTheoLinhVuc(nghiQuyet: NghiQuyet, cauHinh: CauHinhDauHieu): Ca
 }
 
 function thanhPhanHoSo(nghiQuyet: NghiQuyet, cauHinh: CauHinhDauHieu): CanhBao[] {
-  // Chỉ nghị quyết quy phạm pháp luật mới phải đủ hồ sơ trình theo quy định.
   if (nghiQuyet.loai !== 'quy_pham') return [];
   const { diem, mucDo, batBuoc } = cauHinh.thanhPhanHoSo;
   const daCo = new Set(nghiQuyet.hoSoTrinh);
@@ -165,7 +146,7 @@ function theThuc(nghiQuyet: NghiQuyet, cauHinh: CauHinhDauHieu): CanhBao[] {
   const kyHieuQuyPham = lay('ky_hieu_quy_pham');
   if (kyHieuQuyPham && nghiQuyet.loai === 'quy_pham') {
     const nam = nghiQuyet.ngayBanHanh.slice(0, 4);
-    // Số, ký hiệu của văn bản quy phạm phải có năm ban hành: <số>/<năm>/NQ-HĐND
+
     const coNam = nghiQuyet.so.includes(`/${nam}`) || nghiQuyet.kyHieu.includes(nam);
     if (!coNam) {
       ketQua.push({
@@ -184,11 +165,6 @@ function theThuc(nghiQuyet: NghiQuyet, cauHinh: CauHinhDauHieu): CanhBao[] {
   return ketQua;
 }
 
-// ---------------------------------------------------------------------------
-// Tổng hợp
-// ---------------------------------------------------------------------------
-
-/** Phát hiện toàn bộ dấu hiệu cảnh báo của một nghị quyết. */
 export function phatHienCanhBao(nghiQuyet: NghiQuyet, cauHinh: CauHinhDauHieu): CanhBao[] {
   return locCanhBaoHopLe([
     ...canCuHetHieuLuc(nghiQuyet, cauHinh),
@@ -199,7 +175,6 @@ export function phatHienCanhBao(nghiQuyet: NghiQuyet, cauHinh: CauHinhDauHieu): 
   ]);
 }
 
-/** Điểm rủi ro là tổng điểm các cảnh báo, chặn trên ở DIEM_RUI_RO_TOI_DA. */
 export function tinhDiemRuiRo(canhBao: readonly CanhBao[]): number {
   const tong = canhBao.reduce((s, cb) => s + cb.diem, 0);
   return Math.min(tong, DIEM_RUI_RO_TOI_DA);
@@ -211,10 +186,6 @@ export type XepHang = {
   diemRuiRo: number;
 };
 
-/**
- * Xếp hạng nghị quyết theo điểm rủi ro giảm dần.
- * Cùng điểm thì sắp theo id để kết quả ổn định giữa các lần chạy.
- */
 export function xepHangTheoRuiRo(
   danhSach: readonly NghiQuyet[],
   cauHinh: CauHinhDauHieu,
@@ -233,7 +204,6 @@ export function xepHangTheoRuiRo(
     );
 }
 
-/** Câu tóm tắt lý do đề xuất theo cảnh báo, dùng làm `lyDo` của mục đề xuất. */
 export function tomTatCanhBao(canhBao: readonly CanhBao[]): string {
   if (canhBao.length === 0) return '';
   const dau = canhBao[0]!;

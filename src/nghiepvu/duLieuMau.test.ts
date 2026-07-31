@@ -1,8 +1,3 @@
-// Kiểm thử tích hợp trên chính bộ dữ liệu trong data/.
-//
-// Mục đích: bắt sớm mọi sai lệch giữa cấu hình, dữ liệu mẫu và quy tắc nghiệp vụ,
-// để CI hỏng chứ không phải người dùng phát hiện.
-
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -339,7 +334,7 @@ describe('nhiệm vụ sau giám sát mẫu', () => {
       const viTri = nv.buocXuLy.map((b) => THU_TU_BUOC_XU_LY.indexOf(b.ma));
       for (const v of viTri) expect(v).toBeGreaterThanOrEqual(0);
       expect(viTri).toEqual([...viTri].sort((a, b) => a - b));
-      // Không bỏ qua bước nào ở giữa.
+
       viTri.forEach((v, i) => expect(v).toBe(i));
       for (const b of nv.buocXuLy) {
         expect(b.ngay).toMatch(/^\d{4}-\d{2}-\d{2}$/);

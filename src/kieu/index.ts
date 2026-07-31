@@ -1,15 +1,3 @@
-// Định nghĩa kiểu dữ liệu dùng chung.
-// Định danh nghiệp vụ dùng tiếng Việt không dấu để đối chiếu với Quy chế.
-
-// ---------------------------------------------------------------------------
-// Xương sống: 12 nhóm nghiệp vụ giám sát
-// ---------------------------------------------------------------------------
-
-/**
- * Mã nhóm nghiệp vụ giám sát. Danh sách đầy đủ và bộ đầu mục của từng nhóm nằm
- * trong `data/khung-nghiep-vu.json` — kiểu ở đây chỉ khóa tập giá trị hợp lệ,
- * mọi thuộc tính khác của nhóm đều đọc từ cấu hình, không hard-code.
- */
 export type MaNhomGS =
   | 'GS-01'
   | 'GS-02'
@@ -28,7 +16,6 @@ export type ChuTheGiamSat = 'hdnd' | 'thuong_truc' | 'ban' | 'to_dai_bieu' | 'da
 
 export type CapHanhChinh = 'tinh' | 'xa';
 
-/** Ba thuộc tính bắt buộc của mọi hồ sơ trong hệ thống. */
 export type ThuocTinhHoSo = {
   nhomGS: MaNhomGS;
   chuThe: ChuTheGiamSat;
@@ -60,7 +47,6 @@ export type NhomNghiepVu = {
   capApDung: CapHanhChinh[];
   apDungCapXa: PhamViCapXa;
   trienKhai: MucTrienKhai;
-  /** Cảnh báo về dữ liệu nhạy cảm của nhóm, hiển thị nguyên văn ra giao diện. */
   canhBaoDuLieu?: string;
   dauMuc: DauMucDuLieu[];
 };
@@ -104,32 +90,55 @@ export type KhungNghiepVu = {
   cachThucLapDanhMuc: MoTaCachThuc[];
 };
 
-// ---------------------------------------------------------------------------
-// Đơn vị hành chính
-// ---------------------------------------------------------------------------
+export type VaiTro = 'quan_tri' | 'thuong_truc' | 'ban' | 'van_phong' | 'dai_bieu' | 'don_vi';
+
+export type Quyen =
+  | 'nhapNghiQuyet'
+  | 'lapDanhMuc'
+  | 'quyetDinhDanhMuc'
+  | 'thamDinh'
+  | 'ghiGiaiTrinh'
+  | 'chotKetQua'
+  | 'theoDoiNhiemVu'
+  | 'quanLyHoSo'
+  | 'quanTriHeThong';
+
+export type TaiKhoan = {
+  tenDangNhap: string;
+  hoTen: string;
+  vaiTro: VaiTro;
+  maDonVi: string | null;
+  muoi: string;
+  bam: string;
+  hoatDong: boolean;
+  ngayCap: string;
+};
+
+export type KhoTaiKhoan = {
+  phienBan: string;
+  thamSoBam: { thuatToan: string; soVongLap: number };
+  taiKhoan: TaiKhoan[];
+};
+
+export type PhienDangNhap = {
+  tenDangNhap: string;
+  hoTen: string;
+  vaiTro: VaiTro;
+  maDonVi: string | null;
+};
 
 export type LoaiDonVi = 'xa' | 'phuong';
 
-/**
- * Phân vùng địa lý. `chua_phan_loai` dùng khi chưa có căn cứ chính thức —
- * thà để trống còn hơn gán bừa một vùng cho xã, phường có thật.
- */
 export type Vung = 'dong_bang' | 'ven_bien' | 'mien_nui' | 'chua_phan_loai';
 
 export type DonVi = {
-  ma: string; // "TH-001" — mã nội bộ, ổn định, dùng dựng id nghị quyết
-  /** Mã đơn vị hành chính 5 chữ số theo danh mục của Tổng cục Thống kê. */
-  maDvhc: string; // "14812"
-  ten: string; // "Phường Hạc Thành"
+  ma: string;
+  maDvhc: string;
+  ten: string;
   loai: LoaiDonVi;
   vung: Vung;
-  /** Ngày rà soát gần nhất; null nếu chưa từng được rà soát. */
-  lanRaSoatGanNhat: string | null; // ISO date YYYY-MM-DD
+  lanRaSoatGanNhat: string | null;
 };
-
-// ---------------------------------------------------------------------------
-// Nghị quyết cấp xã (đối tượng của GS-02)
-// ---------------------------------------------------------------------------
 
 export type LoaiNghiQuyet = 'quy_pham' | 'ca_biet';
 
@@ -145,27 +154,21 @@ export type LinhVuc =
 export type HieuLuc = 'con_hieu_luc' | 'het_hieu_luc' | 'da_thay_the';
 
 export type NghiQuyet = {
-  id: string; // "<maDonVi>-<so>-<nam>"
+  id: string;
   maDonVi: string;
-  so: string; // "12"
-  kyHieu: string; // "NQ-HĐND"
+  so: string;
+  kyHieu: string;
   ngayBanHanh: string;
   kyHop: string;
   loai: LoaiNghiQuyet;
   linhVuc: LinhVuc;
   trichYeu: string;
   hieuLuc: HieuLuc;
-  /** Trích nguyên văn các căn cứ pháp lý viện dẫn trong văn bản. */
   canCuPhapLy: string[];
-  /** Mã các thành phần hồ sơ trình đã có, đối chiếu với data/dauhieu-canhbao.json. */
   hoSoTrinh: string[];
-  tepDinhKem: string[]; // đường dẫn trong data/files/
+  tepDinhKem: string[];
   ngayCapNhat: string;
 };
-
-// ---------------------------------------------------------------------------
-// Cảnh báo và điểm rủi ro
-// ---------------------------------------------------------------------------
 
 export type MucDoCanhBao = 'cao' | 'trung_binh' | 'thap';
 
@@ -176,33 +179,20 @@ export type MaDauHieu =
   | 'thanh_phan_ho_so'
   | 'the_thuc';
 
-/**
- * Một dấu hiệu cảnh báo phát hiện được.
- *
- * `lyDo` và `viTri` là BẮT BUỘC: cảnh báo không giải thích được lý do và
- * không chỉ ra được chỗ nào trong văn bản thì không được hiển thị.
- */
 export type CanhBao = {
   dauHieu: MaDauHieu;
   mucDo: MucDoCanhBao;
   diem: number;
   lyDo: string;
   viTri: {
-    /** Tên trường dữ liệu chứa dấu hiệu, ví dụ "Căn cứ pháp lý". */
     truong: string;
-    /** Trích dẫn đúng đoạn gây ra cảnh báo. */
     trichDan: string;
   };
 };
 
-// ---------------------------------------------------------------------------
-// Đợt rà soát hằng tháng (GS-02)
-// ---------------------------------------------------------------------------
-
 export type MucDeXuat = {
   idNghiQuyet: string;
   cachThuc: CachThucLapDanhMuc;
-  /** Bắt buộc. Hiển thị cho Thường trực khi quyết định. */
   lyDo: string;
   diemRuiRo: number;
   canhBao: CanhBao[];
@@ -211,9 +201,8 @@ export type MucDeXuat = {
 
 export type HanhDongDanhMuc = 'them' | 'bo';
 
-/** Nhật ký sửa danh mục: ai sửa, sửa lúc nào, vì sao. */
 export type ThayDoiDanhMuc = {
-  luc: string; // ISO date
+  luc: string;
   nguoi: string;
   hanhDong: HanhDongDanhMuc;
   idNghiQuyet: string;
@@ -223,32 +212,26 @@ export type ThayDoiDanhMuc = {
 export type TrangThaiDotRaSoat = 'de_xuat' | 'da_quyet_dinh' | 'dang_tham_dinh' | 'da_chot';
 
 export type DotRaSoat = {
-  ky: string; // "2026-10"
+  ky: string;
   thuocTinh: ThuocTinhHoSo;
   linhVucTrongTam: string | null;
   danhMucDeXuat: MucDeXuat[];
-  danhMucChinhThuc: string[]; // id nghị quyết, sau khi Thường trực quyết định
-  vanBanQuyetDinh: string; // số thông báo kết luận phiên họp
+  danhMucChinhThuc: string[];
+  vanBanQuyetDinh: string;
   ngayMoDot: string;
   hanThamDinh: string;
   trangThai: TrangThaiDotRaSoat;
-  /** Seed của phần bổ sung ngẫu nhiên; null nếu danh mục không dùng cách này. */
   seedNgauNhien: string | null;
-  /** Ban được phân công theo lĩnh vực: idNghiQuyet -> tên Ban. */
   phanCongBan: Record<string, string>;
   nhatKyThayDoi: ThayDoiDanhMuc[];
 };
 
-// ---------------------------------------------------------------------------
-// Thẩm định
-// ---------------------------------------------------------------------------
-
 export type DiemNhom = {
-  thamQuyenHinhThuc: number; // tối đa 20
-  trinhTuThuTuc: number; // tối đa 20
-  noiDungHopPhap: number; // tối đa 30
-  theThucTrinhBay: number; // tối đa 10
-  khaThiThucTien: number; // tối đa 20
+  thamQuyenHinhThuc: number;
+  trinhTuThuTuc: number;
+  noiDungHopPhap: number;
+  theThucTrinhBay: number;
+  khaThiThucTien: number;
 };
 
 export type XepLoai = 'tot' | 'kha' | 'dat' | 'chua_dat';
@@ -256,10 +239,10 @@ export type XepLoai = 'tot' | 'kha' | 'dat' | 'chua_dat';
 export type KetQuaThamDinh = {
   idNghiQuyet: string;
   ky: string;
-  diemNhom: DiemNhom; // tổng 100
+  diemNhom: DiemNhom;
   tongDiem: number;
   xepLoai: XepLoai;
-  coNoiDungTraiPhapLuat: boolean; // true ⇒ ép xuống "chua_dat"
+  coNoiDungTraiPhapLuat: boolean;
   nhanXet: string;
   nguoiThamDinh: string;
   banThamDinh: string;
@@ -275,10 +258,6 @@ export type NhomTieuChi = {
   tieuChi: { ma: string; noiDung: string; diemToiDa: number }[];
 };
 
-// ---------------------------------------------------------------------------
-// Theo dõi sau giám sát (GS-11, GS-12)
-// ---------------------------------------------------------------------------
-
 export type TrangThaiNhiemVu =
   | 'hoan_thanh'
   | 'hoan_thanh_mot_phan'
@@ -289,7 +268,7 @@ export type TrangThaiNhiemVu =
 
 export type BuocXuLy = {
   ma: MaBuocXuLy;
-  ngay: string; // ISO date
+  ngay: string;
   soVanBan: string;
   ghiChu: string;
 };
@@ -307,26 +286,29 @@ export type NhiemVuSauGiamSat = {
   trangThai: TrangThaiNhiemVu;
   minhChung: string[];
   buocXuLy: BuocXuLy[];
-  /**
-   * Hạn giải trình theo Điều 40 Luật 121/2025/QH15, tính bằng NGÀY DƯƠNG LỊCH.
-   * Đặt khi nhiệm vụ quá hạn và đã khởi tạo quy trình yêu cầu giải trình.
-   */
   hanGiaiTrinhDieu40: string | null;
   ngayXacNhanHoanThanh: string | null;
 };
 
-// ---------------------------------------------------------------------------
-// Cấu hình và nội dung phụ trợ
-// ---------------------------------------------------------------------------
+export type TrangThaiHoSo = 'du_thao' | 'dang_thuc_hien' | 'hoan_thanh';
+
+export type HoSoGiamSat = {
+  id: string;
+  thuocTinh: ThuocTinhHoSo;
+  tieuDe: string;
+  ky: string;
+  ngayLap: string;
+  nguoiLap: string;
+  trangThai: TrangThaiHoSo;
+  dauMuc: Record<string, string>;
+  tepDinhKem: string[];
+  ngayCapNhat: string;
+};
 
 export type CauHinh = {
-  /** Chuỗi muối công bố trước, dùng dựng seed cho phần bổ sung ngẫu nhiên. */
   maMuoi: string;
-  /** Số văn bản mục tiêu của danh mục rà soát mỗi tháng. */
   soVanBanRaSoatMoiThang: number;
-  /** Ngày trong tháng hệ thống tổng hợp và chạy phân tích. */
   ngayTongHop: number;
-  /** Ngày trong tháng Văn phòng trình danh mục đề xuất. */
   ngayTrinhDanhMuc: number;
   chuKho: string;
   tenKho: string;
@@ -361,13 +343,9 @@ export type BanTin = {
 };
 
 export type NgayLe = {
-  ngay: string; // ISO date
+  ngay: string;
   ten: string;
 };
-
-// ---------------------------------------------------------------------------
-// Cấu hình dấu hiệu cảnh báo
-// ---------------------------------------------------------------------------
 
 export type MucCauHinhDauHieu = {
   diem: number;

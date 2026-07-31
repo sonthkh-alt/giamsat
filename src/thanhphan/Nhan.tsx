@@ -55,4 +55,3 @@ export function NhanHan({ muc, soNgay }: { muc: MucCanhBao; soNgay?: number }) {
     </Nhan>
   );
 }
-

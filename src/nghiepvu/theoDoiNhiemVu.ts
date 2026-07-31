@@ -1,8 +1,3 @@
-// Theo dõi nhiệm vụ sau giám sát (GS-11, GS-12).
-//
-// NGUYÊN TẮC: hồ sơ không kết thúc khi ban hành kết luận, mà kết thúc khi kiến
-// nghị được thực hiện xong.
-
 import type { MaBuocXuLy, NgayLe, NhiemVuSauGiamSat, TrangThaiNhiemVu } from '../kieu';
 import {
   congNgayDuongLich,
@@ -22,7 +17,6 @@ export const NHAN_TRANG_THAI_NHIEM_VU: Readonly<Record<TrangThaiNhiemVu, string>
   chua_dap_ung_yeu_cau: 'Chưa đáp ứng yêu cầu',
 };
 
-/** Bảy bước xử lý theo mục 3.4 của Quy chế, đúng thứ tự. */
 export const THU_TU_BUOC_XU_LY: readonly MaBuocXuLy[] = [
   'don_doc_1',
   'don_doc_tiep',
@@ -43,7 +37,6 @@ export const NHAN_BUOC_XU_LY: Readonly<Record<MaBuocXuLy, string>> = {
   bao_cao_hdnd: 'Báo cáo Hội đồng nhân dân xem xét',
 };
 
-/** Trạng thái coi là còn phải theo dõi. */
 export const TRANG_THAI_CON_MO: readonly TrangThaiNhiemVu[] = [
   'chua_hoan_thanh',
   'hoan_thanh_mot_phan',
@@ -56,10 +49,6 @@ export function conPhaiTheoDoi(nhiemVu: NhiemVuSauGiamSat): boolean {
   return TRANG_THAI_CON_MO.includes(nhiemVu.trangThai);
 }
 
-/**
- * Mức cảnh báo về hạn hoàn thành, tính theo ngày làm việc (nhắc trước 15 / 7 / 3).
- * Nhiệm vụ đã hoàn thành không còn cảnh báo.
- */
 export function mucCanhBaoNhiemVu(
   nhiemVu: NhiemVuSauGiamSat,
   ngayThamChieu: string,
@@ -77,10 +66,6 @@ export function soNgayConLai(
   return soNgayLamViecConLai(nhiemVu.hanHoanThanh, ngayThamChieu, ngayLe);
 }
 
-/**
- * Bước xử lý tiếp theo nên áp dụng, dựa trên bước đã làm gần nhất.
- * null nghĩa là đã đi hết bảy bước.
- */
 export function buocTiepTheo(nhiemVu: NhiemVuSauGiamSat): MaBuocXuLy | null {
   const daLam = new Set(nhiemVu.buocXuLy.map((b) => b.ma));
   for (const buoc of THU_TU_BUOC_XU_LY) {
@@ -89,13 +74,6 @@ export function buocTiepTheo(nhiemVu: NhiemVuSauGiamSat): MaBuocXuLy | null {
   return null;
 }
 
-/**
- * Hạn giải trình theo Điều 40 Luật 121/2025/QH15.
- *
- * Luật ghi "15 ngày", "trường hợp phức tạp không quá 30 ngày" — đây là NGÀY
- * DƯƠNG LỊCH, không phải ngày làm việc. Đó là ngoại lệ duy nhất so với quy tắc
- * chung ở mục 3.5.
- */
 export function tinhHanGiaiTrinhDieu40(tuNgay: string, phucTap = false): string {
   return congNgayDuongLich(
     tuNgay,
@@ -103,10 +81,6 @@ export function tinhHanGiaiTrinhDieu40(tuNgay: string, phucTap = false): string 
   );
 }
 
-/**
- * Nhiệm vụ quá hạn thì chuyển trạng thái `qua_han` và khởi tạo quy trình yêu cầu
- * giải trình theo Điều 40. Hàm thuần: trả về bản ghi mới, không sửa tại chỗ.
- */
 export function danhDauQuaHan(
   nhiemVu: NhiemVuSauGiamSat,
   ngayThamChieu: string,
@@ -129,7 +103,7 @@ export type ThongKeNhiemVu = {
   theoTrangThai: Record<TrangThaiNhiemVu, number>;
   conTheoDoi: number;
   quaHan: number;
-  /** Tỷ lệ phần trăm hoàn thành đúng hạn; null khi chưa có nhiệm vụ nào hoàn thành. */
+
   tyLeDungHan: number | null;
 };
 

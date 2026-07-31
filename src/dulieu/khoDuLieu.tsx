@@ -1,5 +1,3 @@
-// Tải toàn bộ dữ liệu tĩnh một lần khi mở trang và chia sẻ cho mọi màn hình.
-
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import type {
@@ -8,8 +6,10 @@ import type {
   CauHinhDauHieu,
   DonVi,
   DotRaSoat,
+  HoSoGiamSat,
   HoiDap,
   KetQuaThamDinh,
+  KhoTaiKhoan,
   KhungNghiepVu,
   NgayLe,
   NghiQuyet,
@@ -52,10 +52,17 @@ const DAU_HIEU_RONG: CauHinhDauHieu = {
   theThuc: { diem: 0, mucDo: 'thap', ghiChu: '', quyTac: [] },
 };
 
+const TAI_KHOAN_RONG: KhoTaiKhoan = {
+  phienBan: '',
+  thamSoBam: { thuatToan: 'PBKDF2-SHA256', soVongLap: 210000 },
+  taiKhoan: [],
+};
+
 export type DuLieuHeThong = {
   cauHinh: CauHinh;
   khung: KhungNghiepVu;
   cauHinhDauHieu: CauHinhDauHieu;
+  khoTaiKhoan: KhoTaiKhoan;
   donVi: DonVi[];
   tieuChi: NhomTieuChi[];
   ngayLe: NgayLe[];
@@ -63,10 +70,10 @@ export type DuLieuHeThong = {
   dotRaSoat: DotRaSoat[];
   ketQua: KetQuaThamDinh[];
   nhiemVu: NhiemVuSauGiamSat[];
+  hoSo: HoSoGiamSat[];
   hoiDap: HoiDap[];
   vanBanMau: VanBanMau[];
   banTin: BanTin[];
-  /** true khi ít nhất một tập dữ liệu đang lấy từ data/mau/. */
   dangDungDuLieuMau: boolean;
   homNay: string;
 };
@@ -93,12 +100,14 @@ async function tai(): Promise<DuLieuHeThong> {
   const [
     khung,
     cauHinhDauHieu,
+    khoTaiKhoan,
     donVi,
     tieuChi,
     ngayLe,
     nghiQuyet,
     ketQua,
     nhiemVu,
+    hoSo,
     hoiDap,
     vanBanMau,
     banTin,
@@ -106,12 +115,14 @@ async function tai(): Promise<DuLieuHeThong> {
   ] = await Promise.all([
     docDuLieu<KhungNghiepVu>('khung-nghiep-vu.json', KHUNG_RONG),
     docDuLieu<CauHinhDauHieu>('dauhieu-canhbao.json', DAU_HIEU_RONG),
+    docDuLieu<KhoTaiKhoan>('nguoidung.json', TAI_KHOAN_RONG),
     docDuLieu<DonVi[]>('donvi.json', []),
     docDuLieu<NhomTieuChi[]>('tieuchi.json', []),
     docDuLieu<NgayLe[]>('ngayle.json', []),
     docDuLieu<NghiQuyet[]>(`nghiquyet/${nam}.json`, []),
     docDuLieu<KetQuaThamDinh[]>(`ketqua/${nam}.json`, []),
     docDuLieu<NhiemVuSauGiamSat[]>(`nhiemvu/${nam}.json`, []),
+    docDuLieu<HoSoGiamSat[]>(`hoso/${nam}.json`, []),
     docDuLieu<HoiDap[]>('hoidap.json', []),
     docDuLieu<VanBanMau[]>('vanbanmau.json', []),
     docDuLieu<BanTin[]>('bangtin.json', []),
@@ -126,6 +137,7 @@ async function tai(): Promise<DuLieuHeThong> {
     cauHinh,
     khung: ghiNhan(khung),
     cauHinhDauHieu: ghiNhan(cauHinhDauHieu),
+    khoTaiKhoan: ghiNhan(khoTaiKhoan),
     donVi: ghiNhan(donVi),
     tieuChi: ghiNhan(tieuChi),
     ngayLe: ghiNhan(ngayLe),
@@ -136,6 +148,7 @@ async function tai(): Promise<DuLieuHeThong> {
       .sort((a, b) => (a.ky < b.ky ? 1 : -1)),
     ketQua: ghiNhan(ketQua),
     nhiemVu: ghiNhan(nhiemVu),
+    hoSo: ghiNhan(hoSo),
     hoiDap: ghiNhan(hoiDap),
     vanBanMau: ghiNhan(vanBanMau),
     banTin: ghiNhan(banTin),
@@ -182,7 +195,6 @@ export function useKho(): GiaTriKho {
   return giaTri;
 }
 
-/** Dùng trong các trang chỉ hiển thị sau khi dữ liệu đã tải xong. */
 export function useDuLieu(): DuLieuHeThong {
   const kho = useKho();
   if (kho.trangThai !== 'xong') {

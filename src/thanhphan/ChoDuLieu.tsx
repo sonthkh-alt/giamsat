@@ -1,10 +1,6 @@
 import type { ReactNode } from 'react';
 import { useKho } from '../dulieu/khoDuLieu';
 
-/**
- * Chỉ hiển thị nội dung khi dữ liệu đã tải xong.
- * Màn hình lỗi nói rõ chuyện gì xảy ra và cách khắc phục.
- */
 export default function ChoDuLieu({ children }: { children: ReactNode }) {
   const kho = useKho();
 

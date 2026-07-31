@@ -33,7 +33,8 @@ const SAC_TRANG_THAI: Record<TrangThaiNhiemVu, 'trung_tinh' | 'dat' | 'luuy' | '
 
 export default function TheoDoiSauGiamSat() {
   const du = useDuLieu();
-  const { coQuyenGhi } = usePhien();
+  const { ghiDuoc } = usePhien();
+  const ghiBuocDuoc = ghiDuoc('theoDoiNhiemVu');
   const ghi = useGhi();
   const [loc, datLoc] = useState<string>(MOI);
   const [dangMo, datDangMo] = useState<string | null>(null);
@@ -287,7 +288,7 @@ export default function TheoDoiSauGiamSat() {
                     </details>
                   )}
 
-                  {coQuyenGhi && conPhaiTheoDoi(nv) && (
+                  {ghiBuocDuoc && conPhaiTheoDoi(nv) && (
                     <div className="mt-3 border-t border-vien pt-3">
                       {dangMo === nv.id ? (
                         <BieuMauBuoc

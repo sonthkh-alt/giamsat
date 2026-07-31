@@ -5,7 +5,6 @@ import { useDuLieu } from '../dulieu/khoDuLieu';
 import { useGhi } from '../dulieu/useGhi';
 import { usePhien } from '../dulieu/usePhien';
 import { ghiJson, type ThongTinKho } from '../dulieu/ghiGitHub';
-import { layNguoiDung } from '../dulieu/phienLamViec';
 import { hienThiKyThang, hienThiNgay, kyThang } from '../nghiepvu/hanXuLy';
 import {
   lapDanhMucDeXuat,
@@ -16,6 +15,7 @@ import {
   NHAN_TRANG_THAI_DOT,
 } from '../nghiepvu/lapDanhMuc';
 import { NHAN_LINH_VUC } from '../nghiepvu/nhan';
+import { thieuQuyen } from '../nghiepvu/phanQuyen';
 import ManHinhTrong from '../thanhphan/ManHinhTrong';
 import ThongBao from '../thanhphan/ThongBao';
 import { Nhan } from '../thanhphan/Nhan';
@@ -48,7 +48,9 @@ function DanhSachCanhBao({ canhBao }: { canhBao: readonly CanhBao[] }) {
 
 export default function DanhMucRaSoat() {
   const du = useDuLieu();
-  const { coQuyenGhi } = usePhien();
+  const { ghiDuoc, duocPhep, phien } = usePhien();
+  const lapDuoc = ghiDuoc('lapDanhMuc');
+  const quyetDinhDuoc = ghiDuoc('quyetDinhDanhMuc');
   const ghi = useGhi();
 
   const kyHienTai = kyThang(du.homNay);
@@ -94,7 +96,7 @@ export default function DanhMucRaSoat() {
       deNghi: [],
       soLuongMucTieu: du.cauHinh.soVanBanRaSoatMoiThang,
       maMuoi: du.cauHinh.maMuoi,
-      nguoiDeXuat: layNguoiDung() || 'Văn phòng',
+      nguoiDeXuat: phien?.hoTen ?? 'Văn phòng',
       ngayThamChieu: du.homNay,
     });
     datXemTruoc(kq.danhMucDeXuat);
@@ -141,12 +143,10 @@ export default function DanhMucRaSoat() {
 
   async function chuyen(idNghiQuyet: string, hanhDong: 'them' | 'bo') {
     if (!dot) return;
-    const nguoi = layNguoiDung();
+    const nguoi = phien?.hoTen ?? '';
     if (!nguoi.trim()) {
       ghi.chay(async () => {
-        throw new Error(
-          'Chưa ghi tên người thao tác. Vào trang Quản trị nhập họ tên trước khi sửa danh mục — mỗi thay đổi đều phải ghi rõ ai sửa.',
-        );
+        throw new Error('Phiên đăng nhập không có họ tên. Đăng xuất rồi đăng nhập lại.');
       });
       return;
     }
@@ -277,7 +277,7 @@ export default function DanhMucRaSoat() {
             <button type="button" className="nut-phu" onClick={chayPhanTich}>
               Chạy phân tích, lập danh mục đề xuất
             </button>
-            {xemTruoc && coQuyenGhi && (
+            {xemTruoc && lapDuoc && (
               <button
                 type="button"
                 className="nut-chinh"
@@ -323,13 +323,12 @@ export default function DanhMucRaSoat() {
                   </li>
                 ))}
               </ul>
-              {!coQuyenGhi && (
+              {!lapDuoc && (
                 <p className="text-[0.9375rem] text-[#4A536B]">
-                  Đây là bản xem trước. Muốn trình chính thức, dán mã truy cập ở trang{' '}
-                  <Link to="/quan-tri" className="underline">
-                    Quản trị
-                  </Link>
-                  .
+                  Đây là bản xem trước.{' '}
+                  {duocPhep('lapDanhMuc')
+                    ? 'Máy trạm này chưa kết nối kho nên chưa trình chính thức được.'
+                    : thieuQuyen('lapDanhMuc')}
                 </p>
               )}
             </div>
@@ -363,7 +362,7 @@ export default function DanhMucRaSoat() {
                       </div>
                       <p className="mt-1 text-[0.9375rem] text-[#31394F]">{muc.lyDo}</p>
                       <DanhSachCanhBao canhBao={muc.canhBao} />
-                      {coQuyenGhi && dot.trangThai !== 'da_chot' && (
+                      {quyetDinhDuoc && dot.trangThai !== 'da_chot' && (
                         <button
                           type="button"
                           className="nut-chinh mt-2"
@@ -410,7 +409,7 @@ export default function DanhMucRaSoat() {
                             Thường trực bổ sung ngoài danh mục đề xuất.
                           </p>
                         )}
-                        {coQuyenGhi && dot.trangThai !== 'da_chot' && (
+                        {quyetDinhDuoc && dot.trangThai !== 'da_chot' && (
                           <button
                             type="button"
                             className="nut-phu mt-2"
@@ -428,11 +427,11 @@ export default function DanhMucRaSoat() {
             </div>
           </div>
 
-          {coQuyenGhi && dot.trangThai === 'de_xuat' && dot.danhMucChinhThuc.length > 0 && (
+          {quyetDinhDuoc && dot.trangThai === 'de_xuat' && dot.danhMucChinhThuc.length > 0 && (
             <BieuMauQuyetDinh dangGhi={ghi.dangGhi} onXacNhan={(so) => doiTrangThai('da_quyet_dinh', so)} />
           )}
 
-          {coQuyenGhi && dot.trangThai === 'da_quyet_dinh' && (
+          {quyetDinhDuoc && dot.trangThai === 'da_quyet_dinh' && (
             <div className="khung p-4">
               <p className="mb-2">
                 Danh mục đã được quyết định tại văn bản{' '}

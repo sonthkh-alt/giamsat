@@ -54,7 +54,6 @@ describe('hienThiNgay', () => {
 
 describe('homNay', () => {
   it('tính theo giờ Việt Nam, không theo giờ máy trạm', () => {
-    // 30/07/2026 lúc 18:30 UTC đã là 01:30 ngày 31/07 ở Việt Nam
     expect(homNay(new Date('2026-07-30T18:30:00Z'))).toBe('2026-07-31');
     expect(homNay(new Date('2026-07-30T16:00:00Z'))).toBe('2026-07-30');
   });
@@ -62,9 +61,9 @@ describe('homNay', () => {
 
 describe('laCuoiTuan / laNgayLamViec', () => {
   it('nhận diện thứ Bảy và Chủ nhật', () => {
-    expect(laCuoiTuan('2026-08-01')).toBe(true); // thứ Bảy
-    expect(laCuoiTuan('2026-08-02')).toBe(true); // Chủ nhật
-    expect(laCuoiTuan('2026-08-03')).toBe(false); // thứ Hai
+    expect(laCuoiTuan('2026-08-01')).toBe(true);
+    expect(laCuoiTuan('2026-08-02')).toBe(true);
+    expect(laCuoiTuan('2026-08-03')).toBe(false);
   });
 
   it('loại ngày nghỉ lễ khỏi ngày làm việc', () => {
@@ -79,12 +78,10 @@ describe('congNgayLamViec', () => {
   });
 
   it('bỏ qua cuối tuần', () => {
-    // Thứ Năm 30/07 + 5 ngày làm việc = thứ Năm 06/08
     expect(congNgayLamViec('2026-07-30', 5, NGAY_LE)).toBe('2026-08-06');
   });
 
   it('bỏ qua ngày nghỉ lễ', () => {
-    // Thứ Ba 01/09 + 1 ngày làm việc: 02/09 là Quốc khánh nên nhảy sang 03/09
     expect(congNgayLamViec('2026-09-01', 1, NGAY_LE)).toBe('2026-09-03');
   });
 
@@ -150,7 +147,6 @@ describe('soNgayDuongLich', () => {
 
 describe('congNgayDuongLich', () => {
   it('cộng cả cuối tuần và ngày lễ', () => {
-    // 24/07/2026 là thứ Sáu; +3 ngày dương lịch là Chủ nhật 27/07
     expect(congNgayDuongLich('2026-07-24', 3)).toBe('2026-07-27');
   });
 

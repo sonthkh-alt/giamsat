@@ -8,7 +8,6 @@ const LOP: Record<Loai, string> = {
   loi: 'border-canhbao bg-[#FDF0F2] text-[#8A0A1F]',
 };
 
-/** Thông báo nói rõ chuyện gì đã xảy ra và cần làm gì tiếp. */
 export default function ThongBao({
   loai,
   tieuDe,

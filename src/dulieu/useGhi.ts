@@ -6,10 +6,6 @@ export type TrangThaiGhi = {
   thanhCong: string | null;
 };
 
-/**
- * Gói một thao tác ghi lên GitHub: khóa nút trong lúc chạy, giữ lại thông báo
- * thành công hoặc lỗi để hiển thị nguyên văn cho người dùng.
- */
 export function useGhi(): TrangThaiGhi & {
   chay: (viec: () => Promise<string>) => Promise<boolean>;
   xoaThongBao: () => void;

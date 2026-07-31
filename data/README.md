@@ -16,6 +16,7 @@ Tệp thật luôn được ưu tiên.
 
 | Tệp | Nội dung | Hiện có ở đâu |
 |---|---|---|
+| `nguoidung.json` | **Tài khoản đăng nhập: vai trò, muối và chuỗi băm mật khẩu** | `data/` — thật |
 | `khung-nghiep-vu.json` | **12 nhóm nghiệp vụ giám sát và bộ đầu mục từng nhóm** | `data/` — thật |
 | `dauhieu-canhbao.json` | **Bộ quy tắc phát hiện dấu hiệu cảnh báo** | `data/` — thật |
 | `cauhinh.json` | Mã muối, mốc chu kỳ tháng, tên kho, năm làm việc | `data/` — thật |
@@ -28,6 +29,7 @@ Tệp thật luôn được ưu tiên.
 | `dotrasoat/<kỳ>.json` | Một đợt rà soát tháng: đề xuất, danh mục chính thức, nhật ký sửa | `data/mau/` — giả lập |
 | `ketqua/<năm>.json` | Phiếu thẩm định, giải trình, trạng thái chốt | `data/mau/` — giả lập |
 | `nhiemvu/<năm>.json` | Nhiệm vụ sau giám sát (GS-11, GS-12) | `data/mau/` — giả lập |
+| `hoso/<năm>.json` | Hồ sơ giám sát chung của 12 nhóm nghiệp vụ | `data/mau/` — giả lập |
 | `hoidap.json` | Ngân hàng hỏi đáp nghiệp vụ | `data/mau/` — giả lập |
 | `vanbanmau.json` | Danh mục thư viện văn bản mẫu | `data/mau/` — giả lập |
 | `bangtin.json` | Bảng tin điều hành | `data/mau/` — giả lập |
@@ -46,6 +48,17 @@ bắt buộc, quy tắc thể thức.
 Cả hai **là cấu hình, không phải mã nguồn**. Khi quy định pháp luật thay đổi, sửa tệp ở đây;
 không sửa `src/`. Mỗi mục trong `dauhieu-canhbao.json` bắt buộc có trường `lyDo` — cảnh báo
 không nêu được lý do sẽ bị `locCanhBaoHopLe()` loại bỏ và không hiển thị ra giao diện.
+
+## Tài khoản đăng nhập
+
+`nguoidung.json` giữ tài khoản do quản trị cấp: tên đăng nhập, họ tên, vai trò, mã đơn vị,
+muối và chuỗi băm PBKDF2-SHA256 210.000 vòng. **Không lưu mật khẩu gốc.**
+
+Cấp và quản lý bằng `npm run tai-khoan`, rồi commit lại tệp này.
+
+> Tệp nằm trong kho public nên ai cũng tải về được. Băm PBKDF2 chỉ làm việc dò mật khẩu tốn
+> kém, không làm nó bất khả thi. Đặt mật khẩu dài, không dùng lại mật khẩu của hệ thống khác,
+> và coi đăng nhập là phân việc trong ứng dụng chứ không phải kiểm soát truy cập thật.
 
 ## Danh mục đơn vị hành chính
 

@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
 import type { HieuLuc, LinhVuc, LoaiNghiQuyet, NghiQuyet as KieuNghiQuyet } from '../kieu';
 import { useDuLieu } from '../dulieu/khoDuLieu';
 import { usePhien } from '../dulieu/usePhien';
@@ -14,6 +13,7 @@ import {
   NHAN_LOAI_NGHI_QUYET,
 } from '../nghiepvu/nhan';
 import { phatHienCanhBao, tinhDiemRuiRo } from '../nghiepvu/xepHangRuiRo';
+import { thieuQuyen } from '../nghiepvu/phanQuyen';
 import { Nhan } from '../thanhphan/Nhan';
 import ManHinhTrong from '../thanhphan/ManHinhTrong';
 import ThongBao from '../thanhphan/ThongBao';
@@ -38,7 +38,8 @@ const BO_LOC_RONG: BoLoc = {
 
 export default function NghiQuyet() {
   const du = useDuLieu();
-  const { coQuyenGhi } = usePhien();
+  const { ghiDuoc, duocPhep } = usePhien();
+  const nhapDuoc = ghiDuoc('nhapNghiQuyet');
   const ghi = useGhi();
   const [boLoc, datBoLoc] = useState<BoLoc>(BO_LOC_RONG);
   const [moBieuMau, datMoBieuMau] = useState(false);
@@ -83,7 +84,7 @@ export default function NghiQuyet() {
             {ketQua.length}.
           </p>
         </div>
-        {coQuyenGhi ? (
+        {nhapDuoc ? (
           <button
             type="button"
             className="nut-chinh"
@@ -96,11 +97,9 @@ export default function NghiQuyet() {
           </button>
         ) : (
           <p className="text-[0.9375rem] text-[#4A536B]">
-            Muốn nhập liệu, dán mã truy cập ở trang{' '}
-            <Link to="/quan-tri" className="underline">
-              Quản trị
-            </Link>
-            .
+            {duocPhep('nhapNghiQuyet')
+              ? 'Máy trạm này chưa kết nối kho nên chưa nhập liệu được.'
+              : thieuQuyen('nhapNghiQuyet')}
           </p>
         )}
       </div>
@@ -116,7 +115,7 @@ export default function NghiQuyet() {
         </ThongBao>
       )}
 
-      {moBieuMau && coQuyenGhi && (
+      {moBieuMau && nhapDuoc && (
         <BieuMauNghiQuyet onXong={() => datMoBieuMau(false)} ghi={ghi} />
       )}
 
@@ -284,12 +283,6 @@ export default function NghiQuyet() {
   );
 }
 
-// ---------------------------------------------------------------------------
-
-/**
- * Dấu hiệu cảnh báo của một văn bản. Đây chỉ là dấu hiệu để người thẩm định xem
- * trước, không phải kết luận. Mỗi dấu hiệu luôn kèm lý do và vị trí trong văn bản.
- */
 function DauHieu({ canhBao }: { canhBao: ReturnType<typeof phatHienCanhBao> }) {
   if (canhBao.length === 0) {
     return <span className="text-[#4A536B]">Không có</span>;
@@ -315,8 +308,6 @@ function DauHieu({ canhBao }: { canhBao: ReturnType<typeof phatHienCanhBao> }) {
     </details>
   );
 }
-
-// ---------------------------------------------------------------------------
 
 function BieuMauNghiQuyet({
   ghi,

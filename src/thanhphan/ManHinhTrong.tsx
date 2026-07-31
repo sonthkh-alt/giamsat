@@ -1,9 +1,5 @@
 import type { ReactNode } from 'react';
 
-/**
- * Màn hình trống là lời mời làm việc, không phải lời xin lỗi:
- * nói rõ chưa có gì và việc tiếp theo nên làm.
- */
 export default function ManHinhTrong({
   tieuDe,
   moTa,

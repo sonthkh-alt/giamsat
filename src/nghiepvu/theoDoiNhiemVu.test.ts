@@ -34,7 +34,6 @@ function nhiemVu(phan: Partial<NhiemVuSauGiamSat> = {}): NhiemVuSauGiamSat {
 
 describe('Điều 40 tính theo ngày dương lịch, không phải ngày làm việc', () => {
   it('15 ngày dương lịch kể cả cuối tuần', () => {
-    // 24/07/2026 + 15 ngày dương lịch = 08/08/2026
     expect(tinhHanGiaiTrinhDieu40('2026-07-24')).toBe('2026-08-08');
   });
 
@@ -43,7 +42,6 @@ describe('Điều 40 tính theo ngày dương lịch, không phải ngày làm v
   });
 
   it('không bỏ qua ngày nghỉ lễ — vì luật ghi là "ngày"', () => {
-    // 01/09 + 15 ngày = 16/09 dù 02/09 là ngày nghỉ lễ
     expect(tinhHanGiaiTrinhDieu40('2026-09-01')).toBe('2026-09-16');
   });
 });
@@ -170,7 +168,6 @@ describe('thongKeNhiemVu', () => {
   });
 
   it('tỷ lệ đúng hạn tính trên số đã hoàn thành', () => {
-    // 'a' xác nhận 20/07 ≤ hạn 24/07 là đúng hạn; 'b' xác nhận 28/07 là trễ.
     expect(thongKeNhiemVu(danhSach, '2026-07-30', NGAY_LE).tyLeDungHan).toBe(50);
   });
 

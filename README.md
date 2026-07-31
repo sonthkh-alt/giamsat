@@ -113,18 +113,56 @@ GitHub Pages là **static hosting: không backend, không mã chạy phía máy 
 |---|---|
 | Hiển thị dữ liệu | Tệp JSON trong `data/`, tải bằng `fetch()` khi chạy |
 | Ghi dữ liệu | Trình duyệt gọi thẳng GitHub Contents API, commit vào `main` |
-| Xác thực người ghi | Fine-grained PAT người dùng tự dán, lưu ở `sessionStorage` |
+| Đăng nhập, phân quyền | Tài khoản do quản trị cấp, mật khẩu băm PBKDF2 trong `data/nguoidung.json` |
+| Quyền ghi lên kho | Mã kết nối GitHub, quản trị cấu hình một lần cho mỗi máy trạm |
 | Lưu bản PDF | Commit vào `data/files/<năm>/`, tối đa 10 MB mỗi tệp |
 | Phát hành | GitHub Actions build và deploy Pages sau mỗi commit |
 
 Công nghệ: Vite · React 18 · TypeScript · Tailwind CSS · React Router (HashRouter, vì Pages
 không viết lại được đường dẫn). Đọc ghi GitHub bằng `fetch` trực tiếp, không thêm SDK.
 
+## Đăng nhập và phân quyền
+
+Người dùng đăng nhập bằng **tài khoản do quản trị cấp**. Mật khẩu băm PBKDF2-SHA256 210.000
+vòng, mỗi tài khoản một muối riêng; không lưu mật khẩu gốc.
+
+```bash
+npm run tai-khoan cap <tên đăng nhập> <mật khẩu> <vai trò> "<họ tên>" [mã đơn vị]
+npm run tai-khoan doi-mat-khau <tên đăng nhập> <mật khẩu mới>
+npm run tai-khoan khoa <tên đăng nhập>
+npm run tai-khoan danh-sach
+```
+
+| Vai trò | Quyền |
+|---|---|
+| `quan_tri` | Toàn quyền, cấu hình kết nối kho, khóa và mở tài khoản |
+| `thuong_truc` | Quyết định danh mục chính thức, chốt kết quả, hồ sơ giám sát |
+| `ban` | Chấm điểm thẩm định, ghi bước sau giám sát, hồ sơ giám sát |
+| `van_phong` | Nhập nghị quyết, lập danh mục đề xuất, ghi giải trình, hồ sơ giám sát |
+| `don_vi` | Ghi giải trình của đơn vị |
+| `dai_bieu` | Chỉ xem |
+
+Tách bạch thẩm quyền được khóa bằng kiểm thử: Văn phòng lập danh mục nhưng không quyết định;
+Ban chấm điểm nhưng không chốt kết quả.
+
+### Vì sao vẫn còn mã kết nối kho
+
+GitHub Pages là hosting tĩnh, không có backend. Ghi dữ liệu nghĩa là trình duyệt gọi thẳng
+GitHub API, mà API đó bắt buộc phải có thông tin xác thực GitHub — không hệ đăng nhập thuần
+client nào tạo ra được quyền ghi. Nên hệ thống tách hai tầng:
+
+- **Đăng nhập tài khoản** — danh tính, phân quyền trong ứng dụng, ghi nhật ký ai làm gì.
+- **Kết nối kho** — mã GitHub, chỉ vai trò `quan_tri` thấy và cấu hình một lần cho mỗi máy
+  trạm dùng chung. Người dùng thường không nhìn thấy mục này.
+
+Ghi được dữ liệu = **có quyền theo vai trò** và **máy trạm đã kết nối kho**.
+
 ### Những giới hạn phải nói rõ
 
-- **Không có phân quyền thật.** Việc ẩn kết quả chưa chốt khỏi người chưa dán mã truy cập chỉ
-  là quy ước hiển thị: ai cũng đọc thẳng được tệp JSON trong kho. Nội dung thực sự cần riêng
-  tư phải chuyển sang kho private, nhưng GitHub Pages cho kho private đòi hỏi gói trả phí.
+- **Đăng nhập không phải kiểm soát truy cập thật.** Kho public nên ai cũng tải được tệp JSON,
+  kể cả `data/nguoidung.json`. Đăng nhập chặn người vãng lai và phân việc trong ứng dụng, chứ
+  không giấu được dữ liệu. Nội dung thực sự cần riêng tư phải chuyển sang kho private, mà
+  GitHub Pages cho kho private đòi hỏi gói trả phí.
 - **GS-09 (tín nhiệm) không triển khai trên kho public.** Nhóm này áp dụng chế độ bảo mật cao
   nhất; để lại đến khi có hạ tầng riêng. Trong khung nghiệp vụ nó được đánh dấu rõ.
 - **GS-06 (khiếu nại, tố cáo)** chỉ được lưu số liệu tổng hợp. Không đưa nội dung đơn thư và
@@ -149,6 +187,7 @@ npm run typecheck         # tsc --noEmit
 npm run test              # Vitest
 npm run lint
 npm run sinh-du-lieu-mau  # sinh lại bộ dữ liệu giả lập trong data/mau/
+npm run tai-khoan         # cấp, khóa, đổi mật khẩu tài khoản
 ```
 
 ## Cấu trúc thư mục
@@ -157,12 +196,12 @@ npm run sinh-du-lieu-mau  # sinh lại bộ dữ liệu giả lập trong data/m
 /
 ├─ CLAUDE.md              hướng dẫn cho Claude Code khi làm việc trên kho này
 ├─ src/
-│  ├─ trang/              TongQuan, KhungNghiepVu, NghiQuyet, DanhMucRaSoat,
-│  │                      ThamDinh, TheoDoiSauGiamSat, HoiDap, QuanTri
-│  ├─ thanhphan/          thành phần dùng chung: BoCuc, LuoiDonVi, Nhan, ThongBao…
-│  ├─ dulieu/             đọc JSON, ghi qua GitHub API, phiên làm việc
-│  ├─ nghiepvu/           logic thuần: xepHangRuiRo, lapDanhMuc, chamDiem,
-│  │                      hanXuLy, theoDoiNhiemVu, theoDoiDonVi (+ kiểm thử)
+│  ├─ trang/              TongQuan, KhungNghiepVu, NghiQuyet, DanhMucRaSoat, ThamDinh,
+│  │                      TheoDoiSauGiamSat, HoSoGiamSat, HoiDap, QuanTri
+│  ├─ thanhphan/          dùng chung: BoCuc, ManHinhDangNhap, LuoiDonVi, Nhan, ThongBao…
+│  ├─ dulieu/             đọc JSON, ghi qua GitHub API, xác thực và phiên làm việc
+│  ├─ nghiepvu/           logic thuần: xepHangRuiRo, lapDanhMuc, chamDiem, hanXuLy,
+│  │                      theoDoiNhiemVu, theoDoiDonVi, phanQuyen (+ kiểm thử)
 │  └─ kieu/               định nghĩa TypeScript
 ├─ data/                  dữ liệu và cấu hình, xem data/README.md
 ├─ scripts/               bộ sinh dữ liệu giả lập
@@ -204,10 +243,15 @@ phát hành; hỏng một bước là không phát hành.
 
 ## Nhập liệu
 
-1. Tạo fine-grained PAT chỉ cho kho này, quyền **Contents: Read and write**, hạn dùng ngắn.
-2. Mở trang **Quản trị**, dán mã, bấm **Kiểm tra quyền ghi**, và nhập họ tên — tên này được
-   ghi vào nhật ký sửa danh mục và phiếu thẩm định.
-3. Mã chỉ nằm trong `sessionStorage` của tab đang mở, đóng tab là mất. Không bao giờ commit mã.
+1. Quản trị cấp tài khoản bằng `npm run tai-khoan cap`, rồi commit `data/nguoidung.json`.
+2. Quản trị đăng nhập, vào **Quản trị · Kết nối kho**, dán mã GitHub fine-grained (quyền
+   Contents: Read and write, chỉ cho kho này), bấm **Kiểm tra kết nối** — làm một lần cho mỗi
+   máy trạm dùng chung.
+3. Người dùng đăng nhập bằng tài khoản của mình; họ tên trong tài khoản được ghi vào nhật ký
+   sửa danh mục và phiếu thẩm định.
+
+Mã kết nối và phiên đăng nhập chỉ nằm trong `sessionStorage` của tab đang mở, đóng tab là mất.
+Không bao giờ commit mã kết nối.
 
 ## Lộ trình
 

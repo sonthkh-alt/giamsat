@@ -1,6 +1,3 @@
-// Phân mức "độ lâu chưa được rà soát" của từng đơn vị.
-// Đây là dữ liệu cho lưới 166 ô ở trang tổng quan, phục vụ cách thức `luan_phien`.
-
 import type { DonVi } from '../kieu';
 import { soNgayDuongLich } from './hanXuLy';
 
@@ -14,7 +11,6 @@ export const NHAN_MUC_THEO_DOI: Readonly<Record<MucTheoDoi, string>> = {
   chua_bao_gio: 'Chưa từng rà soát',
 };
 
-/** Ngưỡng ngày dương lịch kể từ lần rà soát gần nhất. */
 export const NGUONG_THEO_DOI = { moi: 30, binhThuong: 90, lau: 180 } as const;
 
 export function mucTheoDoi(donVi: DonVi, ngayThamChieu: string): MucTheoDoi {
@@ -26,7 +22,6 @@ export function mucTheoDoi(donVi: DonVi, ngayThamChieu: string): MucTheoDoi {
   return 'rat_lau';
 }
 
-/** Số ngày kể từ lần rà soát gần nhất; null nếu chưa từng. */
 export function soNgayTuLanRaSoat(donVi: DonVi, ngayThamChieu: string): number | null {
   if (!donVi.lanRaSoatGanNhat) return null;
   return soNgayDuongLich(donVi.lanRaSoatGanNhat, ngayThamChieu);

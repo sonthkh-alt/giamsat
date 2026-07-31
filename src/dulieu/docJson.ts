@@ -1,9 +1,3 @@
-// Đọc dữ liệu tĩnh trong thư mục data/.
-//
-// Nếu file thật chưa có (giai đoạn thí điểm chưa nhập liệu), tự động lùi về
-// bộ dữ liệu giả lập trong data/mau/ để hệ thống vẫn chạy thử được, và báo rõ
-// nguồn dữ liệu ra giao diện.
-
 export type NguonDuLieu = 'that' | 'mau' | 'trong';
 
 export type KetQuaDoc<T> = {
@@ -38,8 +32,6 @@ async function taiJson<T>(duongDanDayDu: string): Promise<T | null> {
     throw new LoiDocDuLieu(duongDanDayDu, `máy chủ trả về mã ${phanHoi.status}`);
   }
 
-  // Một số máy chủ tĩnh trả về trang index.html kèm mã 200 cho tệp không tồn tại.
-  // Coi đó là tệp chưa có, để còn lùi về data/mau/ thay vì báo lỗi vô cớ.
   const kieuNoiDung = phanHoi.headers.get('content-type') ?? '';
   if (!kieuNoiDung.includes('json')) return null;
 
@@ -50,12 +42,6 @@ async function taiJson<T>(duongDanDayDu: string): Promise<T | null> {
   }
 }
 
-/**
- * Đọc một file trong data/. Trả về `macDinh` kèm nguồn "trong" nếu cả file thật
- * lẫn file mẫu đều chưa có.
- *
- * @param tenTep đường dẫn tương đối trong data/, ví dụ "donvi.json" hoặc "nghiquyet/2026.json"
- */
 export async function docDuLieu<T>(tenTep: string, macDinh: T): Promise<KetQuaDoc<T>> {
   const that = await taiJson<T>(`${GOC}data/${tenTep}`);
   if (that !== null) return { duLieu: that, nguon: 'that' };
@@ -66,7 +52,6 @@ export async function docDuLieu<T>(tenTep: string, macDinh: T): Promise<KetQuaDo
   return { duLieu: macDinh, nguon: 'trong' };
 }
 
-/** Đường dẫn công khai của một tệp đính kèm trong data/files/. */
 export function duongDanTep(duongDanTrongKho: string): string {
   return `${GOC}${duongDanTrongKho.replace(/^\/+/, '')}`;
 }

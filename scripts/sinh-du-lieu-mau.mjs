@@ -1,18 +1,3 @@
-// Sinh bộ dữ liệu giả lập trong data/mau/.
-//
-//     node scripts/sinh-du-lieu-mau.mjs
-//
-// Chạy lại lệnh này luôn cho ra đúng bộ dữ liệu cũ: mọi chỗ ngẫu nhiên đều dùng
-// bộ sinh số có seed cố định, không dùng Math.random().
-//
-// TÊN ĐƠN VỊ LÀ TÊN THẬT, lấy từ data/donvi_hanhchinh_thanhhoa_166.json.
-// Mọi thứ còn lại — nghị quyết, điểm số, nhiệm vụ sau giám sát — đều là số liệu
-// hư cấu, không phản ánh thực tế của bất kỳ đơn vị nào.
-//
-// Bộ quy tắc cảnh báo ở đây là bản sao rút gọn của src/nghiepvu/xepHangRuiRo.ts,
-// chỉ đủ dùng để dựng dữ liệu mẫu. Kiểm thử src/nghiepvu/duLieuMau.test.ts chạy
-// lại engine thật trên chính dữ liệu này và đối chiếu, nên sai lệch sẽ lộ ra.
-
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -28,7 +13,6 @@ const NGAY_LE = doc('data/ngayle.json').map((n) => n.ngay);
 const MA_MUOI = cauHinh.maMuoi;
 const SO_MUC_TIEU = cauHinh.soVanBanRaSoatMoiThang;
 
-// --- tiện ích ngày ---------------------------------------------------------
 const MOT_NGAY = 86400000;
 const taoNgay = (iso) => new Date(`${iso}T00:00:00Z`);
 const sangISO = (d) => d.toISOString().slice(0, 10);
@@ -45,7 +29,6 @@ function congNgayLamViec(tuNgay, so) {
   return iso;
 }
 
-// --- PRNG (chỉ dùng cho phần bổ sung ngẫu nhiên và cho dữ liệu giả lập) ------
 function bam32(chuoi) {
   let h = 2166136261 >>> 0;
   for (let i = 0; i < chuoi.length; i += 1) {
@@ -64,7 +47,6 @@ function mulberry32(hat) {
   };
 }
 
-// --- bản sao rút gọn của engine cảnh báo -----------------------------------
 const boDau = (s) =>
   s
     .normalize('NFD')
@@ -105,7 +87,6 @@ function phatHienCanhBao(nq) {
 }
 const diemRuiRo = (cb) => Math.min(cb.reduce((s, c) => s + c.diem, 0), 100);
 
-// --- sinh đơn vị -----------------------------------------------------------
 if (danhMucDvhc.length !== 166) {
   throw new Error(`Danh mục đơn vị phải có đúng 166 bản ghi, đang có ${danhMucDvhc.length}.`);
 }
@@ -121,13 +102,12 @@ const donVi = danhMucDvhc.map((goc, i) => {
     maDvhc: goc.ma_dvhc,
     ten: goc.ten_day_du,
     loai: goc.loai === 'Phường' ? 'phuong' : 'xa',
-    // Danh mục nguồn để trống cột vùng. Không tự gán vùng cho đơn vị có thật.
+
     vung: 'chua_phan_loai',
     lanRaSoatGanNhat: lanRaSoat,
   };
 });
 
-// --- sinh nghị quyết -------------------------------------------------------
 const LINH_VUC = [
   'ngan_sach',
   'dau_tu_cong',
@@ -156,7 +136,7 @@ const CAN_CU_CHUAN = [
   'Căn cứ Luật Ban hành văn bản quy phạm pháp luật số 64/2025/QH15;',
   'Căn cứ Luật Ngân sách nhà nước;',
 ];
-// Căn cứ đã hết hiệu lực — cố tình gieo để hệ thống phát hiện được dấu hiệu.
+
 const CAN_CU_CU = [
   'Căn cứ Luật Ban hành văn bản quy phạm pháp luật số 80/2015/QH13;',
   'Căn cứ Luật Tổ chức chính quyền địa phương số 77/2015/QH13;',
@@ -181,7 +161,6 @@ for (let i = 0; i < 96; i += 1) {
   const linhVuc = LINH_VUC[Math.floor(rndNQ() * LINH_VUC.length)];
   const loai = rndNQ() > 0.35 ? 'quy_pham' : 'ca_biet';
 
-  // Gieo dấu hiệu trên một phần văn bản để bộ phân tích có việc để phát hiện.
   const gieoCanCuCu = rndNQ() < 0.14;
   const gieoTenCu = rndNQ() < 0.08;
   const thieuHoSo = loai === 'quy_pham' && rndNQ() < 0.22;
@@ -200,7 +179,7 @@ for (let i = 0; i < 96; i += 1) {
   nghiQuyet.push({
     id: `${dv.ma}-${so}-2026`,
     maDonVi: dv.ma,
-    // Văn bản quy phạm ghi số theo mẫu <số>/<năm>; một phần cố tình ghi thiếu năm.
+
     so: loai === 'quy_pham' && rndNQ() > 0.25 ? `${so}/${nam}` : String(so),
     kyHieu: 'NQ-HĐND',
     ngayBanHanh,
@@ -217,7 +196,6 @@ for (let i = 0; i < 96; i += 1) {
 }
 nghiQuyet.sort((a, b) => (a.ngayBanHanh < b.ngayBanHanh ? 1 : -1));
 
-// --- lập danh mục đề xuất (bản sao rút gọn của lapDanhMuc.ts) ---------------
 const NHAN_LINH_VUC = {
   ngan_sach: 'Ngân sách',
   dau_tu_cong: 'Đầu tư công',
@@ -346,7 +324,7 @@ const nqTheoId = new Map(nghiQuyet.map((nq) => [nq.id, nq]));
 
 function taoDot(ky, linhVucTrongTam, ngayMoDot, vanBanQuyetDinh, trangThai, deNghi, dotDaCo) {
   const { danhMuc, seedNgauNhien } = lapDanhMuc(ky, linhVucTrongTam, deNghi, dotDaCo, ngayMoDot);
-  // Thường trực giữ phần lớn đề xuất, loại một văn bản kèm ghi chú.
+
   const boBot = danhMuc.length > 6 ? danhMuc[danhMuc.length - 1].idNghiQuyet : null;
   const chinhThuc = danhMuc
     .map((m) => m.idNghiQuyet)
@@ -398,8 +376,7 @@ const dot06 = taoDot(
   DE_NGHI_06,
   [],
 );
-// Văn bản được đề nghị rà soát phải còn nằm ngoài các đợt trước, nếu không nó
-// đã bị loại khỏi danh sách ứng viên và cách thức "de_nghi" sẽ không có tác dụng.
+
 const daRaSoat06 = new Set(dot06.danhMucChinhThuc);
 const nqDeNghi = nghiQuyet.filter(
   (nq) => nq.hieuLuc === 'con_hieu_luc' && nq.linhVuc === 'phi_le_phi' && !daRaSoat06.has(nq.id),
@@ -421,7 +398,6 @@ const dot07 = taoDot('2026-07', 'dat_dai', '2026-07-27', '211/TB-HĐND', 'dang_t
   dot06,
 ]);
 
-// --- kết quả thẩm định -----------------------------------------------------
 const BANG_DIEM = [
   {
     diemNhom: { thamQuyenHinhThuc: 20, trinhTuThuTuc: 18, noiDungHopPhap: 28, theThucTrinhBay: 9, khaThiThucTien: 18 },
@@ -493,7 +469,6 @@ const ketQua = [
   ...taoKetQua(dot07, '2026-07-29', 3, 'chua_chot'),
 ];
 
-// Đơn vị có kết quả ĐÃ CHỐT thì coi như vừa được rà soát trong đợt đó.
 const donViTheoMa = new Map(donVi.map((d) => [d.ma, d]));
 const dotTheoKy = new Map([dot06, dot07].map((d) => [d.ky, d]));
 for (const kq of ketQua) {
@@ -505,7 +480,6 @@ for (const kq of ketQua) {
   }
 }
 
-// --- nhiệm vụ sau giám sát (GS-11, GS-12) ----------------------------------
 const nhiemVu = [
   {
     id: 'NV-2026-001',
@@ -607,7 +581,33 @@ const nhiemVu = [
   },
 ];
 
-// --- hỏi đáp, văn bản mẫu, bảng tin ---------------------------------------
+const khung = doc('data/khung-nghiep-vu.json');
+const hoSo = [];
+for (const nhom of khung.nhom) {
+  if (nhom.trienKhai === 'khong_tren_kho_public' || nhom.dauMuc.length === 0) continue;
+  const dauMuc = {};
+  for (const dm of nhom.dauMuc) {
+    if (dm.kieu === 'ngay') dauMuc[dm.ma] = '2026-06-15';
+    else if (dm.kieu === 'so') dauMuc[dm.ma] = '12';
+    else if (dm.kieu === 'tep') dauMuc[dm.ma] = '';
+    else if (dm.kieu === 'danh_sach')
+      dauMuc[dm.ma] = 'Nội dung giả lập dòng 1\nNội dung giả lập dòng 2';
+    else dauMuc[dm.ma] = `${dm.ten} (dữ liệu giả lập)`;
+  }
+  hoSo.push({
+    id: `${nhom.ma}-2026-001`,
+    thuocTinh: { nhomGS: nhom.ma, chuThe: nhom.chuTheApDung[0], cap: nhom.capApDung[0] },
+    tieuDe: `${nhom.ten} — hồ sơ giả lập kỳ tháng 6/2026`,
+    ky: '2026-06',
+    ngayLap: '2026-06-15',
+    nguoiLap: 'Văn phòng Đoàn ĐBQH và HĐND tỉnh',
+    trangThai: nhom.trienKhai === 'giai_doan_1' ? 'dang_thuc_hien' : 'du_thao',
+    dauMuc,
+    tepDinhKem: [],
+    ngayCapNhat: '2026-06-20',
+  });
+}
+
 const hoiDap = [
   {
     id: 'HD-001',
@@ -716,7 +716,6 @@ const banTin = [
   },
 ];
 
-// --- ghi tệp ---------------------------------------------------------------
 function ghi(duongDanTuongDoi, duLieu) {
   const duongDan = resolve(GOC, duongDanTuongDoi);
   mkdirSync(dirname(duongDan), { recursive: true });
@@ -731,6 +730,7 @@ ghi('data/mau/dotrasoat/2026-06.json', dot06);
 ghi('data/mau/dotrasoat/2026-07.json', dot07);
 ghi('data/mau/ketqua/2026.json', ketQua);
 ghi('data/mau/nhiemvu/2026.json', nhiemVu);
+ghi('data/mau/hoso/2026.json', hoSo);
 ghi('data/mau/hoidap.json', hoiDap);
 ghi('data/mau/vanbanmau.json', vanBanMau);
 ghi('data/mau/bangtin.json', banTin);
